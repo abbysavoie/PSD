@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$SSN_TaxID__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Homeless__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Voucher_Type__c</field>
+    </columns>
+    <description>shows the Housing First Clients that have no indicator of housing</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>012t0000000GslT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Voucher_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>RRH,SBV</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Homeless__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>&lt;Unknown&gt;</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Service_Provider_Organization__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Client List Housing Unknown</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_Referral_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Contact$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

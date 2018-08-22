@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$SSN_TaxID__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Homeless__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Subsidy_Program_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact$SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Housing First - Referral</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Service_Provider_Organization__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>VA</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Service_Provider_Organization__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Active__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Non-VASH Tracker</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_Referral_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Contact$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$Referral_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

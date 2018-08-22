@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Actual Financial Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Actual Financial Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accrued --></label>
+        <name>Accrued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Financial Item --></label>
+        <name>Actual_Financial_Item__c</name>
+        <relationshipLabel><!-- Actual Financial Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Annual Payment Note --></label>
+        <name>Annual_Payment_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit --></label>
+        <name>Audit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculation --></label>
+        <name>Borrower_Calculation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial --></label>
+        <name>Budget_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>(Less) Concession/Lost Revenue</masterLabel>
+            <translation><!-- (Less) Concession/Lost Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>(Less) Vacancy</masterLabel>
+            <translation><!-- (Less) Vacancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative</masterLabel>
+            <translation><!-- Administrative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bond Fee</masterLabel>
+            <translation><!-- Bond Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cal HFA Reserve</masterLabel>
+            <translation><!-- Cal HFA Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Services</masterLabel>
+            <translation><!-- Contract Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debt Service</masterLabel>
+            <translation><!-- Debt Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred Developer Fee</masterLabel>
+            <translation><!-- Deferred Developer Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Partner Asset Management Fee</masterLabel>
+            <translation><!-- General Partner Asset Management Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grant Income</masterLabel>
+            <translation><!-- Grant Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ground Rent</masterLabel>
+            <translation><!-- Ground Rent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCD .42%</masterLabel>
+            <translation><!-- HCD .42% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Partner Asset Management Fee</masterLabel>
+            <translation><!-- Limited Partner Asset Management Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance</masterLabel>
+            <translation><!-- Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing &amp; Leasing</masterLabel>
+            <translation><!-- Marketing &amp; Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operating Reserve</masterLabel>
+            <translation><!-- Operating Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Fees</masterLabel>
+            <translation><!-- Other Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income</masterLabel>
+            <translation><!-- Other Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Operating Expenses</masterLabel>
+            <translation><!-- Other Operating Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Reserve</masterLabel>
+            <translation><!-- Other Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Waterfall Expenses</masterLabel>
+            <translation><!-- Other Waterfall Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Salary &amp; Benefits</masterLabel>
+            <translation><!-- Personal Salary &amp; Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Principle Reserve</masterLabel>
+            <translation><!-- Principle Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Management fee</masterLabel>
+            <translation><!-- Property Management fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Taxes &amp; Insurance</masterLabel>
+            <translation><!-- Property Taxes &amp; Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental Income</masterLabel>
+            <translation><!-- Rental Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replacement Reserve</masterLabel>
+            <translation><!-- Replacement Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resident Services</masterLabel>
+            <translation><!-- Resident Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC Monitoring Fee</masterLabel>
+            <translation><!-- SDHC Monitoring Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Services Reserve</masterLabel>
+            <translation><!-- Social Services Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxes/Insurance Reserve</masterLabel>
+            <translation><!-- Taxes/Insurance Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transitional Reserve</masterLabel>
+            <translation><!-- Transitional Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Earned/Funded --></label>
+        <name>Earned_Funded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest --></label>
+        <name>Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Reserve Balance --></label>
+        <name>Net_Reserve_Balance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Place any general notes or an explaination for selecting &quot;Other&quot; --></help>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid --></label>
+        <name>Paid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type RPT --></label>
+        <name>Record_Type_RPT__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Allowance --></label>
+        <name>SDHC_Allowance__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Per Unit --></label>
+        <name>SDHC_Calculated_Per_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated --></label>
+        <name>SDHC_Calculated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Category --></label>
+        <name>Sub_Category__c</name>
+        <picklistValues>
+            <masterLabel>Administrative General Partner</masterLabel>
+            <translation><!-- Administrative General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Limited Partner</masterLabel>
+            <translation><!-- Administrative Limited Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Rent Free Unit</masterLabel>
+            <translation><!-- Administrative Rent Free Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bad Debts</masterLabel>
+            <translation><!-- Bad Debts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-General Partner</masterLabel>
+            <translation><!-- Co-General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collection Loss</masterLabel>
+            <translation><!-- Collection Loss --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Expenses</masterLabel>
+            <translation><!-- Computer Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concession</masterLabel>
+            <translation><!-- Concession --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conventions and Meetings</masterLabel>
+            <translation><!-- Conventions and Meetings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electricity</masterLabel>
+            <translation><!-- Electricity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elevator</masterLabel>
+            <translation><!-- Elevator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment Taxes</masterLabel>
+            <translation><!-- Employment Taxes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garbage/Trash Removal</masterLabel>
+            <translation><!-- Garbage/Trash Removal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas</masterLabel>
+            <translation><!-- Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Exterior Maintenance</masterLabel>
+            <translation><!-- General Exterior Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Interior Maintenance</masterLabel>
+            <translation><!-- General Interior Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Partner</masterLabel>
+            <translation><!-- General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare Benefits</masterLabel>
+            <translation><!-- Healthcare Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet</masterLabel>
+            <translation><!-- Internet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landscaping</masterLabel>
+            <translation><!-- Landscaping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Licenses and Software</masterLabel>
+            <translation><!-- Licenses and Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Partner</masterLabel>
+            <translation><!-- Limited Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost Revenue</masterLabel>
+            <translation><!-- Lost Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance Salaries</masterLabel>
+            <translation><!-- Maintenance Salaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management Consultants</masterLabel>
+            <translation><!-- Management Consultants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manager Salaries</masterLabel>
+            <translation><!-- Manager Salaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous Admin Costs</masterLabel>
+            <translation><!-- Miscellaneous Admin Costs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Sub Category</masterLabel>
+            <translation><!-- No Sub Category --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Salaries</masterLabel>
+            <translation><!-- Office Salaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Supplies</masterLabel>
+            <translation><!-- Office Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office utilities</masterLabel>
+            <translation><!-- Office utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Contract Services</masterLabel>
+            <translation><!-- Other Contract Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Employee Benefits</masterLabel>
+            <translation><!-- Other Employee Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Maintenance Expenses</masterLabel>
+            <translation><!-- Other Maintenance Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painting</masterLabel>
+            <translation><!-- Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Fees</masterLabel>
+            <translation><!-- Payroll Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement Benefits</masterLabel>
+            <translation><!-- Retirement Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sewer</masterLabel>
+            <translation><!-- Sewer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special General Partner</masterLabel>
+            <translation><!-- Special General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Limited Partner</masterLabel>
+            <translation><!-- Special Limited Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water</masterLabel>
+            <translation><!-- Water --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Withdrawal --></label>
+        <name>Withdrawal__c</name>
+    </fields>
+    <layouts>
+        <layout>Actual Financial Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Header Information --></label>
+            <section>Header Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Waterfall Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Header Information --></label>
+            <section>Header Information</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Fees/Required Payments --></label>
+        <name>Fees_Required_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Income --></label>
+        <name>Income</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Operating Expenses --></label>
+        <name>Operating_Expenses</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Waterfall --></label>
+        <name>Waterfall</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

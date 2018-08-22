@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SDHC_Original_Approved_Loan_Component__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>SDHC_Original_Approved_Loan_Component__c$SDHC_Loan__c.Original_Approved_Loan_Amount__c</field>
+    </columns>
+    <description>Shows Loan Details and the Outstanding Balance broken down by construction Type.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SDHC_Original_Approved_Loan_Component__c$SDHC_Loan__c.Loan_Portfolio_Asset_Project__c.Type_Of_Construction__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Outstanding Loan Balance</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HF_SDHC_Loan_Components__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SDHC_Original_Approved_Loan_Component__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Memos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Memos</value>
+    </caseValues>
+    <fields>
+        <label><!-- APP_HMY --></label>
+        <name>APP_HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Date --></label>
+        <name>Action_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Status --></label>
+        <name>Action_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applications --></label>
+        <name>Applications__c</name>
+        <relationshipLabel><!-- Memos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact HMY --></label>
+        <name>Contact_HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateTimeMilliseconds --></label>
+        <name>DateTimeMilliseconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date and Time --></label>
+        <name>Date_and_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ErrorMemoType --></label>
+        <name>ErrorMemoType__c</name>
+        <picklistValues>
+            <masterLabel>FieldUpdateEmailFailure</masterLabel>
+            <translation><!-- FieldUpdateEmailFailure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PurgeReminderFailure</masterLabel>
+            <translation><!-- PurgeReminderFailure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PurgeUpdateFailure</masterLabel>
+            <translation><!-- PurgeUpdateFailure --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HMY --></label>
+        <name>HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes / Desc --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notication --></label>
+        <name>Notication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property --></label>
+        <name>Property__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result --></label>
+        <name>Result__c</name>
+        <picklistValues>
+            <masterLabel>A-App Status(Not Lv/wk SD)</masterLabel>
+            <translation><!-- A-App Status(Not Lv/wk SD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A1- Out our Jurisdiction</masterLabel>
+            <translation><!-- A1- Out our Jurisdiction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approval</masterLabel>
+            <translation><!-- Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B-App Status(iv/wk SD)</masterLabel>
+            <translation><!-- B-App Status(iv/wk SD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C-App Trans Received</masterLabel>
+            <translation><!-- C-App Trans Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancellation</masterLabel>
+            <translation><!-- Cancellation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D- App Trans to County</masterLabel>
+            <translation><!-- D- App Trans to County --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D1-App National City</masterLabel>
+            <translation><!-- D1-App National City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D2- App Oceanside</masterLabel>
+            <translation><!-- D2- App Oceanside --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D3-App Carlsbad</masterLabel>
+            <translation><!-- D3-App Carlsbad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D4-App Encinitas</masterLabel>
+            <translation><!-- D4-App Encinitas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter</masterLabel>
+            <translation><!-- Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ltr1- WL Confirmation</masterLabel>
+            <translation><!-- Ltr1- WL Confirmation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ltr4-WL NE State</masterLabel>
+            <translation><!-- Ltr4-WL NE State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ltr7- WL Claim</masterLabel>
+            <translation><!-- Ltr7- WL Claim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LtrIT-WL Ineligible to Trans</masterLabel>
+            <translation><!-- LtrIT-WL Ineligible to Trans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LtrUT-WL Unable to Trans</masterLabel>
+            <translation><!-- LtrUT-WL Unable to Trans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting</masterLabel>
+            <translation><!-- Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move in</masterLabel>
+            <translation><!-- Move in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejection</masterLabel>
+            <translation><!-- Rejection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Showing</masterLabel>
+            <translation><!-- Showing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait List</masterLabel>
+            <translation><!-- Wait List --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If the box is checked, Boomi will pull the record on the next poll.  If the box is unchecked, Boomi will not pull the record. --></help>
+        <label><!-- Send To Boomi --></label>
+        <name>Send_To_Boomi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show on Calendar --></label>
+        <name>Show_on_Calendar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Process</masterLabel>
+            <translation><!-- In Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memo</masterLabel>
+            <translation><!-- Memo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text --></label>
+        <name>Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approval</masterLabel>
+            <translation><!-- Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancellation</masterLabel>
+            <translation><!-- Cancellation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entity Alert</masterLabel>
+            <translation><!-- Entity Alert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legacy</masterLabel>
+            <translation><!-- Legacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter</masterLabel>
+            <translation><!-- Letter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting</masterLabel>
+            <translation><!-- Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move in</masterLabel>
+            <translation><!-- Move in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejection</masterLabel>
+            <translation><!-- Rejection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Showing</masterLabel>
+            <translation><!-- Showing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait List</masterLabel>
+            <translation><!-- Wait List --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit --></label>
+        <name>Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List Type --></label>
+        <name>Wait_List_Type__c</name>
+    </fields>
+    <layouts>
+        <layout>Memos Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- RAD_Report_on_Memos --></label>
+        <name>RAD_Report_on_Memos</name>
+    </webLinks>
+</CustomObjectTranslation>

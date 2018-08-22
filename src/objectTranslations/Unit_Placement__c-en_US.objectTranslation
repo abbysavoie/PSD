@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit Placement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unit Placements</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assigned Unit --></label>
+        <name>Assigned_Unit__c</name>
+        <relationshipLabel><!-- Unit Placements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Exit Date --></label>
+        <name>Exit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lease Up Date --></label>
+        <name>Lease_Up_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select the SDHC Program responsible for placement. --></help>
+        <label><!-- Placed By --></label>
+        <name>Placed_By__c</name>
+        <picklistValues>
+            <masterLabel>1000 Vets</masterLabel>
+            <translation><!-- 1000 Vets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diversion</masterLabel>
+            <translation><!-- Diversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moving Home</masterLabel>
+            <translation><!-- Moving Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Service Provider</masterLabel>
+            <translation><!-- Other Service Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prevention</masterLabel>
+            <translation><!-- Prevention --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Owner&apos;s Name --></label>
+        <name>Property_Owner_s_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tenant --></label>
+        <name>Tenant__c</name>
+        <relationshipLabel><!-- Unit Placements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Address --></label>
+        <name>Unit_Address__c</name>
+    </fields>
+    <layouts>
+        <layout>Unit Placement Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Data Record Information --></label>
+            <section>Data Record Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

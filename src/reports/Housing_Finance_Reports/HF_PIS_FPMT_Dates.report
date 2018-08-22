@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Loan_Project__c.Project_Status__c</field>
+    </columns>
+    <columns>
+        <field>Loan_Project__c.Placed_In_Service__c</field>
+    </columns>
+    <columns>
+        <field>Loan_Project__c.First_Payment_Date__c</field>
+    </columns>
+    <description>List of Projects&apos; Placed in Service and First Payment Dates.</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Loan_Project__c.Default_Project_Record_Type,012t0000000Cj6X,012t0000000GsnA</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>HF Project Status, PIS, and FPMT Dates</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Loan_Project__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Loan_Project__c.Project_Status__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Loan_Project__c.Closing__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

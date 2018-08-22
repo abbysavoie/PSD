@@ -1,0 +1,103 @@
+<apex:page standardController="Enrolled_Wait_List__c" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+        renderAs="pdf" >
+           <head>                   
+          <style type="text/css" media="print">
+            @page {
+             padding-top: 40px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {
+            
+            position: running(footer);
+            
+            }
+         
+            </style>
+            </head>
+        <!--3.3 top and 1 from left -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>      
+       <p>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</p>
+
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<apex:outputlabel >{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}</apex:outputlabel><br/>  
+            
+        <apex:outputPanel rendered="{!NOT(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet}"/><br/>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingcity}"/>,&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingState}"/>
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingpostalcode}"/>      
+        </apex:outputPanel>     
+        <apex:outputPanel rendered="{!(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_City__c}"/>,&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_State__c}"/>
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+        </apex:outputPanel> 
+        
+        <div style="page-break-after:always;"/>               
+        <html style="font-family:'Times';font-size:16px;" >       
+        <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div> 
+            </div>           
+           
+             <br/>   
+               
+            <center><h4 style="font-weight:bold">SECTION 8 INTAKE APPOINTMENT LETTER</h4></center>
+            <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Today()}"/></apex:outputText>      
+
+            <br/>
+        
+     
+        <body> 
+            <br/><br/> 
+             <!-- Commenting Address fields since address was not found on the FDD Template -->
+              <!--  
+            <apex:outputlabel >{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}</apex:outputlabel><br/> 
+            <apex:outputPanel rendered="{!NOT(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingcity}"/>&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingState}"/>&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingpostalcode}"/>  &nbsp;      
+            </apex:outputPanel>  -->
+          
+       
+     <!--   <apex:outputPanel rendered="{!(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_City__c}"/>&nbsp;
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_State__c}"/>&nbsp;
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+        </apex:outputPanel> -->
+    
+        
+        <br/><br/>
+        <apex:outputlabel >Dear {!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}, </apex:outputlabel><br/><br/>
+         
+        <apex:outputlabel value="{!$Label.section8_label5}"/><br/><br/> 
+        <apex:outputlabel > It is important that you follow the instructions below.</apex:outputlabel><br/><br/>       
+        <apex:outputlabel ><b>Please bring your completed packet to your appointment. Do not mail this intake packet back to us.</b></apex:outputlabel> <br/><br/>   
+        <apex:outputlabel ><u> You must call to schedule your Eligibility Interview within 10 days from the date of this letter.</u></apex:outputlabel>    
+        <center><h4>To schedule your appointment, please call (619) 578-7640</h4></center>  
+        <apex:outputlabel value="{!$Label.section8label}"/> <b>1122 Broadway #300, San Diego CA 92101.</b>  
+        Children are not allowed. Due to the limited spacing, we <b>require</b> that childcare arrangements be made. The interview will last approximately one hour.
+        <br/><br/> 
+        <apex:outputlabel value="{!$Label.section8_label2}"/><br/><br/> 
+        <apex:outputlabel value="{!$Label.section8_label3}"/><br/><br/> 
+        <apex:outputlabel value="{!$Label.section8_label4}"/><br/><br/>
+        <apex:outputlabel > We look forward to seeing you soon. </apex:outputlabel>
+       <br/><br/>
+       <div class="footer">
+        <center> <img alt="SDHC"  src="{!$Resource.SDHC_PDF_FTR}" width="200%" /></center>
+        </div>
+        </body>
+        </html>
+        
+                  
+ </apex:page>

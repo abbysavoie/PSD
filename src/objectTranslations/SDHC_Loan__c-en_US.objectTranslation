@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SDHC Loan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SDHC Loans</value>
+    </caseValues>
+    <fields>
+        <label><!-- Forgivable --></label>
+        <name>Forgivable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Calculation --></label>
+        <name>Interest_Calculation__c</name>
+        <picklistValues>
+            <masterLabel>360/30</masterLabel>
+            <translation><!-- 360/30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>365/30</masterLabel>
+            <translation><!-- 365/30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>365/365</masterLabel>
+            <translation><!-- 365/365 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate Type --></label>
+        <name>Interest_Rate_Type__c</name>
+        <picklistValues>
+            <masterLabel>Compound</masterLabel>
+            <translation><!-- Compound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simple</masterLabel>
+            <translation><!-- Simple --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lien Position Number --></label>
+        <name>Lien_Position_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Payment Type --></label>
+        <name>Loan_Payment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amortized</masterLabel>
+            <translation><!-- Amortized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balloon</masterLabel>
+            <translation><!-- Balloon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred Payment</masterLabel>
+            <translation><!-- Deferred Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residual Receipt</masterLabel>
+            <translation><!-- Residual Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surplus Cash</masterLabel>
+            <translation><!-- Surplus Cash --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Portfolio Asset Project --></label>
+        <name>Loan_Portfolio_Asset_Project__c</name>
+        <relationshipLabel><!-- SDHC Loans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Loan Reporting Period --></label>
+        <name>Loan_Reporting_Period__c</name>
+        <picklistValues>
+            <masterLabel>Calendar Year</masterLabel>
+            <translation><!-- Calendar Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiscal Year</masterLabel>
+            <translation><!-- Fiscal Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD Calendar</masterLabel>
+            <translation><!-- HUD Calendar --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Term Expiration --></label>
+        <name>Loan_Term_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Term --></label>
+        <name>Loan_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Payment --></label>
+        <name>Minimum_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Miscellaneous Payment Terms --></label>
+        <name>Miscellaneous_Payment_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Approved Loan Amount --></label>
+        <name>Original_Approved_Loan_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origination Date --></label>
+        <name>Origination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residual Receipt Percentage --></label>
+        <name>Payment_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payoff Amount --></label>
+        <name>Payoff_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payoff Date --></label>
+        <name>Payoff_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payoff Type --></label>
+        <name>Payoff_Type__c</name>
+        <picklistValues>
+            <masterLabel>Pay Off</masterLabel>
+            <translation><!-- Pay Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Write Off</masterLabel>
+            <translation><!-- Write Off --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>SDHC Loan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Loan Financial Details --></label>
+            <section>Loan Financial Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

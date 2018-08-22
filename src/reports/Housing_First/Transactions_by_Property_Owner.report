@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Date__c</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Name</field>
+    </columns>
+    <columns>
+        <field>Building__c$Name</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Unit_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r$Name</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Resource__c</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Dollar_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Subsidy_Program_Type__c</field>
+    </columns>
+    <columns>
+        <field>Building__c$Property_Owner__c.AccountNumber</field>
+    </columns>
+    <columns>
+        <field>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Unit_Tenant__c</field>
+    </columns>
+    <description>Shows a list of transactions based on the Owner of a property.</description>
+    <format>Tabular</format>
+    <name>Transactions by Property Owner</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_Unit_Transactions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Building__c.Building_Units__r.Unit_Placements__r.Unit_Transactions__r$Date__c</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

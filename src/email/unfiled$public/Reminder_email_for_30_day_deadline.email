@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="font-family: Arial, sans-serif; font-size: large;">Dear {!Receiving_User.FirstName} {!Receiving_User.LastName},</span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><font face="Times New Roman, Times, serif" size="4">Your application for the rental assistance wait list from the San Diego Housing&nbsp;Commission (SDHC) is incomplete and has not been submitted.</font></p><p><font face="Times New Roman, Times, serif" size="4"><br></font></p><p><font face="Times New Roman, Times, serif" size="4">Please log into the SDHC Online Rental Assistance Wait List Portal on SDHC’s website,&nbsp;<a href="http://www.sdhc.org/">www.sdhc.org</a>,&nbsp;to complete and submit your application.</font></p><p><font face="Times New Roman, Times, serif" size="4"><br></font></p><p><font face="Times New Roman, Times, serif" size="4">Your application will be removed if it is not submitted within the next 30 calendar days.</font></p><p><font face="Times New Roman, Times, serif" size="4"><br></font></p><p><font face="Times New Roman, Times, serif" size="4">If you have a disability and need a reasonable accommodation, please call the wait list call center at 619-578-7640.</font></p><div><font face="Times New Roman, Times, serif" size="4"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<span style="font-family: Arial, sans-serif; font-size: large;">Sincerely,</span><br style="font-family: Arial, sans-serif; font-size: large;"><span style="font-family: Arial, sans-serif; font-size: large;">SDHC Rental Assistance Division</span>]]></td>
+</tr>
+</table>

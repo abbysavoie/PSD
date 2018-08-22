@@ -1,0 +1,182 @@
+<apex:page Controller="RAD_OwnerRefOpptCntrl" doctype="html-5.0"  standardStylesheets="true" sidebar="false"  showheader="false">
+<html >
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   </head> 
+      
+    <apex:form id="frmidd"> 
+     <apex:pageMessages id="showmsg"></apex:pageMessages>
+ 
+      <apex:pageBlock title="Print: Notice of Opportunity and Notice of Referral">
+     
+          <apex:pageBlockSection columns="1">
+             <apex:pageBlockSectionItem >
+          <apex:outputLabel >Wait List <font color="red" size="2">*</font></apex:outputLabel>
+           
+                                 
+             <select name="Waitlisttype"  id="wltid"  onchange="ChangeWaitlistInfo(this)"  rerender="otherPanel,lstId">
+               <option value="">None</option>     
+                <option value="Mod Rehab">Mod Rehab</option>
+                <option value="Project Based"> Project Based</option>
+                <option value="Project Based Single">ProjectBased Single</option>
+                </select>
+                </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem > 
+                <apex:outputlabel > Selected Run ID <font color="red" size="2">*</font> </apex:outputlabel>
+                 <apex:selectList multiselect="false" size="1" id="otherPanel"  onchange="ChangeselectionidInfo(this)"  >
+                                <apex:selectOptions id="lstId" value="{!IdNames}" />
+                            </apex:selectList>
+             </apex:pageBlockSectionItem> 
+            
+                
+           <apex:pageBlockSectionItem >      
+             <apex:outputlabel > Respond By <font color="red" size="2">*</font> </apex:outputlabel> 
+            <apex:input type="date" value="{!RespondedBy}" />         
+           </apex:pageBlockSectionItem> 
+         
+           <apex:pageBlockSectionItem > 
+           <apex:outputlabel > Case Worker <font color="red" size="2">*</font> </apex:outputlabel>         
+             <apex:inputtext value="{!caseworker}" />
+             </apex:pageBlockSectionItem> 
+             
+               <apex:pageBlockSectionItem > 
+             <apex:outputlabel > Bedroom Size: <font color="red" size="2">*</font> </apex:outputlabel>
+                 
+            <apex:inputtext value="{!Bedroomsize }"/> 
+           </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >   
+            <apex:outputlabel > Unit Address <font color="red" size="2">*</font> </apex:outputlabel>  
+            <apex:inputtext value="{!Unitaddress}" />
+             </apex:pageBlockSectionItem> 
+             
+             <apex:pageBlockSectionItem >         
+             <apex:outputlabel > Owner Name <font color="red" size="2">*</font> </apex:outputlabel>
+                    
+            <apex:inputtext value="{!OwnerNamephone}" />   
+              </apex:pageBlockSectionItem> 
+              <apex:pageBlockSectionItem >         
+             <apex:outputlabel > Owner Phone <font color="red" size="2">*</font> </apex:outputlabel>
+                    
+            <apex:inputtext value="{!OwnerPhone}"/>   
+              </apex:pageBlockSectionItem> 
+              
+               <apex:pageBlockSectionItem >              
+             <apex:outputlabel > Owner Address <font color="red" size="2">*</font> </apex:outputlabel>
+                      
+            <apex:inputtext value="{!OwnerAddress}" /> 
+            </apex:pageBlockSectionItem>
+            
+              <apex:pageBlockSectionItem >                    
+            <apex:outputlabel > Contact Manager By Date <font color="red" size="2">*</font></apex:outputlabel> 
+                               
+            <apex:input type="date" value="{!ContactManagerDate}" />
+
+            <!--<apex:input type="date" value="{!ctDate}"/>-->
+              </apex:pageBlockSectionItem>                        
+              <apex:pageBlockSectionItem >                  
+             <apex:outputlabel > Notice Type <font color="red" size="2">*</font> </apex:outputlabel>          
+           <select name="noticeofopp"  id="noticeid" onchange="ChangeselectedletterInfo(this)">
+           <option value="">None</option>
+           <option value="NOletter">Notice of Opportunity Letter  </option>
+           <option value="NRletter">Notice of Referral Letter </option>
+           <option value="NORLetter">Notice of Opportunity Letter And Notice of Referral Letter</option>
+          </select>
+            </apex:pageBlockSectionItem> 
+          </apex:pageBlockSection>
+ <br/>
+ 
+  <div align="Center">
+  <apex:commandButton value="Display Selection Records" action="{!displaySelectionRecords}" rerender="disSelrec,pbid,showmsg"/> 
+ </div>
+ </apex:pageBlock>
+ 
+ 
+ 
+ 
+  <apex:pageMessages id="successPrint"/>
+ <apex:pageBlock id="pbid">
+  
+    <apex:outputpanel rendered="{!selectedRecs.size>0}" id="disSelrec" >
+            <apex:pageBlockTable value="{!selectedRecs}" var="sR"  > 
+            
+                <apex:column headervalue="Selected">
+                <apex:inputCheckbox selected="true" value="{!sR.checked}"  />
+                </apex:column>
+                <apex:column headerValue="Selection ID" value="{!sR.SelRec.name}"/>
+                <apex:column headerValue="Position" value="{!sR.SelRec.Position__c}"/> 
+                <apex:column headerValue="Name" value="{!sR.SelRec.Name__c}"/>
+                <apex:column headerValue="Prospect" value="{!sR.SelRec.Prospect__c}"/>
+               <apex:column headerValue="Lottery Rank" value="{!sR.SelRec.Lottery_Rank__c}"/>
+                <apex:column headerValue="Income Target" value="{!sR.SelRec.Income_Target__c}"/>
+                 <apex:column headerValue="Status" value="{!sR.SelRec.Status__c}"/>
+                <apex:column headerValue="Pref Points" value="{!sR.SelRec.Pref_Points__c}"/>   -->
+                               
+          </apex:pageBlockTable>
+        
+ 
+ 
+ 
+ 
+<div align="center" draggable="false" >
+
+<apex:commandButton value="Print"  action="{!submit}" rerender="successPrint" oncomplete="window.opener.window.opener.reload();" /> &nbsp;
+<apex:commandButton value="Clear"   oncomplete="window.top.location.reload()" />
+
+
+</div>
+</apex:outputPanel>
+
+
+</apex:pageBlock>
+
+
+
+<script>
+function ChangeWaitlistInfo(obj)
+{ 
+//alert(obj.value);
+//alert('chkk'); 
+var a=obj.value;
+//alert(a);   
+ChangeAccInfo(a);
+
+}
+ function ChangeselectionidInfo(obj)
+ {
+ //alert(obj.value);
+ var sid=obj.value;
+ //alert(sid);
+ changeselid(sid);
+ }
+ function  ChangeselectedletterInfo(obj)
+ {
+ //alert(obj.value);
+ var let=obj.value;
+ //alert(let);
+ ChangeletterInfo(let);
+ }
+ 
+
+ 
+</script>
+
+
+<apex:actionFunction name="ChangeAccInfo" action="{!ChangeAccInformation}" rerender="otherPanel,lstId">
+<!--<apex:param name="myParam" value="a"/>-->
+<apex:param name="myParam"  value=""  assignTo="{!wlType}" />
+</apex:actionFunction>
+
+<apex:actionFunction name="changeselid" action="{!ChangesidInformation}" rerender=" otherPanel,lstId">
+<!--<apex:param name="myParam" value="a"/>-->
+<apex:param name="myParam1"  value=""  assignTo="{!SelectedRunId}" />
+</apex:actionFunction>
+
+<apex:actionFunction name="ChangeletterInfo" action="{!ChangeletterInformation}" rerender="otherPanel,lstId">
+<!--<apex:param name="myParam" value="a"/>-->
+<apex:param name="myParam2"  value=""  assignTo="{!selectedletter}" />
+</apex:actionFunction>
+
+</apex:form>
+</html>    
+</apex:page>

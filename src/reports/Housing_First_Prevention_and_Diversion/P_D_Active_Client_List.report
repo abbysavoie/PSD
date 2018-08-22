@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Prevention_Score__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Veteran__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Referred_By__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Active__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CONTACT_CREATED</field>
+    </columns>
+    <description>Active client list</description>
+    <filter>
+        <booleanFilter>((1 OR 2)) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Contact.SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First - Prevention</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First - Diversion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.SDHC_Community_Relationship__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>P&amp;D Active Client List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LAST_ACTIVITY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

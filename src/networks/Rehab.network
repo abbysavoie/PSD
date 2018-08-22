@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>salesforce.com</loginFooterText>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>jimw@sdhc.org</emailSenderAddress>
+    <emailSenderName>Rehab</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Topics</label>
+            <position>1</position>
+            <publiclyAvailable>true</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <permissionSet>Rehab_Admin_Plus_Login</permissionSet>
+        <permissionSet>Rehab_Managers_Plus_Login</permissionSet>
+        <permissionSet>Rehab_Read_Only_User_Plus_Login</permissionSet>
+        <profile>Admin</profile>
+        <profile>Rehab Admin Plus Login</profile>
+        <profile>Rehab Manager Plus Login</profile>
+        <profile>Rehab Read Only Plus Login</profile>
+        <profile>Internal All Community Access Read Only Plus Login</profile>
+        <profile>SDHC Employee</profile>
+    </networkMemberGroups>
+    <picassoSite>Rehab1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Rehab</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>Rehab_Project__c</customTab>
+        <customTab>Area_Program__c</customTab>
+        <customTab>Building__c</customTab>
+        <defaultTab>01rt0000000GqII</defaultTab>
+        <standardTab>report</standardTab>
+        <standardTab>Contact</standardTab>
+        <standardTab>Account</standardTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>rehab</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

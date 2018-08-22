@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wait List Selection</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wait List Selections</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accepted at eli 30 --></label>
+        <name>AcceptedAtELI30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accepted at vli 50 --></label>
+        <name>AcceptedAtVLI50__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accepted at li 80 --></label>
+        <name>Acceptedatli80__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accepted at li 80+ --></label>
+        <name>Acceptedatli80plus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant at li-80 --></label>
+        <name>Applicant_at_LI_80__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant at eli-30 (75%) --></label>
+        <name>Applicant_at_eli_30_75__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant at vli-50 (25%) --></label>
+        <name>Applicant_at_vli_50_25__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applications --></label>
+        <name>Application__c</name>
+        <relationshipLabel><!-- Wait List Selections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bedroom Size --></label>
+        <name>Bedroom_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Run --></label>
+        <name>Cancel_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generation Date / Time --></label>
+        <name>Generation_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of vacancies to fill --></label>
+        <name>Number_of_vacancies_to_fill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number to Select from List --></label>
+        <name>Number_to_Select_from_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Code --></label>
+        <name>Property_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Selected --></label>
+        <name>Prospect_Selected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospects at 30eli (75%) --></label>
+        <name>Prospects_at_30eli_75__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospects at 50vli (25%) --></label>
+        <name>Prospects_at_50vli_25__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospects at eli-30 (75%) --></label>
+        <name>Prospects_at_eli_30_75__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospects at vli-50 (25%) --></label>
+        <name>Prospects_at_vli_50_25__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pull Rank --></label>
+        <name>Pull_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Scheduler Count --></label>
+        <name>RAD_Current_Scheduler_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduler Count --></label>
+        <name>RAD_Scheduler_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Eli Count --></label>
+        <name>RAD_Temp_Eli_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Li Count --></label>
+        <name>RAD_Temp_Li_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Number to Select --></label>
+        <name>RAD_Temp_Number_to_Select__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Vli Count --></label>
+        <name>RAD_Temp_Vli_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Selection Out of Order --></label>
+        <name>Reason_for_Selection_Out_of_Order__c</name>
+        <picklistValues>
+            <masterLabel>Income Targeting</masterLabel>
+            <translation><!-- Income Targeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lottery</masterLabel>
+            <translation><!-- Lottery --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Schedule Time --></label>
+        <name>Schedule_Time__c</name>
+        <picklistValues>
+            <masterLabel>10:00 AM</masterLabel>
+            <translation><!-- 10:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00 PM</masterLabel>
+            <translation><!-- 10:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 AM</masterLabel>
+            <translation><!-- 11:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 PM</masterLabel>
+            <translation><!-- 11:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 AM</masterLabel>
+            <translation><!-- 12:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 PM</masterLabel>
+            <translation><!-- 12:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 AM</masterLabel>
+            <translation><!-- 1:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 PM</masterLabel>
+            <translation><!-- 1:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 AM</masterLabel>
+            <translation><!-- 2:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 PM</masterLabel>
+            <translation><!-- 2:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 AM</masterLabel>
+            <translation><!-- 3:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 PM</masterLabel>
+            <translation><!-- 3:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 AM</masterLabel>
+            <translation><!-- 4:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 PM</masterLabel>
+            <translation><!-- 4:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 AM</masterLabel>
+            <translation><!-- 5:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 PM</masterLabel>
+            <translation><!-- 5:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 AM</masterLabel>
+            <translation><!-- 6:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 PM</masterLabel>
+            <translation><!-- 6:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 AM</masterLabel>
+            <translation><!-- 7:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 PM</masterLabel>
+            <translation><!-- 7:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 AM</masterLabel>
+            <translation><!-- 8:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 PM</masterLabel>
+            <translation><!-- 8:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 AM</masterLabel>
+            <translation><!-- 9:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 PM</masterLabel>
+            <translation><!-- 9:00 PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Date --></label>
+        <name>Scheduled_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selection Date / Time --></label>
+        <name>Selection_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit --></label>
+        <name>Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List Type --></label>
+        <name>Wait_List_Type__c</name>
+        <relationshipLabel><!-- Wait List Selections --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Cancelled</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule --></label>
+            <section>Schedule</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wait List Selection Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule Section --></label>
+            <section>Schedule Section</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Cancelled --></label>
+        <name>Cancelled</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Error --></errorMessage>
+        <name>Validate_Bedroom_for_Project_based</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bedroom size required for project based wait lists --></errorMessage>
+        <name>Validate_Bedroom_for_ProjectbasedWL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Remove value from Bedroom Size field --></errorMessage>
+        <name>Validate_Bedroom_for_section8</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sum of eli-30, vli-50 and li-80 cannot exceed the value of &quot;Number to select from list&quot; --></errorMessage>
+        <name>Validate_Sum_of_Income_targets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sum cannot exceed the value of &quot;Number to select from list&quot; --></errorMessage>
+        <name>Validate_sum_of_eli30_vli50</name>
+    </validationRules>
+</CustomObjectTranslation>

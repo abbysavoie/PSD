@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>jimw@sdhc.org</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>amandas@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>chrisg@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>emmanuela@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>jamesw@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>kianb@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>kwofir@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>siobhand@sdhc.org</sharedTo>
+        <sharedToType>CustomerPortalUser</sharedToType>
+    </folderShares>
+    <name>Portfolio Management</name>
+</ReportFolder>

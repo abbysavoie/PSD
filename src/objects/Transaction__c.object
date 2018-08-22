@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Anytime Money is paid towards a Unit, it can be logged here.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dollar_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Dollar Amount</label>
+        <precision>17</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payee__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Payee</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Unit_Transactions</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referral__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referral</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Unit_Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resource__c</fullName>
+        <description>Where the money is coming from.</description>
+        <externalId>false</externalId>
+        <label>Resource</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Security Deposit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Incentive Payment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Application Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Utility Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rental Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Contingency Fund - Damages</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Contingency Fund - Eviction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Contingency Fund - Holding Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Contingency Fund - Missed Rent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landlord Contingency Fund - Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment Readiness</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vehicle Expenses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Storage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wells Fargo - Furniture</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Wells Fargo - Hotel</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Wells Fargo – Job Training</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subsidy_Program_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Subsidy/Program Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1,000 Vets RRH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1,000 Vets SBS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VASH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RRH/SSVF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Moving Home/RRH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SBS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Prevention</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Diversion</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tenant_Unit_Placement_Agreement_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Tenant/Unit Placement Agreement ID</label>
+        <referenceTo>Unit_Placement__c</referenceTo>
+        <relationshipName>Unit_Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Tenant_Unit_Placement_Agreement_ID__r.Assigned_Unit__r.Property_Owner__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unit Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Tenant__c</fullName>
+        <externalId>false</externalId>
+        <formula>Tenant_Unit_Placement_Agreement_ID__r.Tenant__r.FirstName + &apos; &apos; +  Tenant_Unit_Placement_Agreement_ID__r.Tenant__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unit Tenant</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Transaction</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Dollar_Amount__c</columns>
+        <columns>Resource__c</columns>
+        <columns>Subsidy_Program_Type__c</columns>
+        <columns>Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>Transaction ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Transactions</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Unit_Owner__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Tenant__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Dollar_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Resource__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Subsidy_Program_Type__c</customTabListAdditionalFields>
+        <searchFilterFields>Resource__c</searchFilterFields>
+        <searchFilterFields>Subsidy_Program_Type__c</searchFilterFields>
+        <searchFilterFields>Unit_Owner__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

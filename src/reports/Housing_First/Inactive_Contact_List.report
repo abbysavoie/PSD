@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$SSN_TaxID__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Homeless__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Voucher_Type__c</field>
+    </columns>
+    <description>Shows all Contacts (Both VASH and RRH) that are marked Inactive.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>012t0000000GslT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>No</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Service_Provider_Organization__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Inactive Contact List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_Referral_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Contact$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

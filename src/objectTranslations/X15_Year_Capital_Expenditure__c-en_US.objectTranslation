@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>15 Year Capital Expenditure</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>15 Year Capital Expenditures</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deficiency Description --></label>
+        <name>Deficiency_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Immediate --></label>
+        <name>Immediate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Updated --></label>
+        <name>Last_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Project --></label>
+        <name>Loan_Project__c</name>
+        <relationshipLabel><!-- 15 Year Capital Expenditures --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Surveyed Area --></label>
+        <name>Surveyed_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 0 - 5 --></label>
+        <name>Year_0_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 11 - 15 --></label>
+        <name>Year_11_15__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 6 - 10 --></label>
+        <name>Year_6_10__c</name>
+    </fields>
+    <layouts>
+        <layout>Reserve Expenditure Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

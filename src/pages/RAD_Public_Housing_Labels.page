@@ -1,0 +1,49 @@
+<apex:page standardController="Wait_List_Selection__c" extensions="RAD_PubHsgPrintLbl"  showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"  readonly="true" 
+           renderAs="pdf">
+           <head>
+            <style type="text/css" media="print">
+            @page{
+              size:A4
+             //size:8.27in 11.69in;/* A4 width and height  21cm, 30cm */
+             margin-top:1cm;
+             margin-left:0.5cm;
+             margin-right:0.5cm;
+             margin-bottom:1cm
+              }
+    
+     </style>
+      </head>      
+        <apex:pageblock >
+           <apex:variable var="i" value="{!0}"/>
+ <apex:pageblocksection columns="3" showheader="false">
+ <apex:repeat value="{!selList}" var="sel">
+         
+         
+                <apex:outputPanel layout="block" style="float:left;width:7cm;height:2.5cm;page-break-inside:avoid;" rendered="{!NOT(ISNULL(sel.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet))}">   
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Name}"/><br/>           
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Mailingcity}"/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.MailingState}"/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Mailingpostalcode}"/>
+            </apex:outputPanel>
+           
+                
+            <apex:outputPanel layout="block" style="float:left;width:7cm;height:2.5cm;page-break-inside:avoid;" rendered="{!(ISNULL(sel.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Name}"/><br/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_City__c}"/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_State__c}"/>
+            <apex:outputField value="{!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_Zipcode__c}"/>  
+           <apex:variable var="i" value="{!i+1}"/>
+           </apex:outputPanel>
+
+            </apex:repeat>        
+            </apex:pageblocksection>       
+             </apex:pageblock>
+              
+   
+         
+           
+
+    
+</apex:page>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Physical Inspection</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Physical Inspections</value>
+    </caseValues>
+    <fields>
+        <label><!-- Balconies/Stairs/Decks --></label>
+        <name>Balconies_Stairs_Decks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bathroom --></label>
+        <name>Bathroom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Boiler Expiration --></label>
+        <name>Boiler_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Safety --></label>
+        <name>Building_Systems_Health_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Safety --></label>
+        <name>Common_Areas_Health_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community Room/Kitchen/Computer Room --></label>
+        <name>Community_Room_Kitchen_Computer_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day Care/Clinic --></label>
+        <name>Day_Care_Clinic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doors/Conditions/Egress --></label>
+        <name>Doors_Conditions_Egress__c</name>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Electrical/Lighting --></label>
+        <name>Electrical_Lighting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Electrical --></label>
+        <name>Electrical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Elevator Expiration --></label>
+        <name>Elevator_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Elevators --></label>
+        <name>Elevators__c</name>
+    </fields>
+    <fields>
+        <label><!-- FHEO (Access) --></label>
+        <name>FHEO_Access__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fencing and Gates --></label>
+        <name>Fencing_and_Gates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fire Alarms Expiration --></label>
+        <name>Fire_Alarms_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fire Monitoring Expiration --></label>
+        <name>Fire_Monitoring_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fire protection --></label>
+        <name>Fire_protection__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flooring --></label>
+        <name>Flooring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foundation --></label>
+        <name>Foundation__c</name>
+    </fields>
+    <fields>
+        <label><!-- HVAC --></label>
+        <name>HVAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Safety --></label>
+        <name>Health_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inspection Date --></label>
+        <name>Inspection_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inspection Score --></label>
+        <name>Inspection_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inspection Type --></label>
+        <name>Inspection_Type__c</name>
+        <picklistValues>
+            <masterLabel>Initial Inspection</masterLabel>
+            <translation><!-- Initial Inspection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-Inspection</masterLabel>
+            <translation><!-- Re-Inspection --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inspector --></label>
+        <name>Inspector__c</name>
+        <relationshipLabel><!-- Physical Inspections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Interior Doors --></label>
+        <name>Interior_Doors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kitchen --></label>
+        <name>Kitchen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landscape/Irrigation/Grounds --></label>
+        <name>Landscape_Irrigation_Grounds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Laundry Room --></label>
+        <name>Laundry_Room__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lighting --></label>
+        <name>Lighting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parking Lot/Carport --></label>
+        <name>Parking_Lot_Carport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage of Units Inspected --></label>
+        <name>Percentage_of_Units_Inspected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property --></label>
+        <name>Physical_Inspection_Property__c</name>
+        <relationshipLabel><!-- Physical Inspections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Play Areas/Equipment --></label>
+        <name>Play_Areas_Equipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plumbing --></label>
+        <name>Plumbing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pools --></label>
+        <name>Pools__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restrooms --></label>
+        <name>Restrooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retaining Wall --></label>
+        <name>Retaining_Wall__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roof System --></label>
+        <name>Roof_System__c</name>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Site Health and Safety --></label>
+        <name>Site_Health_and_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smoke Detectors/CO --></label>
+        <name>Smoke_Detectors_CO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Structure/Walls Framing --></label>
+        <name>Structure_Walls_Framing__c</name>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fair</masterLabel>
+            <translation><!-- Fair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good</masterLabel>
+            <translation><!-- Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor</masterLabel>
+            <translation><!-- Poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Buildings Inspected --></label>
+        <name>Total_Number_of_Buildings_Inspected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Number of Units Inspected --></label>
+        <name>Total_Number_of_Units_Inspected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trash Collectors --></label>
+        <name>Trash_Collectors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit HVAC --></label>
+        <name>Unit_HVAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Health and Safety --></label>
+        <name>Unit_Health_and_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Plumbing --></label>
+        <name>Unit_Plumbing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units Inspected --></label>
+        <name>Units_Inspected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Walkways/Surfaces --></label>
+        <name>Walkways_Surfaces__c</name>
+    </fields>
+    <fields>
+        <label><!-- Walls/Ceiling --></label>
+        <name>Walls_Ceiling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Walls Finish --></label>
+        <name>Walls_Finish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Windows/Conditions/Egress --></label>
+        <name>Windows_Conditions_Egress__c</name>
+    </fields>
+    <layouts>
+        <layout>Physical Inspection Layout</layout>
+        <sections>
+            <label><!-- Building Envelop --></label>
+            <section>Building Envelop</section>
+        </sections>
+        <sections>
+            <label><!-- Building Systems --></label>
+            <section>Building Systems</section>
+        </sections>
+        <sections>
+            <label><!-- Common Areas --></label>
+            <section>Common Areas</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Inspection Expiration Dates --></label>
+            <section>Inspection Expiration Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Site --></label>
+            <section>Site</section>
+        </sections>
+        <sections>
+            <label><!-- Units --></label>
+            <section>Units</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

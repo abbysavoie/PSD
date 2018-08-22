@@ -1,0 +1,80 @@
+<apex:page standardController="Selection_Records__c"  showHeader="false" sidebar="false"  standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+            renderAs="pdf" >
+            <head>
+            <style type="text/css" media="print">
+            @page {
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 10px;
+            position: running(header);
+            }
+            div.footer {
+             padding: 5px;
+            position: running(footer);
+            
+            }
+            p.paratext {
+            font-size:14px;
+            }
+            
+            
+            p.footertext{
+            font-family:Calibri,  letter-spacing:2px;
+            font-size:14px;
+            text-align:center;
+            margin:20px 0px;
+            
+            }
+            
+            </style>
+            </head>
+            
+            <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div>
+            </div><br/><br/>
+            <body>
+            <div class="content">     
+            <center><h3 style="line-height: 10%;">Notice of Opportunity</h3>     
+            <h4 style="font-size: 14px;">(Project Based Single)</h4></center>
+            <center><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Today()}"/></apex:outputText></center>         
+            {!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Name}<br/>          
+            <apex:outputPanel rendered="{!NOT(ISNULL(Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Mailingcity}"/>&nbsp;
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.MailingState}"/>&nbsp;
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Mailingpostalcode}"/>&nbsp;      
+            </apex:outputPanel><br/>   
+            <apex:outputPanel rendered="{!(ISNULL(Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_City__c}"/>&nbsp;
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_State__c}"/>&nbsp;
+            <apex:outputField value="{!Selection_Records__c.RAD_Wait_List__r.Applications__r.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+            </apex:outputPanel> 
+            <br/>
+            <p class="paratext">Dear Applicant:</p>
+            <p class="paratext">When you completed your application for the Section 8 Waiting List, you were also added to the Project Based Single Rental Assistance Waiting List.</p>    
+            <p class="paratext">What is Project Based Single Assistance?  It is a program that provides housing assistance to qualified, low income individuals and/or families.  Project Based Single Rental Assistance participants do not locate their own units, but rather move to a unit already on the Project Based Single program.</p>
+            <p class="paratext">A&nbsp;<apex:outputText value="{!$CurrentPage.parameters.bsize}" /> bedroom Project Based Single Rental Assistance unit that will be available is located at:</p><center><apex:outputText value="{!$CurrentPage.parameters.unitaddres}" /></center>
+            <p class="paratext">Your family is one of the families randomly selected to be referred to this unit.  If you are interested and feel that this unit is suitable, please contact the owner/manager to complete a rental application by &nbsp; <apex:outputText value="{!$CurrentPage.parameters.cmdat}" /></p> 
+            <p class="paratext">The owner/manager’s name and phone number are </p><center><apex:outputText value="{!$CurrentPage.parameters.urlparm}, Ph : {!$CurrentPage.parameters.ownPhNo}" /></center>
+            <p class="paratext">If you are selected to move into this unit, the owner/manager will contact our office to confirm your selection.  An appointment will then be scheduled to determine if you are eligible to participate in the Project Based Single Rental Assistance Program.</p>
+            <p class="paratext">If you are not selected to move into this unit and you wish to remain on our Project Based Single Waiting List (and eligible for our next random selection of families) you will need to write to the Housing Commission at the address above and request your name remain on our Project Based Single Waiting List.</p>
+            <p class="paratext">If you choose not to participate in the Project Based Single program, please do not call or write the Housing Commission.  Your name will be removed automatically from our Project Based Single Waiting List.</p>
+            <p class="paratext">Your name will remain active on our Section 8 Waiting List regardless of the decision you make regarding this Project Based Single assistance opportunity.</p>
+            <p class="paratext">If you have any questions please call me at <b>619-578-7640.</b></p>
+            <p class="paratext">Sincerely,</p><br/><br/>
+            <apex:outputText value="{!$CurrentPage.parameters.caseworkert}" /> 
+            <p class="paratext">Housing Assistant</p>         
+            <p class="paratext">Rental Assistance Department</P>
+            </div>          
+           <div class="footer">
+            <p class="footertext">San Diego Housing Commission 1122 Broadway Suite 300 San Diego CA 92101 (619) 578-7777 Fax  (619) 578-7374</p>
+            </div>        
+            </body>         
+</apex:page>

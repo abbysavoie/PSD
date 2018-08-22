@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>SiteOffLine</fullName>
+        <categories>site</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SiteOffLine</shortDescription>
+        <value>We are currently offline please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>section8_label1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>Children are not allowed. Due to the limited spacing, we require that childcare arrangements be made.The interview will last approximately one hour.</value>
+    </labels>
+    <labels>
+        <fullName>section8_label2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>If you fail to call for an appointment within 10 days from the date of this letter or if you fail to attend a scheduled appointment, your name will be dropped from the Waiting List.   If you arrive late or bring children to your appointment, you will be rescheduled for another date.   Only one rescheduled appointment is allowed. Your cooperation is appreciated.</value>
+    </labels>
+    <labels>
+        <fullName>section8_label3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>Please come prepared for your appointment.   Failure to provide all necessary paperwork will cause a delay in the processing of your case and may result in the denial of your application.</value>
+    </labels>
+    <labels>
+        <fullName>section8_label4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>If you park your car in our facility for your appointment, your parking ticket will be validated for the length of your appointment.</value>
+    </labels>
+    <labels>
+        <fullName>section8_label5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>We are in the process of reviewing your application for the Section 8 program to determine whether or not
+we are able to offer you a voucher at this time.</value>
+    </labels>
+    <labels>
+        <fullName>section8label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>section8appointmentletter</shortDescription>
+        <value>It is required that all adult members of your household (and all minors within 2 months of their 18th birthday) be present at the interview which will be conducted at our main office;</value>
+    </labels>
+</CustomLabels>

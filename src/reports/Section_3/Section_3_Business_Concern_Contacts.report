@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Account</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Contact_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Account.CSLB_or_Professional_License_Number__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Account.Primary_NAICS_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Account.Description</field>
+    </columns>
+    <columns>
+        <field>Contact$Account.Type</field>
+    </columns>
+    <columns>
+        <field>Contact$Phone</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <description>Shows the Section 3 Business Concerns and their contacts and contact information.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$Account.Account_Relationships__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Section 3</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Section 3 Business Concern Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Section_3_Business_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

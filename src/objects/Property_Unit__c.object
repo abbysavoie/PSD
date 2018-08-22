@@ -1,0 +1,2790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>this is a Unit Attached to a Property. the record type specifies which relationships it has.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AMI__c</fullName>
+        <externalId>false</externalId>
+        <label>AMI</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>35%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>40%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>45%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>50%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>55%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>65%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>80%</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Accesibility__c</fullName>
+        <externalId>false</externalId>
+        <label>Accesibility</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Active_Placements__c</fullName>
+        <externalId>false</externalId>
+        <label>Active Placements</label>
+        <summaryFilterItems>
+            <field>Unit_Placement__c.Exit_Date__c</field>
+            <operation>equals</operation>
+            <value>&apos;&apos;</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_Placement__c.Assigned_Unit__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Affordable_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Affordable Units</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Age__c</fullName>
+        <description>Rehab</description>
+        <externalId>false</externalId>
+        <label>Age</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bath_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Bath__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bath Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bath__c</fullName>
+        <externalId>false</externalId>
+        <label>Bath</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BedroomCount__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Bedroom_Type__c, &quot;Studio&quot;, 0, &quot;1 Bedroom&quot;, 1, &quot;2 Bedrooms&quot;, 2, &quot;3 Bedrooms&quot;, 3, &quot;4 Bedrooms&quot;, 4, &quot;5 Bedrooms&quot;, 5, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BedroomCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bedroom_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Bedroom Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SRO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Studio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Bedroom</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8 Bedrooms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shared Housing</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Beds__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Bedrooms</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Between_6_and_17__c</fullName>
+        <externalId>false</externalId>
+        <label>Between 6 and 17</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Building__c</fullName>
+        <externalId>false</externalId>
+        <label>Building</label>
+        <referenceTo>Building__c</referenceTo>
+        <relationshipLabel>Bulding Units</relationshipLabel>
+        <relationshipName>Building_Units</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Child_Eligibility__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Child Eligibility</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Building__r.City__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_HQS__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of HQS</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Doors_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Doors__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Doors Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Doors__c</fullName>
+        <externalId>false</externalId>
+        <label>Doors</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Electrical_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Electrical__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Electrical Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Electrical__c</fullName>
+        <externalId>false</externalId>
+        <label>Electrical</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ethnicity__c</fullName>
+        <externalId>false</externalId>
+        <label>Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Ethnicity</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Family_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Family Size</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Flooring_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Flooring__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Flooring Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Flooring__c</fullName>
+        <externalId>false</externalId>
+        <label>Flooring</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HQS_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>HQS Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pre-Inspection</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Real Time</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HVAC_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( HVAC__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HVAC Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HVAC__c</fullName>
+        <externalId>false</externalId>
+        <label>HVAC</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Handicaped__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Handicaped</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Health_Safety_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Health_Safety__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Health &amp; Safety Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Health_Safety__c</fullName>
+        <externalId>false</externalId>
+        <label>Health &amp; Safety</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Hearing__c</fullName>
+        <externalId>false</externalId>
+        <label>Hearing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Income_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Income 1</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Income 2</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Income 3</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Income</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Kitchen_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Kitchen__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Kitchen Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Kitchen__c</fullName>
+        <externalId>false</externalId>
+        <label>Kitchen</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_Contacted_Landlord__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Contacted Landlord</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Physical_Needs_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Physical Needs Assessment</label>
+        <summarizedField>Unit_GPNA__c.Inspection_Date__c</summarizedField>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>LegacyRHNumber__c</fullName>
+        <externalId>true</externalId>
+        <label>LegacyRHNumber</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meets_ADA_Requirements__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(TEXT(Accesibility__c) = &quot;Yes&quot;,Text(Hearing__c) = &quot;Yes&quot;,Text(Vision__c) = &quot;Yes&quot;),True,False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Meets ADA Requirements</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Bathrooms__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Bathrooms</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Over_60__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Over 60</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Participating__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Participating</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Plumbing_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Plumbing__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Plumbing Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plumbing__c</fullName>
+        <externalId>false</externalId>
+        <label>Plumbing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Manager_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Manager Unit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Building__r.Property_Owner__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Race__c</fullName>
+        <externalId>false</externalId>
+        <label>Race</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Race</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reason_Not_Available__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Not Available</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rented Through Housing First SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rented to Non-SDHC Tenant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Released</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rehab_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab Project</label>
+        <referenceTo>Rehab_Project__c</referenceTo>
+        <relationshipName>Units</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Released_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date that the Unit was released and SDHC no longer can use it for placement.</inlineHelpText>
+        <label>Released Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rent_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Amount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Program_Affiliation__c</fullName>
+        <description>Used for Filtering Property Units. This allows for each SDHC Department to filter on only the units they need to see.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select any and all SDHC programs this unit is affiliated with. NOTE: If you don&apos;t select your program, you probably won&apos;t see this unit represented on reports or included in counts. 
+
+This will be replacing Record Type!</inlineHelpText>
+        <label>SDHC Program Affiliation</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SDHC_Community_Relationships</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SD_CO_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( SD_CO__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SD/CO Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SD_CO__c</fullName>
+        <externalId>false</externalId>
+        <label>SD/CO</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Security_Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sex__c</fullName>
+        <externalId>false</externalId>
+        <label>Sex</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Gender</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Square_Footage__c</fullName>
+        <externalId>false</externalId>
+        <label>Square Footage</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Building__r.State__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Building__r.Street_Number_Start__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Street Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Street_Old</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Building__r.Street_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Street</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Under_6_Medical__c</fullName>
+        <externalId>false</externalId>
+        <label>Under 6 Medical</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Under_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Under 6</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Available_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date the Unit would be available to SDHC for placement.</inlineHelpText>
+        <label>Unit Available Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Name</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Number</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0 Bedroom 0 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bd 1 ba elderly down</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bd 1 ba elderly up</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bdrm  1 bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bed 1 bath Elderly - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bed 1 bath Elderly - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bed 1 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 bed 1 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Bedroom 1 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Bedroom 1 Bath Disability</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Bedroom 1 Bath Downstairs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 Bedroom 1 Bath Upstairs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 BR 1 BA DOWN FAMILY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1 BR 1 BA UP FAMILY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath  Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Disabled - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Disabled - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Elderly - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Elderly - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Family - Manager Apartment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Single Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 1 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 2 bath  Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 2 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 bed 2 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Bedroom 1 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Bedroom 2 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Bedroom 2 Bath Disability</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 BR 2 BA DOWN FAMILY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 BR 2 BA UP FAMILY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2bd+2ba downstr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2bd+2ba upstr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2bed 1 bath Disabled - Up Unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1 bath Single Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Disabled - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Disabled- Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Disabled-Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Single Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 1.5 bath Townhome Disabled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Disabled - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Disabled - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Family  Down Unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 bed 2.5 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 Bedroom 2 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 BR 2 BA TOWNHOUSE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 BR 2 BA UP FAMILY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3bd+2ba downstr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3bd+2ba upstr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 bed 2 bath Family - Down unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 bed 2 bath Family - Up unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 bed 2 bath Single Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 bed 2 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 Bedroom 2 Bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 bed 1.5 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 bed 2.5 bath Single Family</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 bed 2.5 bath Townhome</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>studio  1 bath</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commercial Suite</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vision__c</fullName>
+        <externalId>false</externalId>
+        <label>Vision</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Visitors_Older_Than_6_With_Medical__c</fullName>
+        <externalId>false</externalId>
+        <label>Visitors Older Than 6 With Medical</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visitors_Older_Than_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Visitors Older Than 6</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Walls_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Walls__c , &apos;Excellent&apos;, 0.05, &apos;Good&apos;, 0.66, &apos;Fair&apos;, 1.34, &apos;Poor&apos;, 2, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Walls Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Walls__c</fullName>
+        <externalId>false</externalId>
+        <label>Walls</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Inspection_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Year_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 10</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 10</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 11</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 11</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_12__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 12</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 12</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_13__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 13</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 13</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_14__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 14</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 14</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_15__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 15</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 15</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_16__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 16</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 16</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_17__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 17</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 17</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_18__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 18</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 18</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_19__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 19</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 19</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 1</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 1</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_20__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 20</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 20</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 2</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 2</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 3</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 3</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 4</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 4</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 5</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 5</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 6</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 6</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 7</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 7</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 8</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 8</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Year_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 9</label>
+        <summarizedField>Unit_GPNA__c.Subtotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>Unit_GPNA__c.Replacement_Year__c</field>
+            <operation>equals</operation>
+            <value>Year 9</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Unit_GPNA__c.Associated_Unit_ID__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Zip_Code_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code_Old</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Building__r.Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Property Unit</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_Finance_Units</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Housing Finance Database</value>
+        </filters>
+        <label>Housing Finance Units</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_First_Available_Units</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Bedroom_Type__c</columns>
+        <columns>Number_of_Bathrooms__c</columns>
+        <columns>Building__c</columns>
+        <columns>Property_Owner__c</columns>
+        <columns>Rent_Amount__c</columns>
+        <columns>Security_Deposit__c</columns>
+        <columns>Street_Number__c</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Housing First</value>
+        </filters>
+        <label>Housing First Available Units</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_First_Units</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>City__c</columns>
+        <columns>Street__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Housing First</value>
+        </filters>
+        <label>Housing First Units</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_First_Units_With_Placements</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>Street_Number__c</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Housing First</value>
+        </filters>
+        <label>Housing First Units With Placements</label>
+    </listViews>
+    <listViews>
+        <fullName>Portfolio_Management</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>Street_Number__c</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Portfolio Management</value>
+        </filters>
+        <label>Portfolio Management</label>
+    </listViews>
+    <listViews>
+        <fullName>Rehab_Units</fullName>
+        <columns>NAME</columns>
+        <columns>Unit_Name__c</columns>
+        <columns>Unit_Number__c</columns>
+        <columns>Street__c</columns>
+        <columns>City__c</columns>
+        <columns>State__c</columns>
+        <columns>Zip_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SDHC_Program_Affiliation__c</field>
+            <operation>includes</operation>
+            <value>Rehab</value>
+        </filters>
+        <label>Rehab Units</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>UnitID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Property Units</pluralLabel>
+    <recordTypes>
+        <fullName>Master_Unit_Record_Type</fullName>
+        <active>true</active>
+        <description>This Record Type lists all fields for Sys Admins</description>
+        <label>Master Unit Record Type</label>
+        <picklistValues>
+            <picklist>AMI__c</picklist>
+            <values>
+                <fullName>30%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>65%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>80%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bedroom_Type__c</picklist>
+            <values>
+                <fullName>1 Bedroom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SRO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shared Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Studio</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Checkbox_Results</picklist>
+            <values>
+                <fullName>%3CUnknown%3E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ethnicity</picklist>
+            <values>
+                <fullName>Hispanic%2FLatino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Hispanic%2FLatino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refuse%2FDecline to State</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Gender</picklist>
+            <values>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HQS_Type__c</picklist>
+            <values>
+                <fullName>Pre-Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Inspection_Results</picklist>
+            <values>
+                <fullName>Excellent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Poor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Race</picklist>
+            <values>
+                <fullName>American Indian%2FAlaskan Native</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black%2FAfrican American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native Hawaiian%2FOther Pacific Islander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>White</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Not_Available__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rented Through Housing First SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rented to Non-SDHC Tenant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDHC_Community_Relationships</picklist>
+            <values>
+                <fullName>Housing Finance Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portfolio Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Section 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Unit_Type__c</picklist>
+            <values>
+                <fullName>0 Bedroom 0 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 BR 1 BA DOWN FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 BR 1 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Disability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Downstairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Upstairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bd 1 ba elderly down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bd 1 ba elderly up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bdrm  1 bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Elderly - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Elderly - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 BR 2 BA DOWN FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 BR 2 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 1 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 2 Bath Disability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath  Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Disabled - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Elderly - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Elderly - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Manager Apartment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath  Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bd%2B2ba downstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bd%2B2ba upstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bed 1 bath Disabled - Up Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 BR 2 BA TOWNHOUSE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 BR 2 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled- Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled-Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Townhome Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Disabled - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family  Down Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3bd%2B2ba downstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3bd%2B2ba upstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 1%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 2%2E5 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 2%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Suite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>studio  1 bath</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Minimal_Information</fullName>
+        <active>true</active>
+        <description>Shows the Minimal Unit Information and all fields are Read Only</description>
+        <label>Minimal Information</label>
+        <picklistValues>
+            <picklist>AMI__c</picklist>
+            <values>
+                <fullName>30%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>55%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>65%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>80%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bedroom_Type__c</picklist>
+            <values>
+                <fullName>1 Bedroom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Bedrooms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Studio</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Checkbox_Results</picklist>
+            <values>
+                <fullName>%3CUnknown%3E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ethnicity</picklist>
+            <values>
+                <fullName>Hispanic%2FLatino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Hispanic%2FLatino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refuse%2FDecline to State</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Gender</picklist>
+            <values>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HQS_Type__c</picklist>
+            <values>
+                <fullName>Pre-Inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Time</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Inspection_Results</picklist>
+            <values>
+                <fullName>Excellent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Poor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Race</picklist>
+            <values>
+                <fullName>American Indian%2FAlaskan Native</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Black%2FAfrican American</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Native Hawaiian%2FOther Pacific Islander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>White</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Not_Available__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rented Through Housing First SD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rented to Non-SDHC Tenant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDHC_Community_Relationships</picklist>
+            <values>
+                <fullName>Housing Finance Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Moving Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Prevention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDHC Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Section 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Unit_Type__c</picklist>
+            <values>
+                <fullName>0 Bedroom 0 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 BR 1 BA DOWN FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 BR 1 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Disability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Downstairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Bedroom 1 Bath Upstairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bd 1 ba elderly down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bd 1 ba elderly up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bdrm  1 bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Elderly - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Elderly - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 BR 2 BA DOWN FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 BR 2 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 1 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Bedroom 2 Bath Disability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath  Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Disabled - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Elderly - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Elderly - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Manager Apartment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 1 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath  Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bd%2B2ba downstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bd%2B2ba upstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2bed 1 bath Disabled - Up Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 BR 2 BA TOWNHOUSE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 BR 2 BA UP FAMILY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled- Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Disabled-Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 1%2E5 bath Townhome Disabled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Disabled - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Disabled - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family  Down Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 bed 2%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3bd%2B2ba downstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3bd%2B2ba upstr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Bedroom 2 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Family - Down unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Family - Up unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 bed 2 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 1%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 2%2E5 bath Single Family</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 bed 2%2E5 bath Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Suite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>studio  1 bath</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Building__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Property_Owner__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Number__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Unit_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Unit_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Street__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>City__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>State__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Zip_Code__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Unit_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Unit_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Street__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>City__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>State__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Zip_Code__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Unit_Name__c</searchFilterFields>
+        <searchFilterFields>Unit_Number__c</searchFilterFields>
+        <searchFilterFields>Street__c</searchFilterFields>
+        <searchFilterFields>City__c</searchFilterFields>
+        <searchFilterFields>State__c</searchFilterFields>
+        <searchFilterFields>Zip_Code__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Unit_Currently_Vacant_Reason_Required</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( TEXT(Unit_Currently_Vacant__c) = &apos;No&apos;, ISBLANK( TEXT(Reason_Not_Available__c) ) )</errorConditionFormula>
+        <errorDisplayField>Reason_Not_Available__c</errorDisplayField>
+        <errorMessage>If the Unit is Not Currently Vacant, you must supply a &quot;Reason Not 
+Available&quot;.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Deferred Developer Fee Payment/Balance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Deferred Developer Fee Payments/Balances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Financial Item --></label>
+        <name>Actual_Financial_Item__c</name>
+        <relationshipLabel><!-- Deferred Developer Fee Payments/Balances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DDF Balance --></label>
+        <name>DDF_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- DDF Interest --></label>
+        <name>DDF_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- DDF Total Outstanding Balance --></label>
+        <name>DDF_Total_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- DDF Total Payment --></label>
+        <name>DDF_Total_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deferred Developer Fee --></label>
+        <name>Deferred_Developer_Fee__c</name>
+        <relationshipLabel><!-- Deferred Developer Fee Payments/Balances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment to DDF Balance --></label>
+        <name>Payment_to_DDF_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment to DDF Interest --></label>
+        <name>Payment_to_DDF_Interest__c</name>
+    </fields>
+    <layouts>
+        <layout>Deferred Developer Fee Payment/Balance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- DDF Details --></label>
+            <section>DDF Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

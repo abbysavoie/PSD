@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AcceptedAtELI30__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted at eli 30</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Leased</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>eli30</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>AcceptedAtVLI50__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted at vli 50</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Leased</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>vli50</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Acceptedatli80__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted at li 80</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Leased</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>eli80</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Acceptedatli80plus__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted at li 80+</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Leased</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>li80+</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_at_LI_80__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant at li-80</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_at_eli_30_75__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant at eli-30 (75%)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_at_vli_50_25__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant at vli-50 (25%)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Applications</label>
+        <referenceTo>Applications__c</referenceTo>
+        <relationshipLabel>Wait List Selections</relationshipLabel>
+        <relationshipName>Wait_List_Selections</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bedroom_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Bedroom Size</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancel_Run__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cancel Run</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Generation_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Generation Date / Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_vacancies_to_fill__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of vacancies to fill</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_to_Select_from_List__c</fullName>
+        <externalId>false</externalId>
+        <formula>CEILING (Number_of_vacancies_to_fill__c * (100 / VALUE( Wait_List_Type__r.Lease_Up__c ) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number to Select from List</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Property_Code</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Prospect_Selected__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Selected</label>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Prospects_at_30eli_75__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospects at 30eli (75%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospects_at_50vli_25__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospects at 50vli (25%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospects_at_eli_30_75__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospects at eli-30 (75%)</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>eli-30</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Prospects_at_vli_50_25__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospects at vli-50 (25%)</label>
+        <summaryFilterItems>
+            <field>Selection_Records__c.Income_Target__c</field>
+            <operation>equals</operation>
+            <value>eli-50</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Selection_Records__c.Selection_ID__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Pull_Rank__c</fullName>
+        <externalId>false</externalId>
+        <label>Pull Rank</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Current_Scheduler_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Scheduler Count</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Scheduler_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduler Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Temp_Eli_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp Eli Count</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Temp_Li_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp Li Count</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Temp_Number_to_Select__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp Number to Select</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Temp_Vli_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp Vli Count</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Selection_Out_of_Order__c</fullName>
+        <defaultValue>&quot;Income Targeting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Reason for Selection Out of Order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Income Targeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lottery</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Schedule_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Schedule Time</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>12:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11:00 AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10:00 PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11:00 PM</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduled Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Selection_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Selection Date / Time</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <defaultValue>&quot;pending&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Unit</label>
+        <length>10</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wait_List_Type__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Wait List Type</label>
+        <referenceTo>Wait_List_Type__c</referenceTo>
+        <relationshipLabel>Wait List Selections</relationshipLabel>
+        <relationshipName>Wait_List_Selections</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Wait List Selection</label>
+    <listViews>
+        <fullName>All_Data</fullName>
+        <columns>NAME</columns>
+        <columns>Wait_List_Type__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Status__c</columns>
+        <columns>Bedroom_Size__c</columns>
+        <columns>Scheduled_Date__c</columns>
+        <columns>Schedule_Time__c</columns>
+        <columns>Number_to_Select_from_List__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Data View</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SL-{0000000000}</displayFormat>
+        <label>Selection Run ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Wait List Selections</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Cancelled</fullName>
+        <active>true</active>
+        <label>Cancelled</label>
+        <picklistValues>
+            <picklist>Reason_for_Selection_Out_of_Order__c</picklist>
+            <values>
+                <fullName>Income Targeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lottery</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Schedule_Time__c</picklist>
+            <values>
+                <fullName>1%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Validate_Bedroom_for_Project_based</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(  
+
+  Wait_List_Type__c = &apos;Mod Rehab&apos; , true, false) 
+
+ &amp;&amp;    
+
+ISBLANK( Bedroom_Size__c )</errorConditionFormula>
+        <errorMessage>Error</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Bedroom_for_ProjectbasedWL</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND ( IF( 
+ Wait_List_Type__r.Name = &apos;Project Based&apos; , true, false)   || 
+IF( 
+ Wait_List_Type__r.Name = &apos;Project Based Single&apos; , true, false) 
+||
+IF( 
+ Wait_List_Type__r.Name = &apos;Public Housing&apos; , true, false) 
+ 
+||
+IF( 
+ Wait_List_Type__r.Name = &apos;Mod Rehab&apos; , true, false))
+
+&amp;&amp; 
+ISBLANK( Bedroom_Size__c )</errorConditionFormula>
+        <errorMessage>Bedroom size required for project based wait lists</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Bedroom_for_section8</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(IF( 
+Wait_List_Type__r.Name = &apos;Section 8&apos; , true, false) 
+|| 
+IF( 
+Wait_List_Type__r.Name = &apos;NED&apos; , true, false)) 
+&amp;&amp; 
+NOT(ISBLANK( Bedroom_Size__c ))</errorConditionFormula>
+        <errorMessage>Remove value from Bedroom Size field</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Sum_of_Income_targets</fullName>
+        <active>true</active>
+        <errorConditionFormula>Applicant_at_eli_30_75__c +  Applicant_at_LI_80__c +  Applicant_at_vli_50_25__c   &gt;  Number_to_Select_from_List__c</errorConditionFormula>
+        <errorMessage>Sum of eli-30, vli-50 and li-80 cannot exceed the value of &quot;Number to select from list&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_sum_of_eli30_vli50</fullName>
+        <active>true</active>
+        <errorConditionFormula>Applicant_at_eli_30_75__c + Applicant_at_vli_50_25__c   &gt;  Number_to_Select_from_List__c</errorConditionFormula>
+        <errorMessage>Sum cannot exceed the value of &quot;Number to select from list&quot;</errorMessage>
+    </validationRules>
+</CustomObject>

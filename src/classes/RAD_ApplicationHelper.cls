@@ -5,11 +5,12 @@ public class RAD_ApplicationHelper{
     public Map<Id, Applications__c> oldAppsMap;
     public Map<Id, Applications__c> newAppsMap;
     public Map<Id, String> appEmailMap;
-    public EmailTemplate templateId_SD;
-    public EmailTemplate templateId_NSD;
-    
+    public RAD_Configuration__c confg = new RAD_Configuration__c();
+ 
+
     public RAD_ApplicationHelper(List<Applications__c> applicationRecs_new, List<Applications__c> applicationRecs_old)
     {
+        this.confg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
         this.ApplicationRecs_new = applicationRecs_new;
         this.ApplicationRecs_old = applicationRecs_old;
         newAppsMap= new Map<Id, Applications__c>();
@@ -30,8 +31,8 @@ public class RAD_ApplicationHelper{
         List<Id> tempApps = new List<id>();
         tempApps.addAll(appEmailMap.keyset());
         System.debug('DLS tempApps collection is: '+ tempApps);
-        for(Applications__c app:[SELECT applicant__r.email, applicant__r.EmailBouncedDate, id FROM Applications__c WHERE id IN :tempApps ]){
-            if(app.applicant__r.EmailBouncedDate==null){
+        for(Applications__c app:[SELECT applicant__r.email, applicant__r.paperless_email_only__c, applicant__r.EmailBouncedDate, id FROM Applications__c WHERE id IN :tempApps ]){
+            if((app.applicant__r.EmailBouncedDate==null)&&(app.applicant__r.paperless_email_only__c)){
                 appEmailMap.put(app.id,app.Applicant__r.email);
                 System.debug('DLS Email being added to map: '+ app.id);
             }
@@ -47,9 +48,8 @@ public class RAD_ApplicationHelper{
             Map<Id, Contact> mapCts = new Map<Id, Contact>();
             Set<Id> ctIds = new Set<Id>();
             Set<Id> setSubmittedApplicationContacts = new Set<Id>();
-            
-            RAD_Configuration__c cnfg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
-            Integer totalMonths = Integer.valueOf(cnfg.Update_Duration_Months__c) + Integer.valueOf(cnfg.RAD_Purge_Extension_Months__c);
+            //RAD_Configuration__c cnfg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
+            Integer totalMonths = Integer.valueOf(confg.Update_Duration_Months__c) + Integer.valueOf(confg.RAD_Purge_Extension_Months__c);
             
             for(Applications__c apl : (List<Applications__c>)Trigger.new)
             {
@@ -65,7 +65,7 @@ public class RAD_ApplicationHelper{
                     Integer offset = UserInfo.getTimezone().getOffset(apl.Applied_Date_time__c);
                     Datetime dtLocal = (apl.Applied_Date_time__c).addSeconds(offset/1000);
                     apl.Applied_Date_Time_With_Seconds__c = (apl.Applied_Date_time__c).format('MM/dd/yyyy hh:mm:ss a');   
-                    apl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(cnfg.Update_Duration_Months__c));
+                    apl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(confg.Update_Duration_Months__c));
                     apl.RAD_Next_Purge_Date__c =  Datetime.Now().addMonths(totalMonths);                                                 
                 }
                 else if(apl.Application_Status__c == 'Saved')
@@ -249,15 +249,23 @@ public class RAD_ApplicationHelper{
             
         }
     }
+    @future
+    public static void saveWaitlist(String wl)
+    {
+        
+
+    
+    }
     
     public void processApplnBeforeUpdate()
     {
         Set<Id> setSubmittedApplicationContacts = new Set<Id>();
-        RAD_Configuration__c cnfg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
+        //RAD_Configuration__c confg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
         
         for(Applications__c appl:(List<Applications__c>)Trigger.new)
         {
-            Integer totalMonths = Integer.valueOf(cnfg.Update_Duration_Months__c) + Integer.valueOf(cnfg.RAD_Purge_Extension_Months__c); 
+            
+            Integer totalMonths = Integer.valueOf(confg.Update_Duration_Months__c) + Integer.valueOf(confg.RAD_Purge_Extension_Months__c); 
             if(appl.Application_Status__c == 'Submitted')
             {
                 setSubmittedApplicationContacts.add(appl.Applicant__c);
@@ -281,7 +289,7 @@ public class RAD_ApplicationHelper{
                 
                 if(appl.RAD_Next_Purge_Request_Date__c == Null && appl.RAD_Next_Purge_Date__c == Null)  
                 {
-                    appl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(cnfg.Update_Duration_Months__c));
+                    appl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(confg.Update_Duration_Months__c));
                     appl.RAD_Next_Purge_Date__c =  Datetime.Now().addMonths(totalMonths);                                                 
                 }
                 
@@ -299,7 +307,7 @@ public class RAD_ApplicationHelper{
             if(appl.Application_Status__c == 'Update Required' && appl.Update_Confirmation__c == True)
             {
                 appl.RAD_Last_Update_Date__c = Datetime.Now();
-                appl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(cnfg.Update_Duration_Months__c));
+                appl.RAD_Next_Purge_Request_Date__c = Datetime.Now().addMonths(Integer.valueOf(confg.Update_Duration_Months__c));
                 appl.RAD_Next_Purge_Date__c =  Datetime.Now().addMonths(totalMonths);
                 appl.Application_Status__c = 'Submitted';
             } 
@@ -324,8 +332,8 @@ public class RAD_ApplicationHelper{
             
             System.debug('DLS--processing update');
             if(!(UserInfo.getName() =='Dell Boomi')){
-            	sendEmailIfPublicInfoChanged();  
-        		}
+                sendEmailIfPublicInfoChanged();  
+            }
             //Send email to client if any of the public fields is edited:
             List<Messaging.SingleEmailMessage> emailLst = new List<Messaging.SingleEmailMessage>();
             
@@ -333,7 +341,7 @@ public class RAD_ApplicationHelper{
             for( Wait_List_Type__c wlt : [Select name, RADDisabled_Family__c, RADFamily__c, RADHomeless_with_disability__c, RADLive_Work_in_City_of_San_Diego__c,
                                           RADVeteran_Active_Military__c, RADNon_Elderly_Disabled__c from Wait_List_Type__c] ){
                                               wltMap.put(wlt.name, wlt);
-                                          }
+            }
             
             
             
@@ -354,7 +362,20 @@ public class RAD_ApplicationHelper{
                                              Spouse_Co_Head_If_applicable__c, Dependents_Children_under_age_of_18__c,
                                              Family__c, Homeless_with_disability__c, Live_Work_in_City_of_San_Diego__c, Applicant__r.Email, Applicant__r.Paperless_Email_only__c, Non_Elderly_Disabled__c, Veteran_Family_of__c,
                                              Section_8__c, NED_Non_Elderly_Person_with_Disability__c, PBV_Project_Based__c, PBVS_Project_Based_Single__c , Public_Housing__c,
-                                             Family_Annual_Income__c, of_people_in_the_H_H_Adults__c, Applied_Date_time__c from Applications__c where id in : trigger.new];       
+                                             Family_Annual_Income__c, of_people_in_the_H_H_Adults__c, Applied_Date_time__c, 
+                                             (Select Id,name, Applications__c ,Applications__r.of_people_in_the_H_H_Adults__c, Applications__r.Family__c, SFDC_Original_Datetime__c,
+                                                 Applications__r.Spouse_Co_Head_If_applicable__c, Applications__r.Dependents_Children_under_age_of_18__c,
+                                                 Applications__r.Homeless_with_disability__c, Applications__r.Live_Work_in_City_of_San_Diego__c, Applications__r.Non_Elderly_Disabled__c,
+                                                 Applications__r.Veteran_Family_of__c, Applications__r.Applied_Date_time__c,
+                                                 Applications__r.Family_Annual_Income__c, RAD_Applied_Date_and_Time__c,
+                                                 Wait_List_Type__c, Wait_List_Type__r.Name,Current_Status__c from Enrolled_Wait_Lists__r),
+                                             (Select name, Application__c , Application__r.Family__c, Application__r.Disabled_Family__c , Application__r.Elderly_Family__c ,
+                                                 Application__r.Homeless_with_disability__c, Application__r.Live_Work_in_City_of_San_Diego__c, Application__r.Non_Elderly_Disabled__c,
+                                                 Application__r.Homeless__c, Application__r.Veteran_Family_of__c, Application__r.Applied_Date_time__c,
+                                                 End_Date__c, Status__c   from Preferences__r)
+                                              from Applications__c where id in : trigger.new];       
+            List<Enrolled_Wait_List__c> enrolledWL = new List<Enrolled_Wait_List__c>();
+            List<Preferences__c> prefList = new List<Preferences__c>();
             for(Applications__c applRec: applLst)
             {
                 if( ((Applications__c)Trigger.oldMap.get(applRec.id)).Application_Status__c != applRec.Application_Status__c){
@@ -387,6 +408,14 @@ public class RAD_ApplicationHelper{
                     mmo.Applications__c = applRec.Id;
                     mmoLst.add(mmo);   
                 }
+                if (applRec.Enrolled_Wait_Lists__r <> Null)
+                {
+                    enrolledWL.AddAll(applRec.Enrolled_Wait_Lists__r);
+                }
+                if (applRec.Preferences__r <> Null)
+                {
+                    prefList.AddAll(applRec.Preferences__r);
+                }
             }
             if(!mmoLst.isEmpty())
             {
@@ -415,12 +444,15 @@ public class RAD_ApplicationHelper{
             
             if(!(UserInfo.getName() =='Dell Boomi'))
             {
+                /*
                 for(Enrolled_Wait_List__c wls : [Select name, Applications__c ,Applications__r.of_people_in_the_H_H_Adults__c, Applications__r.Family__c, SFDC_Original_Datetime__c,
                                                  Applications__r.Spouse_Co_Head_If_applicable__c, Applications__r.Dependents_Children_under_age_of_18__c,
                                                  Applications__r.Homeless_with_disability__c, Applications__r.Live_Work_in_City_of_San_Diego__c, Applications__r.Non_Elderly_Disabled__c,
                                                  Applications__r.Veteran_Family_of__c, Applications__r.Applied_Date_time__c,
                                                  Applications__r.Family_Annual_Income__c, RAD_Applied_Date_and_Time__c,
                                                  Wait_List_Type__c, Wait_List_Type__r.Name,Current_Status__c from Enrolled_Wait_List__c where Applications__c in: Trigger.New])
+                */
+                for (Enrolled_Wait_List__c wls : enrolledWL)
                 {
                     
                     //eg, if there is a wl for sec 8 with any status, do not create WL, just update it if the wl status is onlist
@@ -483,11 +515,16 @@ public class RAD_ApplicationHelper{
             //Yardi preferences - make sure preferences base records exist otherwise create.
             if(!System.isBatch() && !(UserInfo.getName() =='Dell Boomi'))
             {
+                if(prefList != Null)
+                {
+                    preferences_exist = prefList;
+                }
+                /*
                 preferences_exist = [Select name, Application__c , Application__r.Family__c, Application__r.Disabled_Family__c , Application__r.Elderly_Family__c ,
                                      Application__r.Homeless_with_disability__c, Application__r.Live_Work_in_City_of_San_Diego__c, Application__r.Non_Elderly_Disabled__c,
                                      Application__r.Homeless__c, Application__r.Veteran_Family_of__c, Application__r.Applied_Date_time__c,
                                      End_Date__c, Status__c   from Preferences__c where Application__c in: Trigger.New];
-                
+                */
             }
             
             List<Preferences__c > preferences_listnew = new List<Preferences__c >();
@@ -629,13 +666,18 @@ preferences_listnew.add(new Preferences__c(Application__c = appl.Id, End_Date__c
             if(!(UserInfo.getName() =='Dell Boomi'))
             {
                 //SET YARDI PREFERENCES
-                List<Preferences__c> preferences_list= [Select name, Application__c , Application__r.Family__c, Application__r.Disabled_Family__c , Application__r.Elderly_Family__c ,
+                
+                List<Preferences__c> preferences_list= preferences_listnew;
+                /*
+                [Select name, Application__c , Application__r.Family__c, Application__r.Disabled_Family__c , Application__r.Elderly_Family__c ,
                                                         Application__r.Homeless_with_disability__c, Application__r.Live_Work_in_City_of_San_Diego__c, Application__r.Non_Elderly_Disabled__c,
                                                         Application__r.Homeless__c, Application__r.Veteran_Family_of__c,
                                                         End_Date__c, Status__c   from Preferences__c where Application__c in: Trigger.New];
+                */
                 Boolean updtPref = false;
                 for(Preferences__c pref : preferences_list)
                 {
+                
                     updtPref = false;
                     if(pref.Name == 'Live/Work in City of San Diego'){
                         if( pref.Application__r.Live_Work_in_City_of_San_Diego__c == true){
@@ -822,6 +864,7 @@ preferences_listnew.add(new Preferences__c(Application__c = appl.Id, End_Date__c
     /*
 Set 'Send to Boomi flag' on contacts if the Application corresponding to the contact is in Submitted Status
 */
+
     public static void setSendToBoomiOnContacts(Set<Id> setContactIds)
     {
         //Retrieve all contacts related to the submitted list of applications. setContactIds contains all contacts that satisfy this criteria
@@ -836,15 +879,18 @@ Set 'Send to Boomi flag' on contacts if the Application corresponding to the con
             update lstContacts;
         }
     }
-    
+
     public void sendEmailIfPublicInfoChanged(){
+         EmailTemplate templateId_SD;
+         EmailTemplate templateId_NSD;
+    
         System.debug('DLS--Entering method');
         
         System.debug('*****Code is being called. Batch status is '+ System.isBatch());
         //Create list to hold all outgoing emails
         transient List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
         List<EmailTemplate> templates = [Select DeveloperName, id from EmailTemplate 
-                                       where DeveloperName in ('Status_update_email','Status_update_email_not_living')];
+                                         where DeveloperName in ('Status_update_email','Status_update_email_not_living')];
         for(EmailTemplate e:templates){
             if (e.DeveloperName =='Status_update_email')
                 templateId_SD=e;
@@ -998,31 +1044,32 @@ Set 'Send to Boomi flag' on contacts if the Application corresponding to the con
                     {
                         
                         createMemo(app.id);
-						                   
+                        
                     }
+                    
                 }
             }
             //ID jobID = System.enqueueJob(new RAD_QueueableApplicationUpdateEmail(emails));
             
             System.debug('*****calling sendEmail from DLS code');
-            Messaging.SendEmailResult[] results = Messaging.sendEmail(emails);
-            System.debug('DLS-- email results: '+ results);
-            for(Messaging.SendEmailResult res:results)
-                if (res.success) 
-            {
-                System.debug('DLS--The email was sent successfully.');
-                
-            } else 
-            {   //Go through the results and set up memos for failed emails
-                System.debug('DLS--The email failed.');
-                createMemo(res.getErrors()[0].getTargetObjectId());
-                
+            if (emails.size()>0){
+                Messaging.SendEmailResult[] results = Messaging.sendEmail(emails);
+                System.debug('DLS-- email results: '+ results);
+                for(Messaging.SendEmailResult res:results)
+                    if (res.success) 
+                {
+                    System.debug('DLS--The email was sent successfully.');
+                    
+                } else 
+                {   //Go through the results and set up memos for failed emails
+                    System.debug('DLS--The email failed.');
+                    createMemo(res.getErrors()[0].getTargetObjectId());
+                    
+                }
             }
- 
         } 
     }
-
-    @future
+    
     public static void createMemo(Id targetId){
         System.debug('DLS--The email failed to send');
         Memo__c newMemo = new Memo__c();

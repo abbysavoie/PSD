@@ -1,0 +1,1429 @@
+<apex:page id="pgid" controller="RAD_LoginRegisterCtrl"  doctype="HTML-5.0" sidebar="false" showHeader="false" standardStylesheets="false"  applyBodyTag="false" applyHtmlTag="false" >
+
+    <apex:composition template="RAD_SiteTemplate">
+
+        <apex:define name="css_scripts">
+            <apex:includeScript value="{!URLFOR($Resource.RAD_LogRegJS)}"/>
+        </apex:define>
+  
+        <apex:define name="body">
+            <div id="login-modal">
+                <div class="row">
+                    <div class="col-md-4 col-xs-offset-1">
+                        <h1 class="boldheading" html-aria-describedby="helpBlock">Existing User {!randompassword}</h1>
+                        <p id="helpBlock" class="help-block1">* Required Fields</p>
+                        <div class="form-horizontal">
+                            <div class="form-group has-feedback">
+                                <input type="text" id="usernameId" name="username" value="" aria-describedby="inputSuccess2Status" class="form-control col-md-4 required" placeholder="Username"/>
+                                <div id="usernameId-error" style="display:none;"> <font color="red"> Please Enter your Email Address. </font></div>
+                                <div id="usernameId-error1" style="display:none;"> <font color="red"> Please enter valid email address </font></div>
+                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                <span id="inputSuccess2Status" class="sr-only ">(required)</span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="password" id="passwordId" name="password" value="" aria-describedby="inputSuccess2Status" class="form-control col-md-4 required" placeholder="Password"/>
+                                <div id="passwordId-error" style="display:none;"> <font color="red"> Please enter your password. </font></div>
+                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                <span id="inputSuccess2Status" class="sr-only ">(required)</span>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <a href="#" data-toggle="modal" data-target="#forgotPasswordModal" class="popup-modal" onclick="FillUserName();">Forgot password?</a>  &nbsp; &nbsp;
+                                    </div>
+                                    <div class="form-group" style="float:right;">
+                                        <a href="#" data-toggle="modal" data-target="#forgotuserNameModal" class="popup-modal" onClick="FillEmailAddr();" >Forgot username?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  class="row" style="color:red;font-size:12px;font-weight:bold;background-color: #FFFF00;">                            
+                                <apex:pageMessages id="msgz" />
+                            </div>
+
+                            <div class="form-group">
+                                <apex:commandButton onclick="ValidateLogin();" html-aria-describedby="helpBlock" oncomplete="" id="loginButton" value="Login" styleClass="btn btn-primary btn-lg btn-block col-md-4" style="margin-bottom: 5px;" />
+                                <!--<apex:commandButton action="{!passwordchange}" html-aria-describedby="helpBlock" oncomplete="" id="ResetloginButton" value="Reset" reRender="fmId" styleClass="btn btn-primary btn-lg btn-block col-md-4" style="margin-bottom: 5px;" />-->
+                                <p id="helpBlock" class="help-block">Login to your account to continue.</p>
+                            </div>
+                            
+                            <div  class="form-group">
+                                <div>
+                                <h1 class="boldheading " html-aria-describedby="helpBlock"  >Search User</h1>
+                                
+                                </div>
+                                <div>
+                                Enter your SSN and Last Name below to look up your account
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="ssn_ID" name="ssnID" onkeyup="SsnSearch();" maxlength="11" value="" aria-describedby="inputSuccess2Status" class="form-control col-md-4 required" placeholder="Enter your SSN Here"/>
+                                <div id="ssnsearch-error" class="hidden" style="color:red;"></div>
+                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>                                
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="ssnLName_ID" name="ssnLNameID" onkeyup="SsnSearch();" maxlength="25" value="" aria-describedby="inputSuccess2Status" class="form-control col-md-4 required" placeholder="Enter your Last Name Here"/>
+                                <div id="ssnlname-error" class="hidden" style="color:red;"></div>
+                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                            </div>
+                            <div  class="row" style="color:red;font-size:12px;font-weight:bold;background-color: #FFFF00;">                            
+                                <apex:pageMessages id="ssnsearchmsg"/>
+                            </div>
+                            <div class="form-group">
+                                <apex:commandButton html-aria-describedby="helpBlock" oncomplete="" id="ssnButton" onclick="validateSSNsearch();return false;" value="Search" styleClass="btn btn-primary btn-lg btn-block col-md-4" style="margin-bottom: 5px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-offset-1">
+                        <h1 class="boldheading">New Users</h1>
+                        <a class="text-primary boldheading" id="regAccount" style="text-decoration:none;cursor:pointer;" onclick="registerAccount(); return false;"> Click here to Register</a>
+                    </div>
+                </div>
+            </div>
+            <!--------------------login model End---->
+            
+            <main role="main">
+                <div id="register-modal" class="hidden"> 
+                <apex:inputHidden value="{!hasErrMsg}" id="msg2"> </apex:inputHidden>
+                
+                    <div class="l-constrained l-padding-mobile-hd background-white">
+                        <div class="container-fluid"> 
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h1 class="start">Create Your Profile Here</h1>
+                                    <p id="helpBlock" style="color:red;font-size:12px;" class="help-block1">* Required Fileds</p>
+                                    <!--<h2><center>Create Your Profile Here</center></h2>-->
+                                    
+                                    
+                                    <!--apex:outputPanel >
+                                        <div Class="form-horizontal" >
+                                            <apex:outputLabel id="msg2" styleClass="alert alert-danger errors" style="list-style-type: none;" value="{!strErrMsg}" ></apex:outputLabel>
+                                        </div>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel id="msg3" rendered="{!strErrMsg!=null}" >
+                                        <div Class="form-horizontal"  >
+                                            <apex:outputLabel  id="msg4" styleClass="alert alert-danger errors" style="list-style-type: none;" value="{!strErrMsg}" ></apex:outputLabel>
+                                        </div>
+                                    </apex:outputPanel-->
+                                    
+                                    
+                                </div>
+                            </div>
+                            <fieldset>      
+                                <div class="row">
+                                    <h1 class="formheaders" style="margin-left:16px;">Personal Information</h1>
+                                    <div class="row">
+                                        <div class="col-md-12"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group" style="position:static;">
+                                                    <label for="input_text">Choose your username</label>
+                                                    <div class="has-feedback">
+                                                        <input type="username" id="HRusrnameId" onchange="ValidateuserNameDetail();" name="usrname" value=""  Class="form-control" placeholder="User Name"/>
+                                                        <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                                        <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                        <div id="HRuserNameId1-error" style="display:none;"> <font color="red">Please enter a username</font></div>
+                                                        <div id="HRuserNameId-error" style="display:none;"> <font color="red">That username is taken. Try another.</font></div>
+                                                        <div id="HRuserNameId2-error" style="display:none;"> <font color="red">Username should be in the email format </font></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-6">
+                                                <div class="checkbox" style="position:static;">
+                                                    <!--<label for="check_avail">
+                                                        <input type="checkbox" name="check_avail" id="check_avail">
+                                                            <span>Check availability </span> 
+                                                        </input>
+                                                    </label>
+                                                    <label for="input_text">&nbsp;</label>
+                                                    <!--<input type="button" class="button" onclick="ValidateuserNameDetail();" value="Check Availability"/>
+                                                    <!--<button type="button" id="usercheck_avail" onclick="ValidateuserNameDetail();" class="btn btn-primary">Check Availability</button>
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-text-1">First Name</label>
+                                            <div class="has-feedback">
+                                                <!-- Narasimha 27/06/2017 start -->
+                                                <input type="text" id="HRFnmId" name="fname" Class="form-control"  placeholder="First Name"/>
+                                               
+                                                <script>
+                                                $("#HRFnmId").keyup(function () { 
+                                                var newValue = $(this).val().replace(/[^a-zA-Z\s]+$/,'');
+                                                $(this).val(newValue);    
+                                                                });
+                                                </script>
+                                                 <!-- Narasimha 27/06/2017 END -->
+                                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                                <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                <div id="HRFnmId-error" style="display:none;" display="Dynamic"> <font color="red"> Please enter your first name. </font></div>
+                                                <div id="HRFnmvalidateId-error" style="display:none;"> <font color="red">Entered phone and fisrt name already exists.Please login to your account </font></div>
+                                            </div>
+                                        </div> 
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-id-2">Last Name</label>
+                                            <div class="has-feedback">
+                                                <!-- Narasimha 27/06/2017 start -->
+                                                <input type="text" id="HRLnmId" name="lname" value="" Class="form-control"  placeholder="Last Name"/>
+                                                <script>
+                                                $("#HRLnmId").keyup(function () { 
+                                                var newValue = $(this).val().replace(/[^a-zA-Z\s]+$/,'');
+                                                $(this).val(newValue);    
+                                                                });
+                                                </script>
+                                                <!-- Narasimha 27/06/2017 END -->
+                                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                                <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                <div id="HRLnmId-error" style="display:none;"> <font color="red"> Please enter your last name. </font></div>
+                                                <div id="HRLnmId_1-error" style="display:none;"> <font color="red"> Minimum two characters allowed. </font></div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-id-4">Email</label>
+                                            <input type="email" id="HRemailId" name="email" value="" onchange="papercheck();" Class="form-control" placeholder="Email"/>
+                                            <div id="HREmailPhonevalidateId-error" style="display:none;"> <font color="red">Enetred phone and email already exists.Please login to your account </font></div>
+                                            <div id="HREmailvalidateId-error" style="display:none;"> <font color="red">Enetred email already exists.Please login to your account </font></div>
+                                            <div id="HREmailPaperless-error" style="display:none;"> <font color="red">Please enter an email as you have opted for paperless </font></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-id-3">Gender</label>
+                                            <div class="has-feedback">
+                                                <select name="Gender" class="form-control" id="HRgenderId">
+                                                    <option value="None">Select</option><option value="Male">Male</option><option value="Female">Female</option>                
+                                                    <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                                    <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                </select>
+                                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                                <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                <div id="HRgenderId-error" style="display:none;"> <font color="red"> Please select your Gender </font></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row" id="dob_Id">
+                                            <div class="col-md-3">
+                                                <div class="has-feedback">
+                                                    <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;margin:-10px 5px;" aria-hidden="true"></span>
+                                                    <span id="SuccessStatus" class="sr-only">(required)</span>
+                                                </div>
+                                                <div class="form-group" style="position: static;">
+                                                    <!--<div class="has-feedback">
+                                                        <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                                        <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                    </div>-->
+                                                    <label>Date of Birth </label>
+                                                    
+                                                    <label for="HRmonthId" input="hide"></label>
+                                                    <select name="mm"  class="form-control" onchange="calculateAge();" id="HRmonthId" >
+                                                        <option value="0">Month</option>
+                                                        <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>                
+                                                    </select>
+                                                    <div id="HRmonthId-error" style="display:none;"> <font color="red"> Please enter the Month </font></div>                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group" style="position: static;">
+                                                    <label>&nbsp;</label>
+                                                    <label for="dateday" input="hide"></label>
+                                                    <select name="dd" id="dateday" onchange="calculateAge();" class="form-control">
+                                                        <option value="0">Day</option>
+                                                        <option value="1" >01 </option><option value="2" >02 </option><option value="3" >03 </option><option value="4" >04 </option><option value="5" >05 </option><option value="6" >06 </option><option value="7" >07 </option><option value="8" >08 </option><option value="9" >09 </option><option value="10" >10 </option><option value="11" >11 </option><option value="12" >12 </option><option value="13" >13 </option><option value="14" >14 </option><option value="15" >15 </option><option value="16" >16 </option><option value="17" >17 </option><option value="18" >18 </option><option value="19" >19 </option><option value="20" >20 </option><option value="21" >21 </option><option value="22" >22 </option><option value="23" >23 </option><option value="24" >24 </option><option value="25" >25 </option><option value="26" >26 </option><option value="27" >27 </option><option value="28" >28 </option><option value="29" >29 </option><option value="30" >30 </option><option value="31" >31 </option>                
+                                                    </select>
+                                                    <div id="HRdateId-error" style="display:none;"> <font color="red"> Please select the date </font></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group" style="position: static;">
+                                                    <label>&nbsp;</label>
+                                                    <label for="dateYear" input="hide"></label>
+                                                    <select name="yyyy"  id="dateYear" styleClass="form-control" onchange="calculateAge();" />
+                                     
+                                                    <!--<span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                                    <span id="SuccessStatus" class="sr-only ">(required)</span>-->
+                                                    <div id="HRyearId-error" style="display:none;"> <font color="red"> Please select the year </font></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="position:static;">
+                                            <label for="HRageId">Age</label>
+                                            <input type="text" value="" id="HRageId" placeholder="Age" readonly="readonly" class="form-control"/>
+                                        </div>   
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-id-5">Social Security Number</label>
+                                            <div class="has-feedback">
+                                                <input type="text" maxlength="11" id="HRssnId" name="ssn" value="" onkeyup="myFunc();" onchange="ValidateSSNPreCreationDetails();" Class="form-control"  placeholder="xxx-xx-xxxx"/>
+                                                <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                                <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                                <div id="HRssnId-error" style="display:none;"> <font color="red"> Please Enter SSN in the Format xxx-xx-xxxx. </font></div>
+                                                <div id="HRssnIdvalidate-error" style="display:none;"> <font color="red">SSN is registered,Please log in to your account.</font></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-id-7">Phone</label>
+                                            <input type="text" maxlength="12" id="HRphoneId" name="phone" value="" onkeyup="myphFunc();" Class="form-control" placeholder="Phone number"/>
+                                            <div id="HRphoneIdvalidate-error" style="display:none;"> <font color="red">Entered phone and fisrt name already exists.Please login to your account</font></div>
+                                            <div id="HRphoneEmailIdvalidate-error" style="display:none;"> <font color="red">Entered Email and phone already exists.Please login to your account</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                   
+                                </div>
+                                
+                                        <div class="checkbox" style="position:static;">
+                                            <label for="donotKnow">
+                                                <input type="checkbox" onclick="donotHaveSSN();" name="donotKnow" id="donotKnow">
+                                                    <span>Check here if you do not have a social security number</span> 
+                                                </input>
+                                            </label>
+                                        </div>
+                                                                       
+                            </fieldset>
+                            
+                            <!---SATYA-6/27/2017---displaying error messages without changing allignment.--->
+                            
+                            <div class="row">
+                                <h1 class="formheaders" style="margin-left:16px;">Security Questions (Required to retrieve your password if it is forgotten)</h1>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-scid-1">Select Your First Security Question</label>
+                                        <div class="has-feedback">
+                                            <select name="securityQues1" class="form-control" id="HRscques1Id">
+                                                <option value="">Select your security question</option>
+                                                <option value="Which is your favorite Color?">What is your favorite color ?</option>
+                                                <option value="What is the name of your childhood friend?">What is the name of your best friend as a child?</option>                                                 
+                                                <option value="What was the brand of your first car?">What was your first car?</option> 
+                                                <option value="In which city you were born?">In which city were you born?</option>
+                                                <option value="What is the name of your first pet?">What was the name of your first pet?</option>    
+                                            </select>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscques1Id-error" style="display:none;"> <font color="red"> Please Select your first security question </font></div>
+                                        </div>
+                                    </div>
+                               </div>
+                               
+                                <div class="col-md-6">  
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-ansid-1">Please enter the answer for your first security question</label>
+                                        <div class="has-feedback">
+                                            <input type="text" id="HRscans1Id" name="scans1" value=""  Class="form-control" placeholder="Your Answer"/>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscans1Id-error" style="display:none;"> <font color="red"> Please enter your answer for the first security question</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">  
+                                <div class="col-md-6">    
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-scid-2">Select Your Second Security Question</label>
+                                        <div class="has-feedback">
+                                            <select name="securityQues2" class="form-control" id="HRscques2Id">
+                                                <option value="">Select your security question</option>
+                                                <option value="Which is your favorite Color?">Which is your favorite color?</option>
+                                                <option value="What is the name of your childhood friend?">What is the name of your best friend as a child?</option>                                                 
+                                                <option value="What was the brand of your first car?">What was your first car?</option> 
+                                                <option value="In which city you were born?">In which city were you born?</option>
+                                                <option value="What is the name of your first pet?">What is the name of your first pet?</option>    
+                                            </select>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscques2Id-error" style="display:none;"> <font color="red"> Please Select your second and different security question </font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">  
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-ansid-2">Please enter the answer for your second security question</label>
+                                        <div class="has-feedback">
+                                            <input type="text" id="HRscans2Id" name="scans2" value="" Class="form-control" placeholder="Your Answer"/>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscans2Id-error" style="display:none;"> <font color="red"> Please enter your answer for the second security question</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-scid-3">Select Your third Security Question</label>
+                                        <div class="has-feedback">
+                                            <select name="securityQues3" class="form-control" id="HRscques3Id">
+                                                <option value="">Select your security question</option>
+                                                <option value="Which is your favorite Color?">Which is your favorite color?</option>
+                                                <option value="What is the name of your childhood friend?">What is the name of your best friend as a child?</option>                                                 
+                                                <option value="What was the brand of your first car?">What was your first car?</option> 
+                                                <option value="In which city you were born?">In which city were you born?</option>
+                                                <option value="What is the name of your first pet?">What is the name of your first pet?</option>    
+                                            </select>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;text-align:left;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscques3Id-error" style="display:none;"> <font color="red"> Please Select your third and different security question </font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-ansid-3">Please enter the answer for your third security question</label>
+                                        <div class="has-feedback">
+                                            <input type="text" id="HRscans3Id" name="scans3" value="" Class="form-control" placeholder="Your Answer"/>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRscans3Id-error" style="display:none;"> <font color="red"> Please enter your answer for the third security question</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <h1 class="formheaders">Are you homeless?</h1>
+                                    <!--<h2><label for="input-homelessid">Are you homeless?</label></h2>-->
+                                    <div class="checkbox" style="position:static;">
+                                        <label for="input-homeless">
+                                            <input id="Homeless" value="false" onclick="homelss_check();" name="Homeless" type="checkbox">
+                                                <span>Yes</span>
+                                            </input>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <h1 class="formheaders" style="margin-left:16px;">Residential Address</h1>
+                                <div id="res_addr-error" style="display:none;"> <font color="red"> Please enter your full residential address</font></div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-add">Street</label>
+                                        <input type="text" id="HRAltStreetId" name="altstreet" value="" onchange="homelss_check();" class="form-control" placeholder="Street"/>
+                                        <div id="HRAltStreetId-error" style="display:none;"> <font color="red"> Please enter the street name</font></div>
+                                    </div>
+                                    
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-city">City</label>
+                                        <input type="text" id="HRAltCityId" name="altcity" onchange="homelss_check();" value="" class="form-control" placeholder="City"/>
+                                        <div id="HRAltCityId-error" style="display:none;"> <font color="red"> Please enter the city</font></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-state">State</label>
+                                        <select name="altstate" class="form-control" onchange="homelss_check();" id="HRAltStateId">
+                                            <option value="None">Select</option>
+                                                <option value="AK">AK-Alaska</option>
+                                                <option value="AL">AL-Alabama</option>
+                                                <option value="AR">AR-Arkansas</option>
+                                                <option value="AZ">AZ-Arizona</option>
+                                                <option value="CA">CA-California</option>
+                                                <option value="CO">CO-Colorado</option>
+                                                <option value="CT">CT-Connecticut</option>
+                                                <option value="DE">DE-Delaware</option>
+                                                <option value="FL">FL-Florida</option>
+                                                <option value="GA">GA-Georgia</option>
+                                                <option value="HI">HI-Hawaii</option>
+                                                <option value="IA">IA-Iowa</option>
+                                                <option value="ID">ID-Idaho</option>
+                                                <option value="IL">IL-Illinois</option>
+                                                <option value="IN">IN-Indiana</option>
+                                                <option value="KS">KS-Kansas</option>
+                                                <option value="KY">KY-Kentucky</option>
+                                                <option value="LA">LA-Louisiana</option>
+                                                <option value="MA">MA-Massachusetts</option>
+                                                <option value="MD">MD-Maryland</option>
+                                                <option value="ME">ME-Maine</option>
+                                                <option value="MI">MI-Michigan</option>
+                                                <option value="MN">MN-Minnesota</option>
+                                                <option value="MO">MO-Missouri</option>
+                                                <option value="MS">MS-Mississippi</option>
+                                                <option value="MT">MT-Montana</option>
+                                                <option value="NC">NC-North Carolina</option>
+                                                <option value="ND">ND-North Dakota</option>
+                                                <option value="NE">NE-Nebraska</option>
+                                                <option value="NV">NV-Nevada</option>
+                                                <option value="NH">NH-New Hampshire</option>
+                                                <option value="NJ">NJ-New Jersey</option>
+                                                <option value="NM">NM-New Mexico</option>
+                                                <option value="NY">NY-New York</option>
+                                                <option value="OH">OH-Ohio</option>
+                                                <option value="OK">OK-Oklahoma</option>
+                                                <option value="OR">OR-Oregon</option>
+                                                <option value="PA">PA-Pennsylvania</option>
+                                                <option value="RI">RI-Rhode Island</option>
+                                                <option value="SC">SC-South Carolina</option>
+                                                <option value="SD">SD-South Dakota</option>
+                                                <option value="TN">TN-Tennessee</option>
+                                                <option value="TX">TX-Texas</option>
+                                                <option value="UT">UT-Utah</option>
+                                                <option value="VA">VA-Virginia</option>
+                                                <option value="VT">VT-Vermont</option>
+                                                <option value="WA">WA-Washington</option>
+                                                <option value="WI">WI-Wisconsin</option>
+                                                <option value="WV">WV-West Virginia</option>
+                                                <option value="WY">WY-Wyoming</option>
+                                        </select>
+                                        <!--<input type="text" id="HRAltStateId" name="altstate" value="" class="form-control" placeholder="State"/>-->
+                                        <div id="HRAltStateId-error" style="display:none;"> <font color="red"> Please select the state </font></div>
+                                    </div>
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-Zipcode">Zip Code</label>
+                                         <input type="text" id="HRAltZipcodeId" onchange="homelss_check();" onkeypress = "return AllowNumbersOnly(event)" maxlength="5" name="altZipCode" value="" class="form-control" placeholder="Zip Code"/>
+                                        
+                                        <div id="HRAltZipcodeId-error" style="display:none;"> <font color="red"> Please enter the zipcode</font></div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                          
+                            <div class="row">
+                                <div id="holeless_add" style="display:none;">
+                                    <h1 class="formheaders" style="margin-left:16px;">Mailing Address</h1>
+                                    <!--<h2 class="formheaders" style="margin-left:16px;">Mandotory if homeless is checked</h2>-->
+                                    <div id="HRaddressId-error" style="display:none;"> <font color="red"> Please enter the full mailing address as you opted for homeless</font></div>
+                                    <div class="col-md-6">  
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-mailing-add">Street</label>
+                                            <input type="text" id="HRStreetId" name="street" onchange="homelss_check();" value="" class="form-control" placeholder="Street"/>
+                                            <div id="HRStreetId-error" style="display:none;"> <font color="red"> Please enter the street name</font></div>
+                                        </div>
+                                        
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-mailing-city">City</label>
+                                            <input type="text" id="HRCityId" name="city" value="" onchange="homelss_check();" class="form-control" placeholder="City"/>
+                                            <div id="HRCityId-error" style="display:none;"> <font color="red"> Please enter the city</font></div>
+                                        </div>
+                                    </div>  
+                                
+                                    <div class="col-md-6">
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-mailing-state">State</label>
+                                            <!--<input type="text" id="HRStateId" name="state" value="" class="form-control" placeholder="State"/>-->
+                                            <select name="state" class="form-control" id="HRStateId" onchange="homelss_check();">
+                                                <option value="None">Select</option>
+                                                <option value="AK">AK-Alaska</option>
+                                                <option value="AL">AL-Alabama</option>
+                                                <option value="AR">AR-Arkansas</option>
+                                                <option value="AZ">AZ-Arizona</option>
+                                                <option value="CA">CA-California</option>
+                                                <option value="CO">CO-Colorado</option>
+                                                <option value="CT">CT-Connecticut</option>
+                                                <option value="DE">DE-Delaware</option>
+                                                <option value="FL">FL-Florida</option>
+                                                <option value="GA">GA-Georgia</option>
+                                                <option value="HI">HI-Hawaii</option>
+                                                <option value="IA">IA-Iowa</option>
+                                                <option value="ID">ID-Idaho</option>
+                                                <option value="IL">IL-Illinois</option>
+                                                <option value="IN">IN-Indiana</option>
+                                                <option value="KS">KS-Kansas</option>
+                                                <option value="KY">KY-Kentucky</option>
+                                                <option value="LA">LA-Louisiana</option>
+                                                <option value="MA">MA-Massachusetts</option>
+                                                <option value="MD">MD-Maryland</option>
+                                                <option value="ME">ME-Maine</option>
+                                                <option value="MI">MI-Michigan</option>
+                                                <option value="MN">MN-Minnesota</option>
+                                                <option value="MO">MO-Missouri</option>
+                                                <option value="MS">MS-Mississippi</option>
+                                                <option value="MT">MT-Montana</option>
+                                                <option value="NC">NC-North Carolina</option>
+                                                <option value="ND">ND-North Dakota</option>
+                                                <option value="NE">NE-Nebraska</option>
+                                                <option value="NV">NV-Nevada</option>
+                                                <option value="NH">NH-New Hampshire</option>
+                                                <option value="NJ">NJ-New Jersey</option>
+                                                <option value="NM">NM-New Mexico</option>
+                                                <option value="NY">NY-New York</option>
+                                                <option value="OH">OH-Ohio</option>
+                                                <option value="OK">OK-Oklahoma</option>
+                                                <option value="OR">OR-Oregon</option>
+                                                <option value="PA">PA-Pennsylvania</option>
+                                                <option value="RI">RI-Rhode Island</option>
+                                                <option value="SC">SC-South Carolina</option>
+                                                <option value="SD">SD-South Dakota</option>
+                                                <option value="TN">TN-Tennessee</option>
+                                                <option value="TX">TX-Texas</option>
+                                                <option value="UT">UT-Utah</option>
+                                                <option value="VA">VA-Virginia</option>
+                                                <option value="VT">VT-Vermont</option>
+                                                <option value="WA">WA-Washington</option>
+                                                <option value="WI">WI-Wisconsin</option>
+                                                <option value="WV">WV-West Virginia</option>
+                                                <option value="WY">WY-Wyoming</option>
+                                            </select>
+                                            <div id="HRStateId-error" style="display:none;"> <font color="red"> Please select the state</font></div>
+                                        </div>
+                                        <div class="form-group" style="position:static;">
+                                            <label for="input-mailing-Zipcode">Zip Code</label>
+                                           <!--  <input type="text" id="HRZipcodeId" name="ZipCode" onchange="homelss_check();" value="" class="form-control" placeholder="Zip Code"/> -->
+                                           <input type="text" id="HRZipcodeId" name="ZipCode" onchange="homelss_check();" onkeypress = "return AllowNumbersOnly(event)" maxlength="5" value="" class="form-control" placeholder="Zip Code"/>
+                                            <div id="HRZipcodeId-error" style="display:none;"> <font color="red"> Please enter the zipcode</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h1 class="formheaders" style="margin-left:16px;">Your password must be at least 10 characters long and contain letters and numbers.</h1>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-state">Password</label>
+                                        <div class="has-feedback">
+                                            <input type="password" id="HRpassId" name="edit-pass" value="" size="60" class="form-control" data-error="1"  placeholder="Password"/>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRpassId-error" style="display:none;"> <font color="red"> Please enter password. </font></div>
+                                            <div id="HRpassId-error1" style="display:none;"> <font color="red"> Your password must be at least 10 characters long and contain letters and numbers.</font></div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="position:static;">
+                                        <label for="input-mailing-state">Re-Type Password</label>
+                                        <div class="has-feedback">
+                                            <input type="password" id="HRpassRId" name="edit-pass" value="" size="60" class="form-control" data-error="1" placeholder="Re-Type Password"/>
+                                            <span class="glyphicon glyphicon-star text-error form-control-feedback" style="color:red;" aria-hidden="true"></span>
+                                            <span id="SuccessStatus" class="sr-only ">(required)</span>
+                                            <div id="HRpassRId-error" style="display:none;"> <font color="red"> Please Re-Type Password. </font></div>
+                                            <div id="HRpassRId-error1" style="display:none;"> <font color="red"> Password and Re-Type Password do not match. </font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                            
+                             <!--satya-6/15/2017-->
+                             <!--Narasimha 07/07/2017 -->
+                            <div class="form-group">
+                                <div class="checkbox" >                                    
+                                        <h1 class="formheaders" id="emailonly">
+                                        Paperless/Email Only <!--satya-6/15/2017--></h1><!--Narasimha 08/07/2017 -->
+                                         <div class="checkbox" style="position:static;">
+                                          <label for="input-paperless">
+                                        <input type="Checkbox" name="showPaperless" id="showPaperless">    
+                                        <span id="emailyesOnly">Yes </span>                                      
+                                        </input>
+                                    </label>
+                                </div>
+                                <div id="paperless_add" style="display:none;">
+                                   <h1 class="formheaders" style="margin-left:16px;">By checking this box, you agree to receive all communication from the San Diego Housing Commission by email to the address you provided. You will not receive any paper correspondence. Do not check this box if you do not have an email address.</h1><!--satya-6/15/2017-->
+                                </div>  
+                                </div>
+                                </div>
+                                <!--<div class="form-group" style="margin-left:16px;">
+                                    <label for="input-homeless-help">By clicking this button, you choose not to receive any paper based correspondence. The Housing commission will only communicate with you via provided valid email address.</label>
+                                </div>-->
+                            </div>
+
+                            <!--div  class="row" style="color:red;font-size:12px;font-weight:bold;background-color: #FFFF00;border-style: ridge; " -->
+                            <div  class="row" style="color:red;font-size:12px;font-weight:bold;background-color: #FFFF00;">                            
+                                            <!--apex:Messages id="msg1"/-->
+                                            <apex:pageMessages id="msg1" />
+                                    </div>
+                            <br/>
+                            <div class="row">
+                                <div class="from-group col-xs-offset-2">
+                                 <!-- Narasimha start 29/06/2017 -->
+                               <div id="dividd">
+                              
+                                
+                             <!-- Narasimha END 29/06/2017 -->
+          
+         
+                             <apex:actionStatus id="fetchResp" >
+                                <apex:facet name="stop">
+
+                                    <apex:commandButton id="CreateAccButton"  onclick="ValidateRegistration(); return false;" status="fetchResp" rerender="abc" styleClass="btn btn-primary btn-lg col-xs-4" value="Submit"/>                                    
+                                </apex:facet>
+                                <apex:facet name="start">
+
+                                            <apex:commandButton styleClass="btn btn-primary btn-lg col-xs-4" value="Please Wait...In Progress..." disabled="true"/>                                    
+                                </apex:facet>
+                            </apex:actionStatus>   
+                            
+                                    <!--button type="button" id="CreateAccButton" onclick="ValidateRegistration();return false;" Class="btn btn-primary btn-lg col-xs-4">Submit</button-->
+                                    <!--apex:commandButton id="CreateAccButton"  onclick="ValidateRegistration();return false;" status="fetchResp" styleClass="btn btn-primary btn-lg col-xs-4" value="Submit"/-->                                    
+                                    <button type="button" id="cancelbutton1" onclick="this.form.reset(); return true;" oncomplete="" Class="btn btn-primary btn-lg col-xs-offset-1 col-xs-4">Cancel</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-------  Forgot Password  Start ----->
+            <div class="modal fade" tabindex="-1" role="dialog" id="forgotPasswordModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" id="mhdr1">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <center><h2 class="modal-title">Forgot Password ?</h2></center>
+                        </div>
+                        
+                        <div class="modal-header hidden" id="mhdr2" >
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <center><h2 class="modal-title">Password reset email sent</h2></center>
+                        </div>
+                        
+                        
+                        <div class="modal-body">
+                            <div id="UId" class="show">
+                                <center>
+                                    <label id= "fg1">Please enter your username below</label>
+                                </center>
+                                <center>
+                                <input type="text" id="usernameResetPassId" value="" style="width: 250px; margin: auto;" name="username" class="form-control" placeholder="Username."/>
+                                <div id="usernameResetPassId-error" class="hidden" style="color:red;"></div>
+                                <br/>
+                                    <!--a href="#" onclick="ValidateForgetPass();" style="padding-top:2px;">Click here, if you have registered email address with us.</a-->
+                                    <apex:commandLink id="hrefid1" onclick="ValidateForgetPassword();" style="padding-top:2px;" onComplete="return false;">Click here, if you have registered email address with us.</apex:commandLink>
+                                </center>
+                                <br/>
+                                <center>                                
+                                <a href="#" onclick="showSecurityQuestions();" style="padding-top:2px;">Click here, if you <u>do not</u> have registered email address with us.</a>
+                                </center>
+                                <br/>
+                                <div id="fgId1">
+                                    <apex:outputText value="{!cnfgPasswordNote}" escape="false"/> 
+                                </div > 
+                        
+                            </div>
+                            <div id="QId" class="hidden">
+                                <div class="form-group">
+                                    <label id="ques1Id"></label>
+                                   <input type="text" id="ans1Id" name="Ans1" value="" class="form-control" placeholder="Enter Answer for the above Question"/>
+                                   
+                                    <div id="ans1Id-error" style="color:red;font-style:italic;"></div>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label id="ques2Id"></label>
+                                    <input type="text" id="ans2Id" name="Ans2" value="" class="form-control" placeholder="Enter Answer for the above Question"/>
+                                    <div id="ans2Id-error" style="color:red;font-style:italic;"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label id="ques3Id"></label>
+                                    <input type="text" id="ans3Id" name="Ans3" value="" class="form-control" placeholder="Enter Answer for the above Question"/>
+                                    <div id="ans3Id-error" style="color:red;font-style:italic;"></div>
+                                </div>
+                                <div class="modal-body" id="fgId2">
+                                    <label id="lblfg">For any queries:</label>
+                                    <apex:outputText value="{!cnfgPortalAddr}" escape="false"/> 
+                                </div >
+                            </div>
+                           
+                            
+                            <div id="RId" class="hidden">
+                                <center>
+                                    <label >Thank you for submitting password reset request. An email with instructions to reset your password has been sent to your email address provided.</label>
+                                </center>
+                            
+                            </div>
+                            
+                        </div>  
+                        
+                        <div class="modal-footer">
+                            <button type="button" id="ResetPasswordCancelId"  class="btn btn-default "  data-dismiss="modal">Cancel</button>
+                            
+                           <!--<button type="button" id="ResetPasswordCancelId" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="button" id="ResetPasswordSubmitId" onclick="ValidateForgetPass();" oncomplete="" class="btn btn-success">Submit</button> 
+                            <button type="button" id="ResetPasswordNextId" onclick="ValidateSecurityPass();" oncomplete="" class="hidden btn btn-success">Submit</button>--> 
+                            <!--rhathi -->
+                            
+                           <button type="button" id="ResetPasswordNextId" onclick="ValidateSecurityPass();" oncomplete="" class="hidden btn btn-primary">Submit</button>                            
+                            <!--<button type="button" id="ResetloginButton" onclick="ResetPasswordusingSecurityQuestions()" oncomplete="" reRender="fmId" class="hidden btn btn-success">Reset</button>-->
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!----- Forgot Password End --->
+            
+            <!-------  Forgot UserName  Start ----->
+            <div class="modal fade" tabindex="-1" role="dialog" id="forgotuserNameModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        
+                        <div class="modal-header" id="ush1">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <center><h2 class="modal-title" style="font-weight:bold">Forgot Username?</h2></center>
+                        </div>
+                        
+                        <div class="modal-header hidden" id="ush2" >
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <center><h2 class="modal-title">Username Email sent</h2></center>
+                        </div>
+                        
+                          
+                        <div class="modal-body">
+                            
+                            <div id="usb1" class="show">
+                                <center>
+                                    <label id= "fgn1">Enter your registered email  address below. You will receive an email with your username.</label>
+                                </center>
+                                <br/>
+                                <center>
+                                    <input type="text" id="frgtusrnmId" value="" name="username" style="width: 250px; margin: auto;" class="form-control" placeholder="Email"/> 
+                                    <div id="frgtusrnmId-error" class="hidden" style="color:red;"></div>
+                                    <br/>
+                                </center>
+                                
+                                <center><label><strong>No email address registered ?</strong></label></center>
+                                
+                                <div id="fgnId1">
+                                    <apex:outputText value="{!cnfgUsernamenote}" escape="false"/>
+                                </div >
+                            </div>
+             
+                            <div id="usb2" class="hidden">
+                                <center>
+                                    <label >Thank you for submitting username request. An email with your username details have been sent to registered email address.</label>
+                                </center>
+                            
+                            </div>
+                        </div>
+                        <apex:pagemessages id="afid"/>
+                        <div class="modal-footer">
+                            <button type="button" id="cancelbutton"  class="btn btn-default" data-dismiss="modal">Cancel</button><!---satya--6/15/2017-->
+                            <button type="button" id="ResetusrnameId" onclick="Validateusername();return false;" class="btn btn-primary">Submit</button>
+                            <!--<button type="button" id="ResetusrnameId" onclick="Validateusername();" oncomplete="" class="hidden btn btn-success">submit</button>-->
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!----- Forgot UserName End --->
+ 
+            <apex:inputHidden id="LurnmId" value="{!username}"/> 
+            <apex:inputHidden id="LpassId" value="{!password}"/> 
+            <apex:actionFunction name="DoLogin" action="{!login}"/>
+                    
+            <apex:inputHidden id="RAPPnmId" value="{!ApplicantNameRegister}"/> 
+            <apex:inputHidden id="RusrnameId" value="{!UNameRegister}"/>            
+            <apex:inputHidden id="RFnmId" value="{!FirstNameRegister}"/> 
+            <apex:inputHidden id="RLnmId" value="{!LastNameRegister}"/>
+            <apex:inputHidden id="RssnId" value="{!SSNRegister}"/>
+            <apex:inputHidden id="RphoneId" value="{!PhoneRegister}"/>
+            <apex:inputHidden id="RemailId" value="{!EmailRegister}"/>
+            <apex:inputHidden id="RgenderId" value="{!GenderRegister}"/>
+            <apex:inputHidden id="RmonthId" value="{!MonthRegister}"/>
+            <apex:inputHidden id="RageId" value="{!AgeRegister}"/>
+            <apex:inputHidden id="RpassId" value="{!NewPswdRegister}"/> 
+            <apex:inputHidden id="RpassRId" value="{!NewRetypePswdRegister}"/>
+            <apex:inputHidden id="RStreetId" value="{!NewStreetRegister}"/>
+            <apex:inputHidden id="RCityId" value="{!NewCityRegister}"/>
+            <apex:inputHidden id="RStateId" value="{!NewStateRegister}"/>
+            <apex:inputHidden id="RZipcodeId" value="{!NewZipcodeRegister}"/>
+            <apex:inputHidden id="RAltStreetId" value="{!NewAltStreetRegister}"/>
+            <apex:inputHidden id="RAltCityId" value="{!NewAltCityRegister}"/>
+            <apex:inputHidden id="RAltStateId" value="{!NewAltStateRegister}"/>
+            <apex:inputHidden id="RAltZipcodeId" value="{!NewAltZipcodeRegister}"/>
+            <apex:inputHidden id="Rscques1Id" value="{!Newscques1Register}"/>
+            <apex:inputHidden id="Rscans1Id" value="{!Newscans1Register}"/>
+            <apex:inputHidden id="Rscques2Id" value="{!Newscques2Register}"/>
+            <apex:inputHidden id="Rscans2Id" value="{!Newscans2Register}"/>
+            <apex:inputHidden id="Rscques3Id" value="{!Newscques3Register}"/>
+            <apex:inputHidden id="Rscans3Id" value="{!Newscans3Register}"/>
+            <apex:inputHidden id="Homeless_check_Id" value="{!homeless_check}"/>
+            <apex:inputHidden id="SSN_DoNotHave_Id" value="{!SSN_DoNotHave_check}"/>
+            <apex:inputHidden id="paperless_Id" value="{!paperless_check}"/>
+            <apex:actionFunction name="registerAccounttoSFDC" action="{!save}" status="fetchResp" focus="msg1" reRender="register-modal,msg1,msg2,msg3,msg4"/>
+                    
+            <apex:inputHidden id="ReseturId" value="{!usernameResetPswd}"/>
+            <apex:actionFunction name="DoResetPassword" action="{!ResetPassword}" oncomplete="return false;" />
+            
+            <apex:inputHidden id="ResetusernameId" value="{!forgotUserNameMail}"/>
+            <apex:actionFunction name="sendusername" action="{!getForgotUserName}" rerender="afid"  oncomplete="return false;" />
+            
+            <apex:inputHidden id="ResetscquesId" value="{!securityResetpwd}"/>
+            <apex:actionFunction name="DoResetPasswordusingSecurityQuestions" action="{!passwordchange}"/>
+            
+            <apex:inputHidden id="ResetSSNsearchId" value="{!ssnsearch}"/>
+            <apex:inputHidden id="ResetSSNLnameId" value="{!ssnLNamesrch}"/>
+            <apex:actionFunction name="searchSSN" action="{!getSSNsearch}" rerender="ssnsearchmsg" oncomplete="return false;"/>
+                    
+        <script>
+
+
+        function AllowNumbersOnly(e) {
+            var code = (e.which) ? e.which : e.keyCode;
+            if (code > 31 && (code < 48 || code > 57)) {
+              e.preventDefault();
+            }
+          }
+        
+        function showSecurityQuestions(){
+            if($j("#usernameResetPassId").val() == ''){
+                $j("#usernameResetPassId").css({"border":"1px solid red","display":"block"});
+                $j("#usernameResetPassId-error").removeClass("hidden");
+                $j("#usernameResetPassId-error").text("User Name is Required");
+                return false;
+            }
+            else{
+                $j("#usernameResetPassId").css({"border":"","display":"none"});
+                $j("#usernameResetPassId-error").addClass("hidden");
+                        
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.RAD_LoginRegisterCtrl.getAllQuestionandAnswers}',
+                    $j("#usernameResetPassId").val(),
+                    function(result, event) {
+                        if(event.status == true){
+                            console.log(result);
+                            securityQuestionandAnswers = result;
+                            $j("#QId").removeClass("hidden");
+                            $j("#UId").addClass("hidden");
+                            //$j("#ResetPasswordCancelId").addClass("hidden");//rhathi 02 JUL 2017
+                            $j("#ResetPasswordSubmitId").addClass("hidden");
+                            $j("#ResetPasswordNextId").removeClass("hidden");
+                            $j("#ResetloginButton").addClass("hidden");
+                            
+                            $j("#ques1Id").text(result[0].question);
+                            $j("#ques2Id").text(result[1].question);
+                            $j("#ques3Id").text(result[2].question);
+                            $j("#ans1Id").text(result[0].answer);
+                            
+                            
+                            
+                        }
+                        else{
+                            $j("#usernameResetPassId").css({"border":"1px solid red","display":"block"});
+                            $j("#usernameResetPassId-error").removeClass("hidden");
+                            $j("#usernameResetPassId-error").text($j("#usernameResetPassId").val()+" not a valid User Name");
+                            
+                            return false;
+                        }
+                    }
+                );
+            }
+        
+        }
+    
+
+        function calculateAge_OLD(){
+            var mm = $j( "#HRmonthId" ).val();
+            var dt = $j( "#dateday" ).val();
+            var yy = $j( "#dateYear" ).val();
+            if(mm !=0 && dt != 0 && yy != 0){
+              //var dob = yy+'/'+mm+'/'+dt;
+              var dob = yy+'-'+mm+'-'+dt; 
+               //alert(dob);
+                $j("[id*='RmonthId']").val(dob);
+                dob = new Date(dob);
+                var today = new Date();
+                var diff = today-dob;
+                <!--var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));-->
+                var age = Math.floor(diff/(1000*60*60*24*365.25)); 
+                $j("#HRageId").val(age+'');
+                $j("[id*='RageId']").val(age);
+                document.getElementById("HRageId").disabled = true;
+            }
+            $j( "#HRmonthId" ).val(mm); 
+            <!---satya damisetti-6/13/2017-modification-to display age field -->    
+        
+            var mm = $j( "#HRmonthId" ).val();          
+            var dt = $j( "#dateday" ).val();
+            var yy = $j( "#dateYear" ).val();
+            if(mm !=0 && dt != 0 && yy != 0){           
+                 var dob = yy+'/'+mm+'/'+dt;
+                 //alert(dob);
+                 var birthdate = new Date(dob);           
+                 var cur = new Date();
+                 var diff = cur-birthdate;                       
+                 var age = Math.floor(diff/(1000*60*60*24*365.25));            
+                 //alert(age);
+                 $j("[id*='HRageId']").val(age);
+            }      
+        }
+        
+        
+        function calculateAge(){
+            var mm = $j( "#HRmonthId" ).val();
+            var dt = $j( "#dateday" ).val();
+            var yy = $j( "#dateYear" ).val();
+           
+            if(mm !=0 && dt != 0 && yy != 0){
+                var dob = yy+'-'+mm+'-'+dt;
+
+                //alert(dob);
+                $j("[id*='RmonthId']").val(dob); //store the date format -
+                
+                //now change the format for calculation
+                dob = yy+'/'+mm+'/'+dt;
+                dob = new Date(dob);
+                //alert(dob);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                //alert(age);
+
+                $j("#HRageId").val(age+'');
+                $j("[id*='RageId']").val(age);
+                document.getElementById("HRageId").disabled = true;
+            }
+            
+            $j( "#HRmonthId" ).val(mm);
+            
+            
+        
+        }
+  
+              
+        
+        function registerAccounttoSFDCinJS(){
+            registerAccounttoSFDC();
+        }
+        
+       /* function validatePreCreationDetails(){
+            var HRPhonevalidId = document.getElementById('HRphoneId');
+            var HRemailvalidId = document.getElementById('HRemailId');
+            var HRFnmvalidId = document.getElementById('HRFnmId');
+            
+            var HRphoneEmailvalidateEId  = document.getElementById('HRphoneEmailIdvalidate-error');
+            var HREmailPhonevalidateEId  = document.getElementById('HREmailPhonevalidateId-error');
+    
+            var HRFnmvalidateEId = document.getElementById('HRFnmvalidateId-error');
+            var HRPhonevalidateEId  = document.getElementById('HRphoneIdvalidate-error');
+            var HREmailvalidateEId = document.getElementById('HREmailvalidateId-error');
+            
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.RAD_LoginRegisterCtrl.userPreCreationValidations}',
+                $j("#HRFnmId").val(),$j("#HRemailId").val(),$j("#HRphoneId").val(),
+                function(result, event) {
+                    if(event.status == true){
+                        console.log(result);
+                        //alert(result);
+                        validateMessage=result;
+                        if(validateMessage=='Phone and fisrt name exists.Please login to your account'){
+                            HRFnmvalidId .style.cssText = "border: 1px solid red";
+                            HRFnmvalidateEId.style.cssText = "display:block";
+                            HRPhonevalidId .style.cssText = "border: 1px solid red";
+                            HRPhonevalidateEId.style.cssText = "display:block";
+                            //return false;
+                        }
+                        else if(validateMessage!='Phone and fisrt name exists.Please login to your account'){
+                            HRFnmvalidId .style.cssText = "";
+                            HRFnmvalidateEId.style.cssText = "display:None";
+                            HRPhonevalidId .style.cssText = "";
+                            HRPhonevalidateEId.style.cssText = "display:None";
+                        
+                            if(validateMessage=='Email and Phone exists.Please login to your account'){
+                                alert(validateMessage);
+                                HRemailvalidId.style.cssText = "border: 1px solid red";
+                                HREmailPhonevalidateEId.style.cssText = "display:block";
+                                    
+                                HRPhonevalidId.style.cssText = "border: 1px solid red";
+                                HRphoneEmailvalidateEId.style.cssText = "display:block";
+                                //return false;
+                            }
+                            else if(validateMessage!='Email and Phone exists.Please login to your account'){
+                                HRemailvalidId.style.cssText = "";
+                                HREmailPhonevalidateEId.style.cssText = "display:None";
+                                HRPhonevalidId.style.cssText = "";
+                                HRphoneEmailvalidateEId.style.cssText = "display:None";
+
+                                if(validateMessage=='Email exists.Please login to your account'){
+                                    HRemailvalidId.style.cssText = "border: 1px solid red";
+                                    HREmailvalidateEId.style.cssText = "display:block";
+                                    //return false;
+                                }
+                                else if(validateMessage!='Email exists.Please login to your account'){
+                                    HRemailvalidId.style.cssText = "";
+                                    HREmailvalidateEId.style.cssText = "display:None";  
+                                }
+                            }
+                        }
+
+                    }
+                    else{
+                        console.log(event);
+                        return false;
+                    }
+                }
+            );
+        }*/
+        
+        function ValidateSSNPreCreationDetails(){
+        
+            var SSNnamevalidateEId = document.getElementById('HRssnIdvalidate-error');
+            var SSNnamevalidId = document.getElementById('HRssnId');
+            
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.RAD_LoginRegisterCtrl.validateSSN}',
+                $j("#HRssnId").val(),
+                function(result, event){
+                    if(event.status == true){
+                        console.log(result);
+                        HRssnId=result;
+                        //alert(HRssnId);
+                        if(HRssnId==false){
+                            SSNnamevalidId .style.cssText = "border: 1px solid red";
+                            SSNnamevalidateEId.style.cssText = "display:block";
+                            return false;
+                        }
+                        else if(HRssnId==true){
+                            SSNnamevalidId .style.cssText = "";
+                            SSNnamevalidateEId.style.cssText = "display:None";
+                        }
+                    }
+                    else{
+                        console.log(event);
+                        return false;
+                    }
+                }
+            );
+        }
+        
+        
+        function ValidateuserNameDetail(){
+        
+            var UserNamevalidateEId = document.getElementById('HRuserNameId-error');
+            var UserNamevalidId = document.getElementById('HRusrnameId');
+            
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.RAD_LoginRegisterCtrl.validateUserName}',
+                $j("#HRusrnameId").val(),
+                function(result, event){
+                    if(event.status == true){
+                        console.log(result);
+                        HRusrnameId=result;
+                        //alert(HRusrnameId);
+                        if(HRusrnameId==false){
+                            UserNamevalidId .style.cssText = "border: 1px solid red";
+                            UserNamevalidateEId.style.cssText = "display:block";
+                            //alert('username already exists');                 
+                            return false;
+                        }
+                        else if(HRusrnameId==true){
+                            UserNamevalidId .style.cssText = "";
+                            UserNamevalidateEId.style.cssText = "display:None";
+                            //alert('the username does not exits');
+                        }
+                    }
+                    else{
+                        console.log(event);
+                        return false;
+                    }
+                }
+            );
+        }
+         
+         
+        $('#showPaperless').on('click',function(){
+            var checked=$(this).is(':checked');
+            if(checked==true)
+            {  
+              $("#paperless_add").show(); 
+                $('#HRemailId').attr('disabled',false);
+                var text=$('#HRemailId').val();
+                checktext(text);
+            }
+            <!--satya--6/23/2017-->
+             else
+            {
+              $("#paperless_add").hide();
+            var HRemailvalidId = document.getElementById('HRemailId');
+            var HRemailpaperlessEId  = document.getElementById('HREmailPaperless-error');
+            HRemailvalidId .style.cssText = "";
+            HRemailpaperlessEId.style.cssText = "display:None";
+            
+            }
+        });
+        
+        function checktext(text){
+            var HRemailvalidId = document.getElementById('HRemailId');
+            var HRemailpaperlessEId  = document.getElementById('HREmailPaperless-error');
+            //alert(text);
+            if(text==''){
+                //alert('Please enter an email as you have opted for palerless');
+                HRemailvalidId .style.cssText = "border: 1px solid red";
+                HRemailpaperlessEId.style.cssText = "display:block";
+                document.getElementById('HRemailId').focus();
+                return false;
+            }
+            else if(text!=''){
+                HRemailvalidId .style.cssText = "";
+                HRemailpaperlessEId.style.cssText = "display:None";
+            
+            }
+        }
+        
+        
+       
+   
+        
+        
+        
+        $('#Homeless').on('change',function(){
+            if( $(this).is(':checked')){
+            $('#HRAltStreetId').attr('disabled',true);
+            $('#HRAltCityId').attr('disabled',true);
+            $('#HRAltStateId').attr('disabled',true);
+            $('#HRAltZipcodeId').attr('disabled',true);
+            $("#HRAltStreetId").val('');
+            $("#HRAltCityId").val('');
+            $("#HRAltStateId").val('');
+            $("#HRAltZipcodeId").val('');
+            var res_address_EId  = document.getElementById('res_addr-error');
+            res_address_EId.style.cssText = "display:none"; //RHATHI
+            $("#holeless_add").show()
+            
+            }
+            else{
+            $('#HRAltStreetId').attr('disabled',false);
+            $('#HRAltCityId').attr('disabled',false);
+            $('#HRAltStateId').attr('disabled',false);
+            $('#HRAltZipcodeId').attr('disabled',false);
+            $("#holeless_add").hide()
+            $('#HRStreetId').val('');
+            $('#HRCityId').val('');
+            $('#HRStateId').val('');
+            $('#HRZipcodeId').val('');    
+            }
+        });
+         
+        $('#cancelbutton').click(function(){
+            window.location = '{!urlfor($Page.RADNewLogReg)}';
+        });
+        $('#cancelbutton1').click(function(){
+            window.location = '{!urlfor($Page.RADNewLogReg)}';
+        });
+        <!--narasimha--6/23/2017-->
+        $('#donotKnow').on('click',function(){
+         
+         var checked=$(this).is(':checked');
+            if(checked==true)
+            {   
+                $('#HRssnId').attr('disabled',true);
+                //var text=$('#HRemailId').val();
+                //checktext(text);
+             var HRemailvalidId = document.getElementById('HRssnId');
+             var HRemailpaperlessEId  = document.getElementById('HRssnId-error');
+             HRemailvalidId .style.cssText = "";
+             HRemailpaperlessEId.style.cssText = "display:None";   
+                
+            }
+           
+        });
+/*$('#Homeless').on('click',function(){
+         
+         var checked=$(this).is(':checked');
+            if(checked==true)
+            {   
+                $('#HRAltStreetId').attr('disabled',true);
+                //var text=$('#HRemailId').val();
+                //checktext(text);
+                /* var HRemailvalidId = document.getElementById('HRAltStreetId');
+             var HRemailpaperlessEId  = document.getElementById('HRAltStreetId-error');
+             HRemailvalidId .style.cssText = "";
+             HRemailpaperlessEId.style.cssText = "display:None";   
+                
+            }
+           
+}); */
+        
+        $(document).ready(function(){
+            $('#dateYear').append($('<option />').val('0').html('Year').attr('class', 'form-control')).attr('class', 'form-control');
+            var yr = new Date().getFullYear();
+            for (i = 1; i <=100; i++)
+            {
+                $('#dateYear').append($('<option />').val(yr).html(yr).attr('class', 'form-control')).attr('class', 'form-control');
+                yr--;
+            }
+            
+  
+            
+        });
+        
+        function papercheck()
+        {
+            var text=$('#HRemailId').val();
+            if(text==''){
+                //var pa=$('#showPaperless').val();
+                var checked=$(showPaperless).is(':checked');
+                if(checked==true)
+                {
+                    var HRemailvalidId = document.getElementById('HRemailId');
+                     var HRemailpaperlessEId  = document.getElementById('HREmailPaperless-error');
+                    //alert('Email is  required when paperless checkbox is checked');
+                     HRemailvalidId .style.cssText = "border: 1px solid red";
+                    HRemailpaperlessEId.style.cssText = "display:block";
+                    document.getElementById('HRemailId').focus();
+                    return false;
+                
+                }
+           }
+        }
+        
+        function  homelss_check()
+        {
+            var checked = document.getElementById("Homeless").checked; 
+            if(checked==true) {
+            
+                var street_text=$('#HRStreetId').val();
+                //var streetvalidId = document.getElementById('HRStreetId');
+                //var streetvalidEId  = document.getElementById('HRStreetId-error');
+                var addressEId  = document.getElementById('HRaddressId-error');
+                
+                var city_text=$('#HRCityId').val();
+                //var cityvalidId = document.getElementById('HRCityId');
+                //var cityvalidEId  = document.getElementById('HRCityId-error');
+                
+                var state_text=$('#HRStateId').val();
+                //var statevalidId = document.getElementById('HRStateId');
+                //var statevalidEId  = document.getElementById('HRStateId-error');
+                
+                var zipcode_text=$('#HRZipcodeId').val();
+                //var zipcodevalidId = document.getElementById('HRZipcodeId');
+                //var zipcodevalidEId  = document.getElementById('HRZipcodeId-error');
+                
+                if(street_text=='' || city_text=='' || state_text=='None' ||zipcode_text=='' ){
+                    //streetvalidId .style.cssText = "border: 1px solid red";
+                    //streetvalidEId.style.cssText = "display:block";
+                    addressEId.style.cssText = "display:block";
+                    document.getElementById('HRStreetId').focus();
+                    return false;
+                
+                }
+                else{
+                    //streetvalidId.style.cssText = "";
+                    //streetvalidEId.style.cssText = "display:none";
+                    addressEId.style.cssText = "display:none";
+                    return true;
+                    
+                    /*if(city_text==''){
+                        cityvalidId.style.cssText = "border: 1px solid red";
+                        cityvalidEId.style.cssText = "display:block";
+                        document.getElementById('HRCityId').focus();
+                        return false;
+                    }
+                    else{
+                        cityvalidId.style.cssText = "";
+                        cityvalidEId.style.cssText = "display:none";
+                        
+                        if(state_text=='None'){ 
+                            statevalidId.style.cssText = "border: 1px solid red";
+                            statevalidEId.style.cssText = "display:block";
+                            document.getElementById('HRStateId').focus();
+                            return false;
+                        
+                        }
+                        else{
+                            statevalidId.style.cssText = "";
+                            statevalidEId.style.cssText = "display:none";
+                            
+                            if(zipcode_text==''){
+                                zipcodevalidId.style.cssText = "border: 1px solid red";
+                                zipcodevalidEId.style.cssText = "display:block";
+                                document.getElementById('HRZipcodeId').focus();
+                                return false;
+                            
+                            }
+                            else{
+                                zipcodevalidId.style.cssText = "";
+                                zipcodevalidEId.style.cssText = "display:none";
+                            }
+                        }
+                    }*/
+                } 
+            }
+            else if(checked==false){
+                var street_text=$('#HRAltStreetId').val();
+                //var streetvalidId = document.getElementById('HRAltStreetId');
+                //var streetvalidEId  = document.getElementById('HRAltStreetId-error');
+                var res_address_EId  = document.getElementById('res_addr-error');
+                res_address_EId.style.cssText = "display:none"; //RHATHI
+                
+                var city_text=$('#HRAltCityId').val();
+                //var cityvalidId = document.getElementById('HRAltCityId');
+                //var cityvalidEId  = document.getElementById('HRAltCityId-error');
+                
+                var state_text=$('#HRAltStateId').val();
+                //var statevalidId = document.getElementById('HRAltStateId');
+                //var statevalidEId  = document.getElementById('HRAltStateId-error');
+                
+                var zipcode_text=$('#HRAltZipcodeId').val();
+                //var zipcodevalidId = document.getElementById('HRAltZipcodeId');
+                //var zipcodevalidEId  = document.getElementById('HRAltZipcodeId-error');
+                
+                if(street_text==''||city_text==''||state_text=='None'|| zipcode_text==''){
+                    //streetvalidId .style.cssText = "border: 1px solid red";
+                    //streetvalidEId.style.cssText = "display:block";
+                    res_address_EId.style.cssText = "display:block";
+                    document.getElementById('HRAltStreetId').focus();
+                    return false;
+                
+                }
+                else{
+                    //streetvalidId.style.cssText = "";
+                    //streetvalidEId.style.cssText = "display:none";
+                    res_address_EId.style.cssText = "display:none";
+                    return true;
+                    
+                    /*if(city_text==''){
+                        cityvalidId.style.cssText = "border: 1px solid red";
+                        cityvalidEId.style.cssText = "display:block";
+                        document.getElementById('HRCityId').focus();
+                        return false;
+                    }
+                    else{
+                        cityvalidId.style.cssText = "";
+                        cityvalidEId.style.cssText = "display:none";
+                        
+                        if(state_text=='None'){ 
+                            statevalidId.style.cssText = "border: 1px solid red";
+                            statevalidEId.style.cssText = "display:block";
+                            document.getElementById('HRStateId').focus();
+                            return false;
+                        
+                        }
+                        else{
+                            statevalidId.style.cssText = "";
+                            statevalidEId.style.cssText = "display:none";
+                            
+                            if(zipcode_text==''){
+                                zipcodevalidId.style.cssText = "border: 1px solid red";
+                                zipcodevalidEId.style.cssText = "display:block";
+                                document.getElementById('HRZipcodeId').focus();
+                                return false;
+                            
+                            }
+                            else{
+                                zipcodevalidId.style.cssText = "";
+                                zipcodevalidEId.style.cssText = "display:none";
+                            }
+                        }
+                    }*/
+                } 
+            }
+        }
+        
+                /*function ValidateRegistration()
+                {
+                    //papercheck();
+                    var paperless = $(showPaperless).is(':checked');
+                    alert(paperless);
+                    var HRemailvalidId = $('#HRemailId').val();
+                    alert(HRemailvalidId);
+                    if(paperless == false || HRemailvalidId != '')
+                    {
+                        alert(1);
+                        return true;
+                    }
+                    else
+                    {
+                        alert(2);
+                        return false;
+                    }
+                }*/
+            </script>
+        </apex:define>
+    </apex:composition>
+</apex:page>

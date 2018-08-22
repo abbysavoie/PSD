@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>RAD_ApplicationDetail_V1</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>RAD_ApplicationDetail</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT( ISBLANK(DOB__c) ) , 
+IF( DATE( 2000 , MONTH( DOB__c ) , DAY( DOB__c ) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ), 
+YEAR (Today()) - YEAR (DOB__c), 
+YEAR (Today()) - YEAR ( DOB__c ) -1 ), 
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Agency Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Agency Contact Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Agency Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Agency_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Agency List</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Did_anyone_helped_you_to_submit_the_info__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alliance For African Assistance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alpha Project For The Homeless</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campesinos Unidos Inc</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Catholic Charities – Diocese of San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Center For Community Solutions</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Chicano Federation-San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community Foundation of San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Downtown Safe Haven</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Episcopal Community Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ethiopian Community Of San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Home Start</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jewish Family Service of San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lutheran Social Service of Southern California-San Diego County</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mental Health Systems Inc</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Neighborhood House Association</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>San Diego Center for Blind and Vision Impaired</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>San Diego Regional Center</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>San Diego Youth and Community Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>St Vincert De Paul Village</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Access to Independence</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>YMCA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Department of Veterans Affairs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>County of San Diego HHSA – Child Welfare Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>211</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Campesinos Unidos Inc.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mental Health Systems Inc.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>San Diego Housing Commission</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Alliance For African Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Alpha Project For The Homeless</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Campesinos Unidos Inc</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Catholic Charities – Diocese of San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Center For Community Solutions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Chicano Federation-San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Community Foundation of San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Downtown Safe Haven</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Episcopal Community Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Ethiopian Community Of San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Home Start</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Jewish Family Service of San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Lutheran Social Service of Southern California-San Diego County</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Mental Health Systems Inc</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Neighborhood House Association</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>San Diego Center for Blind and Vision Impaired</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>San Diego Regional Center</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>San Diego Youth and Community Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>St Vincert De Paul Village</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Access to Independence</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>YMCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Department of Veterans Affairs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>County of San Diego HHSA – Child Welfare Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Others</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>211</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Campesinos Unidos Inc.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>Mental Health Systems Inc.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yes</controllingFieldValue>
+                <valueName>San Diego Housing Commission</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>American_Indian__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>American Indian</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Applicant__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Applications_WL_00000001</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Application_HMY__c</fullName>
+        <externalId>false</externalId>
+        <label>Application HMY</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Saved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Update Required</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Leased</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>On List</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Applied_Date_Time_With_Seconds__c</fullName>
+        <externalId>false</externalId>
+        <label>Applied Date Time</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applied_Date_time__c</fullName>
+        <description>Applied Date/time on Application to map to Yardi Applied Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Applied Date/time</inlineHelpText>
+        <label>Applied Date/time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Are_you_in_Active_duty_with_US_Army__c</fullName>
+        <externalId>false</externalId>
+        <label>Are you in active duty with US military</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Are_you_or_your_spouse_co_head_disabled__c</fullName>
+        <externalId>false</externalId>
+        <label>Are you or your spouse/co-head disabled</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Are_you_veteran_or_a_family_of_a_ventera__c</fullName>
+        <externalId>false</externalId>
+        <label>Are you veteran or a family of veteran</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Asian__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Asian</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Black__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Black</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Boomi_Is_Processing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag is set by Boomi after picking up a record that had the Send To Boomi checkbox set.  It indicates that Boomi has picked up the record and is attempting to send the data to YARDI.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This flag is set by Boomi when it is processing a record.</inlineHelpText>
+        <label>Boomi Is Processing</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Citizenship__c</fullName>
+        <externalId>false</externalId>
+        <label>Citizenship</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Eligible Citizen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Eligible Non - Citizen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ineligible Non-Citizen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Verification</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_Last_Modified_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Last Modified By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Applicant__r.FirstName  &amp;  &apos;,&apos;  &amp;  Applicant__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DOB__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dependents_Children_under_age_of_18__c</fullName>
+        <externalId>false</externalId>
+        <label>Dependents/Children under age of 18</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Did_anyone_helped_you_to_submit_the_info__c</fullName>
+        <externalId>false</externalId>
+        <label>Did anyone helped you to submit the info</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Disabled</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Disabled_Family__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Disabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Displaced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Displaced</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Education__c</fullName>
+        <externalId>false</externalId>
+        <label>Education</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High School</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Masters</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No formal education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Primary education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Secondary education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GED</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vocational qualification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Doctorate or higher</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bachelors</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Some college</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Middle School</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Elderly_Family__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Elderly</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Elderly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Elderly</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Employment_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Employment Zip Code</label>
+        <length>9</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enter_Agency_name_if_selected_other__c</fullName>
+        <externalId>false</externalId>
+        <label>Enter Agency name if selected other</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ethnicity__c</fullName>
+        <externalId>false</externalId>
+        <label>Ethnicity</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hispanic or Latino</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Hispanic or Latino</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Family_Annual_Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Family Annual Income</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Family__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Family</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Spouse First Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HH_Race__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(Black__c ,White__c ,Pacific_Islander__c,American_Indian__c,Asian__c), &quot;White;Black;Pacific Islander;AmericanIndian;Asian;&quot;, 
+IF(AND(White__c ,Pacific_Islander__c,American_Indian__c,Asian__c), &quot;White;Pacific Islander;AmericanIndian;Asian&quot;,
+IF(AND(Black__c ,Pacific_Islander__c,American_Indian__c,Asian__c), &quot;Black;Pacific Islander;AmericanIndian;Asian&quot;, 
+IF(AND(Black__c ,White__c ,American_Indian__c,Asian__c), &quot;White,Black;AmericanIndian;Asian&quot;, 
+IF(AND(Black__c ,White__c ,Pacific_Islander__c,Asian__c), &quot;White,Black;Pacific Islander;Asian&quot;, 
+IF(AND(Black__c ,White__c ,Pacific_Islander__c,American_Indian__c), &quot;White,Black;Pacific Islander;AmericanIndian&quot;, 
+IF(AND(White__c,Black__c ,Pacific_Islander__c), &quot;White;Black;Pacific Islander&quot;,
+IF(AND(White__c,Black__c ,American_Indian__c), &quot;White;Black;American Indian&quot;, 
+IF(AND(White__c,Black__c ,Asian__c), &quot;White;Black;Asian&quot;,
+IF(AND(Black__c ,Pacific_Islander__c,American_Indian__c), &quot;Black;Pacific Islander;American Indian&quot;,
+IF(AND(Black__c ,Pacific_Islander__c,Asian__c), &quot;Black;Pacific Islander;Asian&quot;,
+IF(AND(Pacific_Islander__c ,American_Indian__c,Asian__c), &quot;Pacific Islander;American Indian;Asian&quot;,
+IF(AND(Pacific_Islander__c ,Asian__c,White__c), &quot;Pacific Islander;Asian;White&quot;,
+IF(AND(American_Indian__c,Asian__c,White__c), &quot;American Indian;Asian;White&quot;,
+IF(AND(American_Indian__c,Asian__c,Black__c), &quot;American Indian;Asian;Black&quot;,
+IF(AND(Asian__c,White__c,Black__c), &quot;Asian;White;Black&quot;,
+IF(AND(Asian__c,Pacific_Islander__c,White__c), &quot;Asian;PacificIslander;White&quot;,
+IF(AND(White__c ,Black__c ), &quot;White;Black&quot;,
+IF(AND(White__c ,Pacific_Islander__c ), &quot;White;Pacific Islander&quot;,
+IF(AND(White__c ,American_Indian__c ), &quot;White;merican Indian&quot;,
+IF(AND(White__c ,Asian__c ), &quot;White;Asian&quot;,
+IF(AND(Black__c ,Pacific_Islander__c ), &quot;Black;Pacific Islander&quot;,
+IF(AND(Black__c ,American_Indian__c ), &quot;Black;American Indian&quot;,
+IF(AND(Black__c ,Asian__c ), &quot;Black;Asian&quot;,
+IF(AND(Pacific_Islander__c ,American_Indian__c ), &quot;Pacific Islander;American Indian&quot;,
+IF(AND(Pacific_Islander__c ,Asian__c ), &quot;Pacific Islander;Asian&quot;,
+IF(AND(American_Indian__c ,Asian__c ), &quot;American Indian;Asian&quot;,
+IF(AND(Black__c ), &quot;Black&quot;,
+IF(AND(White__c ), &quot;White&quot;,
+IF(AND(Pacific_Islander__c ), &quot;Pacific Islander&quot;,
+IF(AND(American_Indian__c ), &quot;American Indian&quot;,
+IF(AND(Asian__c ), &quot;Asian&quot;, &apos;&apos;))))))))))))))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HH Race</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HH_Stats__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(Near_Elderly__c ,Disable__c ,Elderly__c,Displaced__c,Homeless__c), &quot;D;NE;E;Disp;H&quot;, 
+IF(AND(Disable__c ,Elderly__c,Displaced__c,Homeless__c), &quot;D;E;Disp;H&quot;, 
+IF(AND(Near_Elderly__c ,Elderly__c,Displaced__c,Homeless__c), &quot;NE;E;Disp;H&quot;, 
+IF(AND(Near_Elderly__c ,Disable__c ,Displaced__c,Homeless__c), &quot;D;NE;Disp;H&quot;, 
+IF(AND(Near_Elderly__c ,Disable__c ,Elderly__c,Homeless__c), &quot;D;NE;E;H&quot;, 
+IF(AND(Near_Elderly__c ,Disable__c ,Elderly__c,Displaced__c), &quot;D;NE;E;Disp&quot;, 
+IF(AND(Disable__c,Near_Elderly__c ,Elderly__c), &quot;D;NE;E&quot;, 
+IF(AND(Disable__c,Near_Elderly__c ,Displaced__c), &quot;D;NE;Disp&quot;, 
+IF(AND(Disable__c,Near_Elderly__c ,Homeless__c), &quot;D;NE;H&quot;, 
+IF(AND(Near_Elderly__c ,Elderly__c,Displaced__c), &quot;NE;E;Disp&quot;, 
+IF(AND(Near_Elderly__c ,Elderly__c,Homeless__c), &quot;NE;E;H&quot;, 
+IF(AND(Elderly__c ,Displaced__c,Homeless__c), &quot;E;Disp;H&quot;, 
+IF(AND(Elderly__c ,Homeless__c,Disable__c), &quot;E;H;D&quot;, 
+IF(AND(Displaced__c,Homeless__c,Disable__c), &quot;Disp;H;D&quot;, 
+IF(AND(Displaced__c,Homeless__c,Near_Elderly__c), &quot;Disp;H;NE&quot;, 
+IF(AND(Homeless__c,Disable__c,Near_Elderly__c), &quot;H;D;NE&quot;, 
+IF(AND(Homeless__c,Elderly__c,Disable__c), &quot;H;E;D&quot;, 
+IF(AND(Disable__c ,Near_Elderly__c ), &quot;D;NE&quot;, 
+IF(AND(Disable__c ,Elderly__c ), &quot;D;E&quot;, 
+IF(AND(Disable__c ,Displaced__c ), &quot;D;Disp&quot;, 
+IF(AND(Disable__c ,Homeless__c ), &quot;D;H&quot;, 
+IF(AND(Near_Elderly__c ,Elderly__c ), &quot;NE;E&quot;, 
+IF(AND(Near_Elderly__c ,Displaced__c ), &quot;NE;Disp&quot;, 
+IF(AND(Near_Elderly__c ,Homeless__c ), &quot;NE;H&quot;, 
+IF(AND(Elderly__c ,Displaced__c ), &quot;E;Disp&quot;, 
+IF(AND(Elderly__c ,Homeless__c ), &quot;E;H&quot;, 
+IF(AND(Displaced__c ,Homeless__c ), &quot;Disp;H&quot;, 
+IF(AND(Near_Elderly__c ), &quot;NE&quot;, 
+IF(AND(Disable__c ), &quot;D&quot;, 
+IF(AND(Elderly__c ), &quot;E&quot;, 
+IF(AND(Displaced__c ), &quot;Disp&quot;, 
+IF(AND(Homeless__c ), &quot;H&quot;, &apos;&apos;))))))))))))))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HH Stats</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HMY__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact HMY</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hearing_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hearing Access</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Homeless__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Homeless</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Homeless_with_disability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Homeless with disability</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Spouse Last Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Live_Work_in_City_of_San_Diego__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Applicant lives or works within the City of San Diego</description>
+        <externalId>false</externalId>
+        <label>Live/Work in City of San Diego</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Middle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Middle Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mobility_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mobility Access</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ModRehab_value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Mod_Rehab__c==True, &quot;Mod Rehab&quot;, &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ModRehab value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mod_Rehab__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Wait List for Mod Rehab</inlineHelpText>
+        <label>Mod Rehab</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NED_Non_Elderly_Person_with_Disability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NED-Non Elderly Person with Disability</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NED_Non_Elderly_Person_with_Disability_v__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NED_Non_Elderly_Person_with_Disability__c==True, &quot;NED-Non Elderly Person with Disability&quot;, &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NED-Non Elderly Person with Disability v</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Near_Elderly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Near Elderly</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Non_Elderly_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Non Elderly Disabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Occupation__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Architecture and Engineering</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unemployed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Arts Design Entertainment Sports and Media</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Building Grounds Cleaning and Maintenance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business and Financial Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community and Social Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Computer and Mathematical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Construction and Extraction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Education Training and Library</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Farming Fishing and Forestry</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Food Preparation and Serving</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare Practitioners and Technical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Installation Maintenance and Repair</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Life or Physical or Social Science</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Military Specific</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Office and Administrative Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Personal Care and Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Production and Manufacturing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Protective Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales and Related</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transportation and Material Moving</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PBVS_Project_Based_Single__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PBS-Project Based Single</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PBVS_Project_Based_Single_value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(PBVS_Project_Based_Single__c==True, &quot;PBVS-Project Based Single&quot;, &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PBS-Project Based Single value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PBV_Project_Based__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PBV-Project Based</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pacific_Islander__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pacific Islander</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Portal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Portal Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Prospect_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect #</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pseudo_SSN__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Pseudo SSN</label>
+        <referenceTo>PSEUDO_SSN__c</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Public_Housing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Public Housing</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RAD_Last_Update_Date__c</fullName>
+        <description>When the applicant shows interest  for extension of purge</description>
+        <externalId>false</externalId>
+        <label>Last Update Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RAD_Next_Purge_Date__c</fullName>
+        <description>This is informational field, which will store the end date of Grace Period.</description>
+        <externalId>false</externalId>
+        <label>Grace Period End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RAD_Next_Purge_Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Update Request Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RAD_Spouse_Age__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT( ISBLANK(Spouse_Date_of_Birth__c) ) , 
+IF( DATE( 2000 , MONTH( Spouse_Date_of_Birth__c) , DAY( Spouse_Date_of_Birth__c) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ), 
+YEAR (Today()) - YEAR (Spouse_Date_of_Birth__c), 
+YEAR (Today()) - YEAR ( Spouse_Date_of_Birth__c) -1 ), 
+null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Spouse Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SSN__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Security Number1</label>
+        <length>11</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Section_8__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Section 8</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Section_8_value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Section_8__c==True, &quot;The Section 8&quot;, &quot; &quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Section 8 value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_To_Boomi__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag is checked by Boomi to determine if a record is to be picked up and processed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the box is checked, Boomi will pull the record on the next poll.  If the box is unchecked, Boomi will not pull the record.</inlineHelpText>
+        <label>Send To Boomi</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sight_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sight Access</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spouse_Co_Head_If_applicable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Spouse/Co-Head/If applicable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spouse_Date_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Spouse Date of Birth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Spouse_Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Gender</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Spouse_SSN__c</fullName>
+        <externalId>false</externalId>
+        <label>Spouse Social Security Number</label>
+        <length>11</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tenant__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant #</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Number_of_People__c</fullName>
+        <externalId>false</externalId>
+        <formula>of_people_in_the_H_H_Adults__c + Dependents_Children_under_age_of_18__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Number of People</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_People__c</fullName>
+        <externalId>false</externalId>
+        <label>Total People</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Confirmation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked when Applicant&apos;s are interested to stay on Wait list. Related to Purge/Update Process</description>
+        <externalId>false</externalId>
+        <label>Update Confirmation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_defined_2__c</fullName>
+        <externalId>false</externalId>
+        <label>User defined 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accessible Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Needs Accessible, but will accept Flat</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Needs Accessible, but will accept any Apt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Needs Flat Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Needs Flat, but will accept ant Apt</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Veteran_Family_of__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Applicant is from a veteran / active military or family of veterans</description>
+        <externalId>false</externalId>
+        <label>Veteran / Active Military</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>White__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>White</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>newdate__c</fullName>
+        <externalId>false</externalId>
+        <label>newdate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>of_people_in_the_H_H_Adults__c</fullName>
+        <externalId>false</externalId>
+        <label># of people in the H/H - Adults</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Applications</label>
+    <listViews>
+        <fullName>All_Applications</fullName>
+        <columns>Applied_Date_time__c</columns>
+        <columns>NAME</columns>
+        <columns>Applicant__c</columns>
+        <columns>Prospect_Name__c</columns>
+        <columns>Tenant__c</columns>
+        <columns>Pseudo_SSN__c</columns>
+        <columns>Application_Status__c</columns>
+        <columns>Citizenship__c</columns>
+        <columns>Ethnicity__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Age__c</columns>
+        <columns>DOB__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Applications</label>
+    </listViews>
+    <listViews>
+        <fullName>Last_Week</fullName>
+        <columns>NAME</columns>
+        <columns>Applicant__c</columns>
+        <columns>Age__c</columns>
+        <columns>Ethnicity__c</columns>
+        <columns>Family_Annual_Income__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Prospect_Name__c</columns>
+        <columns>Tenant__c</columns>
+        <columns>Total_People__c</columns>
+        <columns>Applied_Date_time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>notEqual</operation>
+            <value>8/27/2017 12:00 AM</value>
+        </filters>
+        <label>Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>This_Week</fullName>
+        <columns>NAME</columns>
+        <columns>Applicant__c</columns>
+        <columns>Prospect_Name__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Tenant__c</columns>
+        <columns>Citizenship__c</columns>
+        <columns>Ethnicity__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Family_Annual_Income__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>notEqual</operation>
+            <value>8/28/2017 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>Applications__c.Closed</value>
+        </filters>
+        <label>This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_Applications</fullName>
+        <columns>NAME</columns>
+        <columns>Applicant__c</columns>
+        <columns>Prospect_Name__c</columns>
+        <columns>Tenant__c</columns>
+        <columns>of_people_in_the_H_H_Adults__c</columns>
+        <columns>Age__c</columns>
+        <columns>Citizenship__c</columns>
+        <columns>DOB__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>Applications__c.Closed</value>
+        </filters>
+        <label>Today&apos;s Applications</label>
+    </listViews>
+    <listViews>
+        <fullName>Yesterday_s_Application</fullName>
+        <columns>NAME</columns>
+        <columns>Applicant__c</columns>
+        <columns>Prospect_Name__c</columns>
+        <columns>Tenant__c</columns>
+        <columns>Gender__c</columns>
+        <columns>Family_Annual_Income__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Total_People__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Yesterday&apos;s Application</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AP-{0000000000}</displayFormat>
+        <label>Application ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Applications</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Closed</fullName>
+        <active>true</active>
+        <label>Closed</label>
+        <picklistValues>
+            <picklist>Agency_List__c</picklist>
+            <values>
+                <fullName>211</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Access to Independence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alliance For African Assistance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alpha Project For The Homeless</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campesinos Unidos Inc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campesinos Unidos Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Catholic Charities %E2%80%93 Diocese of San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center For Community Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicano Federation-San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Foundation of San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>County of San Diego HHSA %E2%80%93 Child Welfare Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Department of Veterans Affairs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downtown Safe Haven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Episcopal Community Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ethiopian Community Of San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Start</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewish Family Service of San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lutheran Social Service of Southern California-San Diego County</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental Health Systems Inc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mental Health Systems Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neighborhood House Association</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Diego Center for Blind and Vision Impaired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Diego Housing Commission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Diego Regional Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Diego Youth and Community Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>St Vincert De Paul Village</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YMCA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Application_Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Removed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Required</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Are_you_in_Active_duty_with_US_Army__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Are_you_or_your_spouse_co_head_disabled__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Are_you_veteran_or_a_family_of_a_ventera__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Citizenship__c</picklist>
+            <values>
+                <fullName>Eligible Citizen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eligible Non-Citizen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ineligible Non-Citizen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Verification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Did_anyone_helped_you_to_submit_the_info__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Education__c</picklist>
+            <values>
+                <fullName>Bachelor%E2%80%99s degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctorate or higher</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elementary School %28Grades K-5%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High school %28Grades 9-12%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Master%E2%80%99s degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No formal education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vocational training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ethnicity__c</picklist>
+            <values>
+                <fullName>Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Hispanic or Latino</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Gender__c</picklist>
+            <values>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupation__c</picklist>
+            <values>
+                <fullName>Architecture and Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arts%2C Entertainment and Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building%2C Grounds%2C Cleaning and Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business and Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community and Social Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computers and Mathematics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education%2C Training and Library</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Farming%2C Fishing and Forestry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food Preparation and Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare Practitioners and Technical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation%2C Maintenance and Repair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life%2C Physical and Social Science</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office and Administrative Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Care and Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production%2FManufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Protective Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unemployed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Portal_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Spouse_Gender__c</picklist>
+            <values>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_defined_2__c</picklist>
+            <values>
+                <fullName>Accessible Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Accessible%2C but will accept Flat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Accessible%2C but will accept any Apt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Flat Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Flat%2C but will accept ant Apt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>All_Memos</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>All Memos</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/support/console/30.0/integration.js&quot;)} 
+if(typeof(srcUp) == &apos;function&apos;) //Checks that it is in console
+{ 
+var openSubtab = function(result){ 
+sforce.console.openSubtab(result.id,&apos;/apex/RAD_AllMemos?id={!Applications__c.Id}&apos;, true, &apos;All Memos&apos;, null); 
+}; 
+sforce.console.getEnclosingPrimaryTabId(openSubtab); 
+
+} 
+else{ 
+window.parent.location.href=(&apos;/apex/RAD_AllMemos?id={!Applications__c.Id}&amp;inConsole=false&apos;) 
+}</url>
+    </webLinks>
+</CustomObject>

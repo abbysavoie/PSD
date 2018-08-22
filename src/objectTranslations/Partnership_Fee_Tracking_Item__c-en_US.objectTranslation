@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partnership Fee Tracking Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partnership Fee Tracking Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Financial --></label>
+        <name>Actual_Financial__c</name>
+        <relationshipLabel><!-- Partnership Fee Tracking Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Beginning Balance --></label>
+        <name>Beginning_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposited --></label>
+        <name>Deposited__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ending Balance --></label>
+        <name>Ending_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fee Sub-Type --></label>
+        <name>Fee_Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>Administrative GP</masterLabel>
+            <translation><!-- Administrative GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative LP</masterLabel>
+            <translation><!-- Administrative LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-GP</masterLabel>
+            <translation><!-- Co-GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special GP</masterLabel>
+            <translation><!-- Special GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special LP</masterLabel>
+            <translation><!-- Special LP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fee Type --></label>
+        <name>Fee_Type__c</name>
+        <picklistValues>
+            <masterLabel>General Partner Asset Management Fee</masterLabel>
+            <translation><!-- General Partner Asset Management Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Partner Asset Management Fee</masterLabel>
+            <translation><!-- Limited Partner Asset Management Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest --></label>
+        <name>Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Note --></label>
+        <name>Other_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payment --></label>
+        <name>Total_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Withdrawal --></label>
+        <name>Withdrawal__c</name>
+    </fields>
+    <layouts>
+        <layout>Partnership Fee Tracking Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Partnership Fee Details --></label>
+            <section>Partnership Fee Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

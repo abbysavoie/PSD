@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Property_Unit__c$Name</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Building__c.Name</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Building__c.Property_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Unit_Name__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Unit_Number__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$HQS_Type__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Date_of_HQS__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Unit_Available_Date__c</field>
+    </columns>
+    <columns>
+        <field>Property_Unit__c$Released_Date__c</field>
+    </columns>
+    <description>Lists all the units associated with Housing First</description>
+    <filter>
+        <criteriaItems>
+            <column>Property_Unit__c$Building__c.SDHC_Program_Affiliation__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Housing First Property Unit Information</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Property_Unit_Information__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Property_Unit__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

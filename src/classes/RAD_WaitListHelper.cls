@@ -955,7 +955,7 @@ public class RAD_WaitListHelper{
         if(!Applications_List.isEmpty())
         {
             List<Applications__c> saveApps_list = application_map.values();
-            Database.update(saveApps_list, false);
+            //Database.update(saveApps_list, false);
         }
         
     } 

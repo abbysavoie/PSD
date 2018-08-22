@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wait List Income Limit Details</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wait List Income Limit Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- FMR --></label>
+        <name>FMR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income Limit --></label>
+        <name>Income_Limit__c</name>
+        <relationshipLabel><!-- Wait List Income Limit Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Limit 10 --></label>
+        <name>Limit_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 11 --></label>
+        <name>Limit_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 12 --></label>
+        <name>Limit_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 13 --></label>
+        <name>Limit_13__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 14 --></label>
+        <name>Limit_14__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 15 --></label>
+        <name>Limit_15__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 16 --></label>
+        <name>Limit_16__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 1 --></label>
+        <name>Limit_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 2 --></label>
+        <name>Limit_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 3 --></label>
+        <name>Limit_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 4 --></label>
+        <name>Limit_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 5 --></label>
+        <name>Limit_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 6 --></label>
+        <name>Limit_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 7 --></label>
+        <name>Limit_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 8 --></label>
+        <name>Limit_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit 9 --></label>
+        <name>Limit_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit Effective Date --></label>
+        <name>Limit_Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit Expiration Date --></label>
+        <name>Limit_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income --></label>
+        <name>Median_Income__c</name>
+    </fields>
+    <layouts>
+        <layout>Wait List Income Limit Details Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

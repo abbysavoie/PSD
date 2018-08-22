@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>LPAM - These are the partners that make up this project. They will be attached to Equity Investments.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Business_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account/Business Entity</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Partner Structures</relationshipLabel>
+        <relationshipName>Partner_Structures</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Asset Manager</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account_Business_Entity__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Partner Structures</relationshipLabel>
+        <relationshipName>Partner_Structures</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Associated_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Associated Project</label>
+        <referenceTo>Loan_Project__c</referenceTo>
+        <relationshipLabel>Partner Structures</relationshipLabel>
+        <relationshipName>Partner_Structures</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Partner_Sub_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Sub-Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Investor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Managing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Co-Partner</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Type</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>General Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limited Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Borrower</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Property Management Company</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Asset Management Company</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Asset/Property Management Company</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Property Manager</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Account.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account_Business_Entity__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Partner Structures (Property Manager)</relationshipLabel>
+        <relationshipName>Partner_Structures1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Fees</label>
+        <summarizedField>Partner_Fee__c.Amount__c</summarizedField>
+        <summaryForeignKey>Partner_Fee__c.Partner_Fee__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Partner Structure</label>
+    <nameField>
+        <displayFormat>PStr-{00000}</displayFormat>
+        <label>PartnerStructureID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Partner Structures</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Create_New_Business_Entity</fullName>
+        <availability>online</availability>
+        <description>Creates a new Business Entity</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>1000</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Create New Business Entity</masterLabel>
+        <openType>newWindow</openType>
+        <position>topLeft</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://sd-hc.my.salesforce.com/a05/e?retURL=%2Fa05%2Fo</url>
+        <width>1200</width>
+    </webLinks>
+</CustomObject>

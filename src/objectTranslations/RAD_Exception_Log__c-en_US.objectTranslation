@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Exception Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Exception Logs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>RAD_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Source --></label>
+        <name>RAD_Error_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exception Object Name --></label>
+        <name>RAD_Exception_Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exception Record ID --></label>
+        <name>RAD_Exception_Record_ID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Conventional Debt</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conventional Debts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accrued Interest --></label>
+        <name>Accrued_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Debt Service --></label>
+        <name>Annual_Debt_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Name --></label>
+        <name>Bank_Name__c</name>
+        <relationshipLabel><!-- Conventional Debts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Funding Source Type --></label>
+        <name>Funding_Source_Type__c</name>
+        <picklistValues>
+            <masterLabel>CalHFA</masterLabel>
+            <translation><!-- CalHFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conventional</masterLabel>
+            <translation><!-- Conventional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCD</masterLabel>
+            <translation><!-- HCD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD</masterLabel>
+            <translation><!-- HUD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subordinate</masterLabel>
+            <translation><!-- Subordinate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter the Interest Rate for this loan --></help>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Type --></label>
+        <name>Interest_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amoritized</masterLabel>
+            <translation><!-- Amoritized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compound</masterLabel>
+            <translation><!-- Compound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simple</masterLabel>
+            <translation><!-- Simple --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Information Source --></label>
+        <name>Loan_Information_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Debt Service --></label>
+        <name>Monthly_Debt_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Original Loan Amount for this Loan --></help>
+        <label><!-- Original Loan Amount --></label>
+        <name>Original_Loan_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Loan Type --></label>
+        <name>Other_Loan_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- This feeds the roll-up for the Project Outstanding Balance --></help>
+        <label><!-- Outstanding Balance --></label>
+        <name>Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProjectName --></label>
+        <name>ProjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Conventional Debts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Term (Years) --></label>
+        <name>Term_Years__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payments --></label>
+        <name>Total_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Principle Paid --></label>
+        <name>Total_Principle_Paid__c</name>
+    </fields>
+    <layouts>
+        <layout>Loan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Funding Source Information --></label>
+            <section>Funding Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Funding Source Modification Details --></label>
+            <section>Funding Source Modification Details</section>
+        </sections>
+        <sections>
+            <label><!-- Project --></label>
+            <section>Project</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Funding Source Type --></label>
+        <name>Funding_Source_Type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

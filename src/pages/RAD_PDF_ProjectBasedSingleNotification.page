@@ -1,0 +1,90 @@
+<apex:page standardController="Enrolled_Wait_List__c" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+        renderAs="pdf" >
+          <head>                   
+          <style type="text/css" media="print">
+            @page {
+             padding-top: 40px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {
+            
+            position: running(footer);
+            
+            }
+            li{
+              margin: 10px 0;
+            }
+            h4 {
+              margin: 5px 0;
+            }
+         
+            </style>
+            </head>          
+        <!--<div style="page-break-after:always;"/>  -->             
+           
+        <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div> 
+            </div>           
+           
+             <br/>   
+               
+            <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Today()}"/></apex:outputText>      
+
+            <br/>
+         
+        <body> 
+            <br/><br/> 
+             
+            <b><apex:outputlabel >{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}</apex:outputlabel></b><br/> 
+            <apex:outputPanel rendered="{!NOT(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+            <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet}"/></b><br/>
+            <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingcity}"/></b>&nbsp;
+            <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingState}"/></b>&nbsp;
+            <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingpostalcode}"/></b>&nbsp;      
+            </apex:outputPanel>
+          
+       
+        <apex:outputPanel rendered="{!(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+        <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Street__c}"/></b><br/>
+        <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_City__c}"/></b>&nbsp;
+        <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_State__c}"/></b>&nbsp;
+        <b><apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Zipcode__c}"/></b>&nbsp;     
+        </apex:outputPanel> 
+        
+        <br/>
+        <center><h4 style="font-weight:bold">RENTAL ASSISTANCE PROGRAM</h4></center>
+        <center><h4 style="font-weight:bold">PROJECT BASED SINGLE INTAKE APPOINTMENT LETTER</h4></center>
+        <br/>
+        <apex:outputlabel >Dear {!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}, </apex:outputlabel><br/><br/>      
+          <p> We are in the process of reviewing your application for the Project Based Single rental assistance program to determine whether or not we are able to offer you a voucher at this time.</p>    
+            <p>It is important that you follow the instructions below.</p>
+        <ol>
+        <!-- <li> You have been scheduled to see a  NED eligilibity worker on  <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Today()}"/></apex:outputText> @ 2pm. </li> -->
+        <li> You have been scheduled to see a  Section 8  eligibility worker on:  </li>
+         <li> It is required that all  adult members of your household (and all minors within 2 months of their 18th birthday) be present at the interview which will be conducted at our main office:
+         <b>1122 Broadway #300, San Diego CA 92101</b>. Children are <u>not</u> allowed. Due to the limited spacing, we <b>require</b> that childcare arrangements be made. The interview will last approximately one hour.</li>
+          <li><b> If you must reschedule this appointment, please call (619)578-7640.</b></li>
+         </ol>
+                <p> If you fail to attend your scheduled appointment, your name will be dropped from the Waiting List. If you arrive late or bring children to your appointment, you will be rescheduled for another date. Only one rescheduled appointment is allowed. Your cooperation is appreciated.</p>
+                 <p> Please come prepared for your appointment. Failure to provide all necessary paperwork will cause a delay in the processing of your case and may result in the denial of your application. If you have any questions regarding this letter, please call us at (619)578-7640. </p>
+                 <p>If you park your car in our facility  for your appointment, your parking ticket  will be validated for the length of your appointment.</p>
+               <apex:outputlabel > We look forward to seeing you soon. </apex:outputlabel>       
+       <br/><br/>
+       <p>Rental Assistance Department</p>     
+       
+       <div class="footer">
+        <center> <img alt="SDHC"  src="{!$Resource.SDHC_PDF_FTR}" width="200%" /></center>
+        </div>
+        </body>
+       
+                  
+ </apex:page>

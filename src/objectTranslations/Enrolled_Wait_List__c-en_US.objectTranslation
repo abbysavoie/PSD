@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wait List</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wait Lists</value>
+    </caseValues>
+    <fields>
+        <label><!-- Applicant Confirmation Received --></label>
+        <name>Applicant_Confirmation_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applications --></label>
+        <name>Applications__c</name>
+        <relationshipLabel><!-- Wait Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bed size --></label>
+        <name>Bed_size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status Date Time --></label>
+        <name>Current_Status_Date_Time_With_Seconds__c</name>
+    </fields>
+    <fields>
+        <help><!-- This time changes when the current status changes --></help>
+        <label><!-- Current Status Date / Time --></label>
+        <name>Current_Status_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status --></label>
+        <name>Current_Status__c</name>
+        <picklistValues>
+            <masterLabel>Issue/Offer</masterLabel>
+            <translation><!-- Issue/Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leased</masterLabel>
+            <translation><!-- Leased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onlist</masterLabel>
+            <translation><!-- Onlist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selected</masterLabel>
+            <translation><!-- Selected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- HMY --></label>
+        <name>HMY__c</name>
+        <relationshipLabel><!-- Wait Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Income Target Points --></label>
+        <name>IncomeTtarget_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Type --></label>
+        <name>Issue_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leased Status --></label>
+        <name>Leased_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limit --></label>
+        <name>Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lottery --></label>
+        <name>Lottery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of refusals --></label>
+        <name>Number_of_refusals__c</name>
+    </fields>
+    <fields>
+        <label><!-- OnList Status --></label>
+        <name>OnList_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Date Time --></label>
+        <name>Original_Date_Time_with_seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- PASS THROUGH --></label>
+        <name>PASS_THROUGH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Status --></label>
+        <name>Portal_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Issued Voucher / Offered Unit</masterLabel>
+            <translation><!-- Issued Voucher / Offered Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Program</masterLabel>
+            <translation><!-- On Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selected</masterLabel>
+            <translation><!-- Selected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Preference Point --></label>
+        <name>Prefernce_Point__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preference Points Order --></label>
+        <name>Prefernce_Points_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Code --></label>
+        <name>Property_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property --></label>
+        <name>Property__c</name>
+        <picklistValues>
+            <masterLabel>100000 - MTW S8 - HAP</masterLabel>
+            <translation><!-- 100000 - MTW S8 - HAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101000 - SBS CRF Core</masterLabel>
+            <translation><!-- 101000 - SBS CRF Core --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>101100 - SBS Parker Kier</masterLabel>
+            <translation><!-- 101100 - SBS Parker Kier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>102000 - SBS Homeless 1</masterLabel>
+            <translation><!-- 102000 - SBS Homeless 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>103000 - SBS Homeless 2</masterLabel>
+            <translation><!-- 103000 - SBS Homeless 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104000 - SBS Homeless 3</masterLabel>
+            <translation><!-- 104000 - SBS Homeless 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104100 - SBS Alpha Square</masterLabel>
+            <translation><!-- 104100 - SBS Alpha Square --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104200 - SBS: Hotel Churchill</masterLabel>
+            <translation><!-- 104200 - SBS: Hotel Churchill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104300 - SBS - 1000 Vets: VVSD</masterLabel>
+            <translation><!-- 104300 - SBS - 1000 Vets: VVSD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104400 - SBS - 1000 Vets: SVdP</masterLabel>
+            <translation><!-- 104400 - SBS - 1000 Vets: SVdP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104500 - SBS - MHS HOMES Central</masterLabel>
+            <translation><!-- 104500 - SBS - MHS HOMES Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104600 - SBS - CRF Impact</masterLabel>
+            <translation><!-- 104600 - SBS - CRF Impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>104700 - SBS - MHS C STAR</masterLabel>
+            <translation><!-- 104700 - SBS - MHS C STAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105010 - PBV - Alabama Manor</masterLabel>
+            <translation><!-- 105010 - PBV - Alabama Manor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105020 - PBV - Beckys House</masterLabel>
+            <translation><!-- 105020 - PBV - Beckys House --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105030 - PBV - Connections</masterLabel>
+            <translation><!-- 105030 - PBV - Connections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105040 - PBV - Hollywood Palms</masterLabel>
+            <translation><!-- 105040 - PBV - Hollywood Palms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105050 - PBV - Leah Residence</masterLabel>
+            <translation><!-- 105050 - PBV - Leah Residence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105060 - PBV - Potiker</masterLabel>
+            <translation><!-- 105060 - PBV - Potiker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105070 - PBV - Stepping Stone</masterLabel>
+            <translation><!-- 105070 - PBV - Stepping Stone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105080 - PBV - Take Wing</masterLabel>
+            <translation><!-- 105080 - PBV - Take Wing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105090 - PBV - Townspeople</masterLabel>
+            <translation><!-- 105090 - PBV - Townspeople --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105100 - PBV - Hotel Sandford</masterLabel>
+            <translation><!-- 105100 - PBV - Hotel Sandford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105110 - PBV - Mason</masterLabel>
+            <translation><!-- 105110 - PBV - Mason --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105120 - PBV - Meade</masterLabel>
+            <translation><!-- 105120 - PBV - Meade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105130 - PBV - Santa Margarita</masterLabel>
+            <translation><!-- 105130 - PBV - Santa Margarita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105140 - PBV - The Courtyard</masterLabel>
+            <translation><!-- 105140 - PBV - The Courtyard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105150 - TBRA Home</masterLabel>
+            <translation><!-- 105150 - TBRA Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105160 - Parker-Kier</masterLabel>
+            <translation><!-- 105160 - Parker-Kier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105170 - Westminister Manor</masterLabel>
+            <translation><!-- 105170 - Westminister Manor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105180 - PBV - Celadon</masterLabel>
+            <translation><!-- 105180 - PBV - Celadon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105190 - PBV - New Palace Hotel</masterLabel>
+            <translation><!-- 105190 - PBV - New Palace Hotel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105200 - PBV - Alpha Square</masterLabel>
+            <translation><!-- 105200 - PBV - Alpha Square --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105210 - PBV - Village North</masterLabel>
+            <translation><!-- 105210 - PBV - Village North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105220 - PBV - Atmosphere</masterLabel>
+            <translation><!-- 105220 - PBV - Atmosphere --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105230 - PBV - Cypress</masterLabel>
+            <translation><!-- 105230 - PBV - Cypress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105240 - PBV - Talmadge</masterLabel>
+            <translation><!-- 105240 - PBV - Talmadge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>121000 - S8 Port In Administered</masterLabel>
+            <translation><!-- 121000 - S8 Port In Administered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>125000 - MTW ST Trans - Senior ComCtr</masterLabel>
+            <translation><!-- 125000 - MTW ST Trans - Senior ComCtr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>125100 - MTW ST Trans - Episcopal</masterLabel>
+            <translation><!-- 125100 - MTW ST Trans - Episcopal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>125200 - MTW ST Trans - PATH</masterLabel>
+            <translation><!-- 125200 - MTW ST Trans - PATH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>126000 - Monarch Project</masterLabel>
+            <translation><!-- 126000 - Monarch Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>126100 - Guardian Scholars</masterLabel>
+            <translation><!-- 126100 - Guardian Scholars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>126200 - Moving On Program</masterLabel>
+            <translation><!-- 126200 - Moving On Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>126300 - MTW - Moving Home</masterLabel>
+            <translation><!-- 126300 - MTW - Moving Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>141000 - Home of Your Own - Program</masterLabel>
+            <translation><!-- 141000 - Home of Your Own - Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>160000 - S8 - 1st Year Opt Out</masterLabel>
+            <translation><!-- 160000 - S8 - 1st Year Opt Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>160100 - Tenant Protection</masterLabel>
+            <translation><!-- 160100 - Tenant Protection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>190000 - Enhanced Vouchers</masterLabel>
+            <translation><!-- 190000 - Enhanced Vouchers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>193000 - FUP Program</masterLabel>
+            <translation><!-- 193000 - FUP Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>195000 - VASH Program</masterLabel>
+            <translation><!-- 195000 - VASH Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>197000 - NED Program</masterLabel>
+            <translation><!-- 197000 - NED Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>270000 - S8 Mod Rehab 1 - Program</masterLabel>
+            <translation><!-- 270000 - S8 Mod Rehab 1 - Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>270100 - S8 Mod Rehab 2 - Program</masterLabel>
+            <translation><!-- 270100 - S8 Mod Rehab 2 - Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>270200 - S8 Mod Rehab 7 - Program</masterLabel>
+            <translation><!-- 270200 - S8 Mod Rehab 7 - Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>411000 - HPRP</masterLabel>
+            <translation><!-- 411000 - HPRP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>999999 - Unallocated Salaries</masterLabel>
+            <translation><!-- 999999 - Unallocated Salaries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>hisbvp - SBVP - Homeless</masterLabel>
+            <translation><!-- hisbvp - SBVP - Homeless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>portin - Port In Administered</masterLabel>
+            <translation><!-- portin - Port In Administered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>wait	- Waiting List</masterLabel>
+            <translation><!-- wait	- Waiting List --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field is updated when WL is created and reapplied --></help>
+        <label><!-- Applied Date and Time --></label>
+        <name>RAD_Applied_Date_and_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- This time is updated when the waitlist is created or reapplied --></help>
+        <label><!-- Original Date/Time (Depreciated) --></label>
+        <name>RAD_Date_and_Time_with_Seconds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preference Group --></label>
+        <name>RAD_Preference_Group__c</name>
+        <picklistValues>
+            <masterLabel>Group 1</masterLabel>
+            <translation><!-- Group 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group 2</masterLabel>
+            <translation><!-- Group 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group 3</masterLabel>
+            <translation><!-- Group 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group 4</masterLabel>
+            <translation><!-- Group 4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Selection Marker --></label>
+        <name>RAD_Selection_Marker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason --></label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Briefing</masterLabel>
+            <translation><!-- Briefing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claim</masterLabel>
+            <translation><!-- Claim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Criminal</masterLabel>
+            <translation><!-- Criminal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deceased</masterLabel>
+            <translation><!-- Deceased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped</masterLabel>
+            <translation><!-- Dropped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped/No Update 2011</masterLabel>
+            <translation><!-- Dropped/No Update 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income Targeting</masterLabel>
+            <translation><!-- Income Targeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ineligible</masterLabel>
+            <translation><!-- Ineligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease Up</masterLabel>
+            <translation><!-- Lease Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NED</masterLabel>
+            <translation><!-- NED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Show/Response</masterLabel>
+            <translation><!-- No Show/Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer Accepted</masterLabel>
+            <translation><!-- Offer Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer Rejected</masterLabel>
+            <translation><!-- Offer Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Over Income</masterLabel>
+            <translation><!-- Over Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused Offer</masterLabel>
+            <translation><!-- Refused Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>See Memo</masterLabel>
+            <translation><!-- See Memo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Admission</masterLabel>
+            <translation><!-- Special Admission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Selection</masterLabel>
+            <translation><!-- System Selection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Cancelled</masterLabel>
+            <translation><!-- Voucher Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Expired</masterLabel>
+            <translation><!-- Voucher Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Issued</masterLabel>
+            <translation><!-- Voucher Issued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly Updated</masterLabel>
+            <translation><!-- Yearly Updated --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Removed Status --></label>
+        <name>Removed_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Date/Time --></label>
+        <name>SFDC_Original_Datetime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Bed Size --></label>
+        <name>Second_Bed_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selected Status --></label>
+        <name>Selected_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the box is checked, Boomi will pull the record on the next poll.  If the box is unchecked, Boomi will not pull the record. --></help>
+        <label><!-- Send To Boomi --></label>
+        <name>Send_To_Boomi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Leased</masterLabel>
+            <translation><!-- Leased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On List</masterLabel>
+            <translation><!-- On List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selected</masterLabel>
+            <translation><!-- Selected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- WLAPPLIC_HMY --></label>
+        <name>WLAPPLIC_HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List Type --></label>
+        <name>Wait_List_Type__c</name>
+        <relationshipLabel><!-- Wait Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Weblinks --></label>
+        <name>Weblinks__c</name>
+    </fields>
+    <fields>
+        <label><!-- YARDI HMY --></label>
+        <name>YARDI_HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- YARDI Wait List Type --></label>
+        <name>YARDI_Wait_List_Type__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason out of order --></label>
+        <name>reason_out_of_order__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Briefing</masterLabel>
+            <translation><!-- Briefing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Claim</masterLabel>
+            <translation><!-- Claim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deconcentrate Poverty</masterLabel>
+            <translation><!-- Deconcentrate Poverty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped</masterLabel>
+            <translation><!-- Dropped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped/No Update 2011</masterLabel>
+            <translation><!-- Dropped/No Update 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eligibility</masterLabel>
+            <translation><!-- Eligibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income Targeting</masterLabel>
+            <translation><!-- Income Targeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ineligible</masterLabel>
+            <translation><!-- Ineligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease Up</masterLabel>
+            <translation><!-- Lease Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NED</masterLabel>
+            <translation><!-- NED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Show/Response</masterLabel>
+            <translation><!-- No Show/Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer Accepted</masterLabel>
+            <translation><!-- Offer Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offer Rejected</masterLabel>
+            <translation><!-- Offer Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Selection</masterLabel>
+            <translation><!-- System Selection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Cancelled</masterLabel>
+            <translation><!-- Voucher Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Expired</masterLabel>
+            <translation><!-- Voucher Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher Issued</masterLabel>
+            <translation><!-- Voucher Issued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly Updated</masterLabel>
+            <translation><!-- Yearly Updated --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Enrolled Wait List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RAD USER</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wait List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Ensure the Reason field is not blank --></errorMessage>
+        <name>Reason_NotBlank</name>
+    </validationRules>
+</CustomObjectTranslation>

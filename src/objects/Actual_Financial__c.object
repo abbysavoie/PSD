@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>LPAM - Actuals Header</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accounts_Receivable__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounts Receivable</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Financial_Cash_Flow__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOI_Audit__c - Audit_Financial_Waterfall_Obligations__c - Audit_Financial_Fees_Required_Payments__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Audit Financial Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Financial_Fees_Required_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit Financial Fees/Required Payments</label>
+        <summarizedField>Actual_Financial_Item__c.Audit__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Fees/Required Payments</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Financial_Operating_Expenses__c</fullName>
+        <description>Rollup of the Audit Field for Operating Expenses</description>
+        <externalId>false</externalId>
+        <label>Audit Financial Operating Expenses</label>
+        <summarizedField>Actual_Financial_Item__c.Audit__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Operating Expenses</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Financial_Waterfall_Obligations__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit Financial Waterfall Obligations</label>
+        <summarizedField>Actual_Financial_Item__c.Audit__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waterfall</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Residual_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <formula>(NOI_Audit__c - Audit_Financial_Waterfall_Obligations__c ) * Project__r.Residual_Receipt_Percentage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Audit Residual Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bond_Payments_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Bond Payments Rollup</label>
+        <summarizedField>Bond_Payment__c.Amount__c</summarizedField>
+        <summaryForeignKey>Bond_Payment__c.Actual_Financial__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculated_Cash_Flow__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOI_Borrower_Calculated__c - Borrower_Calculated_Waterfall_Obligation__c - Borrower_Calculated_Fees_Required_Paymen__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Borrower Calculated Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculated_Fees_Required_Paymen__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Calculated Fees/Required Paymen</label>
+        <summarizedField>Actual_Financial_Item__c.Borrower_Calculation__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Fees/Required Payments</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculated_Operating_Expenses__c</fullName>
+        <description>Rollup of the Borrower Calculation Field for Operating Expenses</description>
+        <externalId>false</externalId>
+        <label>Borrower Calculated Operating Expenses</label>
+        <summarizedField>Actual_Financial_Item__c.Borrower_Calculation__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Operating Expenses</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculated_Residual_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <formula>Borrower_Calculated_Cash_Flow__c  *  Project__r.Residual_Receipt_Percentage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Borrower Calculated Residual Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculated_Waterfall_Obligation__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Calculated Waterfall Obligation</label>
+        <summarizedField>Actual_Financial_Item__c.Borrower_Calculation__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waterfall</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial_Cash_Flow__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOI_Budget_Financial__c - Budget_Financial_Waterfall_Obligations__c - Budget_Financial_Fees_Required_Payments__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Budget Financial Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial_Fees_Required_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Financial Fees/Required Payments</label>
+        <summarizedField>Actual_Financial_Item__c.Budget_Financial__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Fees/Required Payments</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial_Operating_Expenses__c</fullName>
+        <description>Rollup of the Budget Financial field for Operating Expenses</description>
+        <externalId>false</externalId>
+        <label>Budget Financial Operating Expenses</label>
+        <summarizedField>Actual_Financial_Item__c.Budget_Financial__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Operating Expenses</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial_Residual_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <formula>(NOI_Budget_Financial__c - Budget_Financial_Waterfall_Obligations__c )* Project__r.Residual_Receipt_Percentage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Budget Financial Residual Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial_Waterfall_Obligations__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Financial Waterfall Obligations</label>
+        <summarizedField>Actual_Financial_Item__c.Budget_Financial__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waterfall</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Cal_HFA_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Cal HFA Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cal_HFA_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Cal_HFA_Reserve_Beg_Balance__c +  Cal_HFA_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cal HFA Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cal_HFA_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Cal HFA Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cash_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Cash Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Collection_Loss_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Concession_Loss_Revenue_Rollup__c /  Rental_Income_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Collection Loss Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Concession_Loss_Revenue_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Concession Loss Revenue Rollup</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Category__c</field>
+            <operation>equals</operation>
+            <value>(Less) Concession/Lost Revenue</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Sub_Category__c</field>
+            <operation>equals</operation>
+            <value>Collection Loss</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Conventional_Debt_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Conventional Debt Payments</label>
+        <summarizedField>Conventional_Debt_Payment_Balance__c.Amount__c</summarizedField>
+        <summaryForeignKey>Conventional_Debt_Payment_Balance__c.Actual_Financial__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Conventional_Outstanding_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Conventional Outstanding Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Debt_Service_Coverage_Ratio__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( (Bond_Payments_Rollup__c + Conventional_Debt_Payments__c + SDHC_Loan_Payments__c ) &gt; 0, 
+NOI_Audit__c / (Bond_Payments_Rollup__c + Conventional_Debt_Payments__c + SDHC_Loan_Payments__c ), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Debt Service Coverage Ratio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EGI_Audit_Financial__c</fullName>
+        <externalId>false</externalId>
+        <label>EGI Audit Financial</label>
+        <summarizedField>Actual_Financial_Item__c.Audit__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>EGI_Borrower_Calculated__c</fullName>
+        <externalId>false</externalId>
+        <label>EGI Borrower Calculated</label>
+        <summarizedField>Actual_Financial_Item__c.Borrower_Calculation__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>EGI_Budget_Financial__c</fullName>
+        <externalId>false</externalId>
+        <label>EGI Budget Financial</label>
+        <summarizedField>Actual_Financial_Item__c.Budget_Financial__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>EGI_SDHC_Calculated__c</fullName>
+        <externalId>false</externalId>
+        <label>EGI SDHC Calculated</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Economic_Vacancy_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Less_Vacancy_Rollup__c * -1) / Rental_Income_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Economic Vacancy Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Less_Vacancy_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Less Vacancy Rollup</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Category__c</field>
+            <operation>equals</operation>
+            <value>(Less) Vacancy</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Loan_to_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Project__r.Conventional_Debt_Outstanding_Balance__c + Project__r.Total_Amount_of_Bonds__c ) /  NOI_Audit__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Loan to Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NOI_Audit__c</fullName>
+        <description>NOI for the Audit Field</description>
+        <externalId>false</externalId>
+        <formula>EGI_Audit_Financial__c - Audit_Financial_Operating_Expenses__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NOI Audit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NOI_Borrower_Calculated__c</fullName>
+        <externalId>false</externalId>
+        <formula>EGI_Borrower_Calculated__c - Borrower_Calculated_Operating_Expenses__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NOI Borrower Calculated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NOI_Budget_Financial__c</fullName>
+        <externalId>false</externalId>
+        <formula>EGI_Budget_Financial__c - Budget_Financial_Operating_Expenses__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NOI Budget Financial</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NOI_SDHC_Calculated__c</fullName>
+        <externalId>false</externalId>
+        <formula>EGI_SDHC_Calculated__c  -  SDHC_Calculated_Operating_Expense__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NOI SDHC Calculated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Operating_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Operating Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Operating_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Operating_Reserve_Beg_Balance__c  + Operating_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Operating Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Operating_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Operating Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Other_Reserve_Beg_Balance__c + Other_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Other Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Cash_Flow__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Cash_Flow__c /Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_EGI__c</fullName>
+        <externalId>false</externalId>
+        <formula>EGI_SDHC_Calculated__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit EGI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Fees_Required_Payments__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Fees_Required_Payments__c /Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Fees/Required Payments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Loan_Payments__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Loan_Payments__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Loan Payments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_NOI__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOI_SDHC_Calculated__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit NOI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Operating_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Operating_Expense__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Operating Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Replacement_Reserves__c</fullName>
+        <externalId>false</externalId>
+        <formula>if  (Project__r.Property__r.Total_Units__c &gt; 0,
+Replacement_Reserve_Rollup__c / Project__r.Property__r.Total_Units__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Replacement Reserves</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Residual_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Residual_Receipt__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Residual Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Waterfall__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Waterfall_Obligations__c / Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Per Unit Waterfall</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Physical_Inspection_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Physical Inspection Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Principle_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Principle Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Principle_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Principle_Reserve_Beg_Balance__c + Principle_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Principle Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Principle_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Principle Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>Loan_Project__c</referenceTo>
+        <relationshipLabel>Actual Financials</relationshipLabel>
+        <relationshipName>Underpayments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Receivables__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Cash_Flow__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Receivables</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Rental_Income_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Rental Income Rollup</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Rental Income</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Reserve_Beginning_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Replacement Reserve Beginning Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Reserve_Ending_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Replacement_Reserve_Beginning_Balance__c + Replacement_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Replacement Reserve Ending Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Reserve_Interest_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Replacement Reserve Interest Rollup</label>
+        <summarizedField>Actual_Financial_Item__c.Interest__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Replacement Reserve</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Replacement Reserve Rollup</label>
+        <summarizedField>Actual_Financial_Item__c.Net_Reserve_Balance__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Replacement Reserve</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Residual_Receipt_Due__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated_Residual_Receipt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Residual Receipt Due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Cash_Flow__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOI_SDHC_Calculated__c - SDHC_Calculated_Waterfall_Obligations__c - SDHC_Calculated_Fees_Required_Payments__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDHC Calculated Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Fees_Required_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Calculated Fees/Required Payments</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Fees/Required Payments</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Operating_Expense__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Calculated Operating Expense</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Operating Expenses</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Residual_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Project__r.Minimum_Payment__c &gt; (SDHC_Calculated_Cash_Flow__c  *  Project__r.Residual_Receipt_Percentage__c), Project__r.Minimum_Payment__c, SDHC_Calculated_Cash_Flow__c  *  Project__r.Residual_Receipt_Percentage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDHC Calculated Residual Receipt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Surplus_Cash__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Calculated Surplus Cash</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Waterfall_Obligations__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Calculated Waterfall Obligations</label>
+        <summarizedField>Actual_Financial_Item__c.SDHC_Calculated__c</summarizedField>
+        <summaryFilterItems>
+            <field>Actual_Financial_Item__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Waterfall</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Actual_Financial_Item__c.Actual_Financial_Item__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Loan_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Loan Payments</label>
+        <summarizedField>SDHC_Loan_Payment__c.Total_Payment__c</summarizedField>
+        <summaryForeignKey>SDHC_Loan_Payment__c.Actual_Financial__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Social_Service_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Social_Services_Reserve_Beg_Balance__c +  Social_Services_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Social Service Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Social_Services_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Services Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Social_Services_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Services Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subordinate_Outstanding_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Subordinate Outstanding Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Taxes_Insurance_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Taxes/Insurance Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Taxes_Insurance_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Taxes_Insurance_Reserve_Beg_Balance__c +  Taxes_Insurance_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Taxes/Insurance Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Taxes_Insurance_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Taxes/Insurance Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transitional_Reserve_Beg_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Transitional Reserve Beg Balance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transitional_Reserve_End_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Transitional_Reserve_Beg_Balance__c +  Transitional_Reserve_Rollup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Transitional Reserve End Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transitional_Reserve_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Transitional Reserve Rollup</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Year</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Year</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Actual Financial</label>
+    <nameField>
+        <displayFormat>AFPMT-{00000}</displayFormat>
+        <label>Actual Financial Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Actual Financials</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Year__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Project__c</searchFilterFields>
+        <searchFilterFields>Year__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

@@ -1,0 +1,2 @@
+A Waitlist selection ({!Wait_List_Selection__c.Wait_List_Type__c}) will occur on 
+{!Wait_List_Selection__c.Scheduled_Date__c} at {!Wait_List_Selection__c.Schedule_Time__c}.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Date_Contacted_SDHC__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Prevention_Score__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Veteran__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Referred_By__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Active__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SDHC_Community_Relationship__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CONTACT_RECORDTYPE</field>
+    </columns>
+    <description>Program updates for Prevention and Diversion</description>
+    <filter>
+        <booleanFilter>(1 OR 2)</booleanFilter>
+        <criteriaItems>
+            <column>Contact.SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First - Prevention</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First - Diversion</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>P/D Reporting</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Contact.SDHC_Community_Relationship__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

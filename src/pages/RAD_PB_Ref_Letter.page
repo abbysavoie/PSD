@@ -1,0 +1,108 @@
+<apex:page standardController="Wait_List_Selection__c" extensions="RAD_RefLetterpdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+           renderAs="pdf">                        
+          <head>
+            <style type="text/css" media="print">
+            @page {
+            padding-top:80px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {          
+            position: running(footer);
+            
+            }
+           
+          
+            p.paratext {
+            font-size:14px;
+            }                    
+            p.footertext{
+            font-family:Calibri,  letter-spacing:2px;
+            font-size:14px;
+            text-align:center;
+            margin:20px 0px;
+            
+            }
+            table {
+    -fs-table-paginate: paginate;
+    }
+            
+            </style>
+            </head>
+            <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div>
+            </div><br/><br/>
+            <body>                                        
+             <center><h3 style="line-height: 10%;">Notice of Contact</h3> 
+            <h4 style="font-size: 14px;">(Project Based)</h4></center>
+            <center><apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Today()}"/></apex:outputText></center> <br/><br/>      
+           <apex:outputText value="{!$CurrentPage.parameters.ownrNmPh}" /><br/>
+           <apex:outputText value="{!$CurrentPage.parameters.owneraddress}" /><br/><br/>
+           <apex:param name="myParam"  value="{!$CurrentPage.parameters.id}"  assignTo="{!selctedwl}" />
+      
+     
+        
+             <p class="paratext">Dear&nbsp;<apex:outputText value="{!$CurrentPage.parameters.ownrNmPh}" />:</p><br/>
+             
+                     
+            <p class="paratext"> We have contacted the families listed on the attached document from our Project Based Rental Assistance waiting list as candidates for tenancy in your currently vacant or soon to be vacant unit located at: </P><center><apex:outputText value="{!$CurrentPage.parameters.unitaddres}" /></center>     
+            <p class="paratext">The enclosed list of families has been asked to contact you by &nbsp;<apex:outputText value="{!$CurrentPage.parameters.resdate}" /> for possible placement in your available unit.  If none of these families are suitable, please contact us for another set of families.</p>       
+            <p class="paratext">If you have any questions please call me at <b>619-578-7777.</b></p>
+            <p class="paratext">Sincerely,</p><br/><br/><br/>
+            <apex:outputText value="{!$CurrentPage.parameters.caseworkert}" />
+            <p class="paratext">Rental Assistance Department</p>        
+            <div class="footer">
+            <p class="footertext">San Diego Housing Commission 1122 Broadway Suite 300 San Diego CA 92101 (619) 578-7777 Fax  (619) 578-7374</p>
+            </div>   
+  
+      <div style="page-break-after:always;"/>
+        <!--<br/><br/><br/>-->
+        <center><h3>Project Based Rental Assistance Referral List</h3></center>
+        <br/><br/>
+      
+        DATE&nbsp; :&nbsp;<apex:outputText value="{!$CurrentPage.parameters.cmdat}" /><br/><br/>
+        Owner&nbsp;:&nbsp;<apex:outputText value="{!$CurrentPage.parameters.ownrNmPh}" /><br/><br/>
+        Unit Address&nbsp;:&nbsp;<apex:outputText value="{!$CurrentPage.parameters.unitaddres}" /><br/><br/>
+        Beds :&nbsp;<apex:outputText value="{!$CurrentPage.parameters.bsize}" /><br/><br/>
+        
+       <br/><br/>
+  
+    <apex:pageBlock >
+      <apex:pageBlockSection columns="1"> 
+   <!--<apex:dataTable value="{!selList}" var="sel"  border="1">-->
+   <apex:dataTable cellpadding="2" styleclass="table" width="15.92cm" border="1" style="text-align:center; line-height: 12pt; font-size:11pt;" columns="5" value="{!selList}" var="sel">
+
+   <apex:column style="text-align:center;width:270px;"> 
+        <apex:facet name="header"><center>Applicant Name</center></apex:facet>
+        {!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Name}
+        </apex:column>
+        <apex:column style="text-align:center;width:270px;"> 
+        <apex:facet name="header"><center>Home Phone</center></apex:facet>
+        {!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Phone}
+        </apex:column>
+        <apex:column style="text-align:center;width:270px;"> 
+        <apex:facet name="header"><center>Email</center></apex:facet>
+        {!sel.RAD_Wait_List__r.Applications__r.Applicant__r.Email}
+        </apex:column>
+   
+   
+    </apex:dataTable>
+   
+       </apex:pageBlockSection>  
+     </apex:pageBlock>
+
+    
+     
+     
+     
+     
+     </body>
+    </apex:page>

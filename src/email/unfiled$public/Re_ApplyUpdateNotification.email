@@ -1,0 +1,42 @@
+<messaging:emailTemplate recipientType="Contact" relatedToType="Applications__c" subject="Rental Assistance Re-Apply Update Notification.">
+<messaging:htmlEmailBody >
+
+        <html>
+
+                <!--<c:SDHCLOGO />-->
+              <img alt="SDHC" height="150" src="https://sd-hc--waitlist--c.cs32.content.force.com/servlet/servlet.ImageServer?id=015r00000009UKy&oid=00Dr00000000qg7&lastMod=1500882746000" width="250" />          
+
+            <center><h2 >Rental Assistance ReApply Notification </h2></center>
+            <br/>
+            <apex:outputText value="{!now()}"/>
+            <br/>
+            <p>Dear Applicant: {!recipient.Name}</p>
+
+
+{!relatedTo.Name}
+
+
+
+            <p>Your application for the rental assistance wait list will be removed from the system 90 days from today.
+             <!--{!relatedTo.Applications__r.RAD_Next_Purge_Request_Date__c }-->
+             Next Purge Request Date : {!relatedTo.RAD_Next_Purge_Request_Date__c}
+             Grace Period End Date : {!relatedTo.RAD_Next_Purge_Date__c}
+            <!-- <c:PurgeNotify applicationId1="{!relatedTo.Id}" />---> <!-- Narasimha 24/7/2017 -->
+            </p>
+            <p>If you are still interested in applying,  please log into the SDHC Online Rental Assistance Wait List Portal on SDHC’s website, www.sdhc.org,
+    submit a new application.
+            </p>
+            <p>If you have a disability and need a reasonable accommodation, please call the wait list call center at 619-578-7640.
+            </p>
+           <p>
+               Sincerely,
+           </p>
+           <p>
+               SDHC Rental Assistance Division
+           </p>
+    
+        
+</html>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

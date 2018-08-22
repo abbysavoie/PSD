@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Rehab - Project Loan</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Area_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Area Program</label>
+        <referenceTo>Area_Program__c</referenceTo>
+        <relationshipLabel>Loans</relationshipLabel>
+        <relationshipName>Loans</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Document_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Authority__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Authority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CA Hsg Trust Fd</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CalHOME</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CalHome EAGR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CDBG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Central Imperial Red</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CHFA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CHRP-O</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>City Hts Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Coastal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>College Grove Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Construction Defects</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Crossroads Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Discretionary Funds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Enterprize Community</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Grantville Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HOME</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HOPWA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hsg Trust Fund</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HTF/CDBG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HTF/Linkage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HUD Healthy Homes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HUD Lead Control Grt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HUD Lead Demo Grant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HUD Lead Pt Grant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inclusionary</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lease Revenue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Linda Vista Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Market St Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mt Hope Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Park Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NSP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NSP Program Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Proj 1st Class</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rent Rehab Inc</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rental Rehab (HUD)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>REO Funds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>San Ysidro Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SB966/AB333</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SDHC Local Funds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SE San Diego Redev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Section 312</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SEDC LSSD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>So Crest Redev</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LSSI__c</fullName>
+        <externalId>false</externalId>
+        <label>LSSI</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LegacyRHNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>LegacyRHNumber</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lender__c</fullName>
+        <externalId>false</externalId>
+        <label>Lender</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Crocker Bank</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HUD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SDHC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>State</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wells Fargo</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Loan_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Buy Down</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct Deferred</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct Forgiven</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct Installment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Direct Interest Only</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Grant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lead Paint Grant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Leveraged Installment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LOA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Moderate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Partially Deferred</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Personal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Section 312</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Participating_Units__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Area_Program__c = Rehab_Project__r.Master_Target_Area__c ,  Rehab_Project__r.Participating_Units__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Participating Units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <externalId>false</externalId>
+        <formula>Area_Program__r.Program__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recorded__c</fullName>
+        <externalId>false</externalId>
+        <label>Recorded</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Rehab Project</label>
+        <referenceTo>Rehab_Project__c</referenceTo>
+        <relationshipLabel>Loans</relationshipLabel>
+        <relationshipName>Loans</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Units__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Area_Program__c = Rehab_Project__r.Master_Target_Area__c ,  Rehab_Project__r.Total_Units__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Loan</label>
+    <nameField>
+        <displayFormat>Loan-{00000}</displayFormat>
+        <label>LoanID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loans</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LSSI_Format_Validation</fullName>
+        <active>true</active>
+        <description>Makes sure the LSSI number is formatted correctly</description>
+        <errorConditionFormula>AND( NOT( ISBLANK(LSSI__c) ) ,NOT( REGEX(  LSSI__c  , &quot;[0-9]{1}-[0-9]{2}-[0-9]{4}&quot;) ))</errorConditionFormula>
+        <errorDisplayField>LSSI__c</errorDisplayField>
+        <errorMessage>Following Format Required: #-##-####</errorMessage>
+    </validationRules>
+</CustomObject>

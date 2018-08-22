@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="Arial, sans-serif"><b>Dear&nbsp;</b></font><font face="Arial, sans-serif"><b>{!Contact.FirstName} {!Contact.LastName}</b><font face="arial" style="font-family: arial;">,</font></font>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font style="font-size: 12pt;">Your rental assistance wait list application&nbsp;</font><font face="Arial, sans-serif">&nbsp;</font><span style="font-family: Arial, sans-serif; font-size: 12pt;">has been successfully submitted to the San Diego Housing Commission (SDHC).</span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p style=""><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">You application ID is :&nbsp;</font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">&nbsp;</span><font face="Arial, sans-serif">{!Applications__c.Name}</font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif"><br></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">It is important for you to keep the information on your application up-to-date. Visit the SDHC Online Rental Assistance Wait List Portal on SDHC’s website,<a href="http://www.sdhc.org/">www.sdhc.org</a>, to report any changes to your existing application or to check your status on the wait list.</font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif"><br></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">If you have a disability and need a reasonable accommodation, please call the wait list call center at 619-578-7640.</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<b style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">Sincerely,<br>SDHC Rental Assistance Division</b>]]></td>
+</tr>
+</table>

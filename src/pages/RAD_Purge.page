@@ -1,0 +1,15 @@
+<apex:page controller="RAD_Purge">
+<apex:form id="formid">
+
+<apex:pageMessages > </apex:pageMessages>
+
+<apex:pageBlock title="Run Update Process : ">
+
+<apex:pageBlockSection >
+<apex:outputlabel > Click on Execute Button to Start the Purge Batch </apex:outputlabel> 
+<apex:commandButton value="EXECUTE" action="{!callBatch}"  rerender="formid"/>  
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

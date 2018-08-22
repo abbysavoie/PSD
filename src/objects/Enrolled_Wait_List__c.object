@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>RAD_WaitlistDetail_V1</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>RAD_WaitlistDetail</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Applicant_Confirmation_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Applicant Confirmation Received</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Applications__c</fullName>
+        <externalId>false</externalId>
+        <label>Applications</label>
+        <referenceTo>Applications__c</referenceTo>
+        <relationshipLabel>Wait Lists</relationshipLabel>
+        <relationshipName>Enrolled_Wait_Lists</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Bed_size__c</fullName>
+        <externalId>false</externalId>
+        <label>Bed size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Status_Date_Time_With_Seconds__c</fullName>
+        <description>Text field to show Current status date time with seconds on WL detail Page</description>
+        <externalId>false</externalId>
+        <label>Current Status Date Time</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Status_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This time changes when the current status changes</inlineHelpText>
+        <label>Current Status Date / Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Current_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Status</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Onlist</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Selected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Leased</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Issue/Offer</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>HMY__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HMY</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Wait Lists</relationshipLabel>
+        <relationshipName>Wait_Lists</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IncomeTtarget_Points__c</fullName>
+        <externalId>false</externalId>
+        <label>Income Target Points</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Type</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leased_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Leased Status</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Limit__c</fullName>
+        <externalId>false</externalId>
+        <label>Limit</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lottery__c</fullName>
+        <externalId>false</externalId>
+        <label>Lottery</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_refusals__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of refusals</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OnList_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>OnList Status</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Original_Date_Time_with_seconds__c</fullName>
+        <description>Text field to show seconds on WL detail Page</description>
+        <externalId>false</externalId>
+        <label>Original Date Time</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PASS_THROUGH__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PASS THROUGH</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Portal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Portal Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>On Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Selected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Issued Voucher / Offered Unit</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Prefernce_Point__c</fullName>
+        <externalId>false</externalId>
+        <label>Preference Point</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prefernce_Points_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Preference Points Order</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Property_Code</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <externalId>false</externalId>
+        <label>Property</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>100000 - MTW S8 - HAP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>101000 - SBS CRF Core</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>101100 - SBS Parker Kier</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>102000 - SBS Homeless 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>103000 - SBS Homeless 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104000 - SBS Homeless 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104100 - SBS Alpha Square</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104200 - SBS: Hotel Churchill</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104300 - SBS - 1000 Vets: VVSD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104400 - SBS - 1000 Vets: SVdP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104500 - SBS - MHS HOMES Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104600 - SBS - CRF Impact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>104700 - SBS - MHS C STAR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105010 - PBV - Alabama Manor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105020 - PBV - Beckys House</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105030 - PBV - Connections</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105040 - PBV - Hollywood Palms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105050 - PBV - Leah Residence</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105060 - PBV - Potiker</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105070 - PBV - Stepping Stone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105080 - PBV - Take Wing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105090 - PBV - Townspeople</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105100 - PBV - Hotel Sandford</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105110 - PBV - Mason</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105120 - PBV - Meade</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105130 - PBV - Santa Margarita</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105140 - PBV - The Courtyard</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105150 - TBRA Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105160 - Parker-Kier</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105170 - Westminister Manor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105180 - PBV - Celadon</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105190 - PBV - New Palace Hotel</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105200 - PBV - Alpha Square</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105210 - PBV - Village North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105220 - PBV - Atmosphere</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105230 - PBV - Cypress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>105240 - PBV - Talmadge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>121000 - S8 Port In Administered</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>125000 - MTW ST Trans - Senior ComCtr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>125100 - MTW ST Trans - Episcopal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>125200 - MTW ST Trans - PATH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>126000 - Monarch Project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>126100 - Guardian Scholars</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>126200 - Moving On Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>126300 - MTW - Moving Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>141000 - Home of Your Own - Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>160000 - S8 - 1st Year Opt Out</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>160100 - Tenant Protection</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>190000 - Enhanced Vouchers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>193000 - FUP Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>195000 - VASH Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>197000 - NED Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>270000 - S8 Mod Rehab 1 - Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>270100 - S8 Mod Rehab 2 - Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>270200 - S8 Mod Rehab 7 - Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>411000 - HPRP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>999999 - Unallocated Salaries</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>hisbvp - SBVP - Homeless</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>portin - Port In Administered</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>wait	- Waiting List</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RAD_Applied_Date_and_Time__c</fullName>
+        <description>This field is updated when WL is created and reapplied</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is updated when WL is created and reapplied</inlineHelpText>
+        <label>Applied Date and Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RAD_Date_and_Time_with_Seconds__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This time is updated when the waitlist is created or reapplied</inlineHelpText>
+        <label>Original Date/Time (Depreciated)</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RAD_Preference_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Preference Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Group 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group 4</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RAD_Selection_Marker__c</fullName>
+        <externalId>false</externalId>
+        <label>Selection Marker</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Current_Status__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Over Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Criminal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deceased</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Refused Offer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Income Targeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>System Selection</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NED</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Briefing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Claim</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped/No Update 2011</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ineligible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lease Up</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Show/Response</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Offer Accepted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Offer Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Cancelled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Expired</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Issued</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yearly Updated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special Admission</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>See Memo</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accessibility Needs</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Deconcentrate Poverty</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Eligibility</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>No, Response</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Request</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Targeted Selection</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Vou Expired</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Over Income</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Criminal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Deceased</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Refused Offer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Income Targeting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>System Selection</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>NED</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Active</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Briefing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Claim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Dropped</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Dropped/No Update 2011</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Ineligible</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Lease Up</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>No Show/Response</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Offer Accepted</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Offer Rejected</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Voucher Cancelled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Voucher Expired</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Voucher Issued</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Yearly Updated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>Special Admission</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Onlist</controllingFieldValue>
+                <controllingFieldValue>Selected</controllingFieldValue>
+                <controllingFieldValue>Removed</controllingFieldValue>
+                <controllingFieldValue>Leased</controllingFieldValue>
+                <controllingFieldValue>Issue/Offer</controllingFieldValue>
+                <valueName>See Memo</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Removed_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Removed Status</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Original_Datetime__c</fullName>
+        <description>This field is auto populated from a trigger based on the conversion of the RAD_Date_and_Time_with_Seconds__c string field that is converted to a date/time field</description>
+        <externalId>false</externalId>
+        <label>Original Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Second_Bed_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Second Bed Size</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Selected Status</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Send_To_Boomi__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag is checked by Boomi to determine if a record is to be picked up and processed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the box is checked, Boomi will pull the record on the next poll.  If the box is unchecked, Boomi will not pull the record.</inlineHelpText>
+        <label>Send To Boomi</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>On List</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Selected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Leased</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Issued/Offer</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Refused</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WLAPPLIC_HMY__c</fullName>
+        <externalId>false</externalId>
+        <label>WLAPPLIC_HMY</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wait_List_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Wait List Type</label>
+        <referenceTo>Wait_List_Type__c</referenceTo>
+        <relationshipLabel>Wait Lists</relationshipLabel>
+        <relationshipName>Wait_Lists</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Weblinks__c</fullName>
+        <externalId>false</externalId>
+        <label>Weblinks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>YARDI_HMY__c</fullName>
+        <externalId>false</externalId>
+        <label>YARDI HMY</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YARDI_Wait_List_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>YARDI Wait List Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>reason_out_of_order__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason out of order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Income Targeting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deconcentrate Poverty</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>System Selection</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NED</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Briefing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Claim</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped/No Update 2011</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Eligibility</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ineligible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lease Up</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Show/Response</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Offer Accepted</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Offer Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Cancelled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Expired</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Voucher Issued</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yearly Updated</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Wait List</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Applications__c</columns>
+        <columns>NAME</columns>
+        <columns>Wait_List_Type__c</columns>
+        <columns>SFDC_Original_Datetime__c</columns>
+        <columns>Current_Status__c</columns>
+        <columns>Current_Status_Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WL-{0000000000}</displayFormat>
+        <label>Wait List ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Wait Lists</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Reason_NotBlank</fullName>
+        <active>true</active>
+        <description>Ensure the Reason field is not blank on WL</description>
+        <errorConditionFormula>ISBLANK(TEXT( Reason__c ))</errorConditionFormula>
+        <errorDisplayField>Reason__c</errorDisplayField>
+        <errorMessage>Ensure the Reason field is not blank</errorMessage>
+    </validationRules>
+</CustomObject>

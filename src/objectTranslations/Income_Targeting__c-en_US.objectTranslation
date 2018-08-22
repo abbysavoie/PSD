@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Income Targeting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Income Targetings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+        <picklistValues>
+            <masterLabel>100% of AMI</masterLabel>
+            <translation><!-- 100% of AMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC Public Housing ELI</masterLabel>
+            <translation><!-- SDHC Public Housing ELI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC Public Housing LI</masterLabel>
+            <translation><!-- SDHC Public Housing LI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC Public Housing VLI</masterLabel>
+            <translation><!-- SDHC Public Housing VLI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- # Housed --></label>
+        <name>Housed__c</name>
+    </fields>
+    <fields>
+        <label><!-- # In Process --></label>
+        <name>In_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income Limit --></label>
+        <name>Income_Limit__c</name>
+        <picklistValues>
+            <masterLabel>eli-30</masterLabel>
+            <translation><!-- eli-30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>full-ami</masterLabel>
+            <translation><!-- full-ami --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>li-80</masterLabel>
+            <translation><!-- li-80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>vli-50</masterLabel>
+            <translation><!-- vli-50 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- % Lease Up --></label>
+        <name>Lease_Up__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Met --></label>
+        <name>Met__c</name>
+    </fields>
+    <fields>
+        <label><!-- Points/ Weight --></label>
+        <name>Points_Weight__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Rejected --></label>
+        <name>Rejected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reqd. % --></label>
+        <name>Reqd__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Selected --></label>
+        <name>Selected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List Type --></label>
+        <name>Wait_List_Type__c</name>
+        <relationshipLabel><!-- Income Targetings --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

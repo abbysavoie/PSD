@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a Link Object that connects a Referral Contact to a Unit in the system</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Assigned_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned Unit</label>
+        <referenceTo>Property_Unit__c</referenceTo>
+        <relationshipLabel>Unit Placements</relationshipLabel>
+        <relationshipName>Unit_Placements</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Exit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Up_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Up Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Placed_By__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the SDHC Program responsible for placement.</inlineHelpText>
+        <label>Placed By</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Moving Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1000 Vets</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Diversion</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Prevention</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Service Provider</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_s_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Assigned_Unit__r.Property_Owner__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Owner&apos;s Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tenant__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Unit Placements</relationshipLabel>
+        <relationshipName>Unit_Placements</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Unit_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Assigned_Unit__r.Building__r.Street_Number_Start__c &amp; &quot; &quot; &amp; Assigned_Unit__r.Building__r.Street_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unit Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Unit Placement</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Tenant__c</columns>
+        <columns>Assigned_Unit__c</columns>
+        <columns>Unit_Address__c</columns>
+        <columns>Lease_Up_Date__c</columns>
+        <columns>Exit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Unit Placements</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Tenant__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assigned_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Address__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_Up_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Exit_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Assigned_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Property_Owner_s_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Tenant__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Assigned_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Tenant__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Assigned_Unit__c</searchFilterFields>
+        <searchFilterFields>Tenant__c</searchFilterFields>
+        <searchFilterFields>Property_Owner_s_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Assigned_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Property_Owner_s_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Tenant__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

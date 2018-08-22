@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>Username</identityMapping>
+    <issuer>exkbiq2nnkXBK7vQ80x7</issuer>
+    <loginUrl>https://sdhc.okta.com/app/salesforce/exkbiq2nnkXBK7vQ80x7/sso/saml</loginUrl>
+    <name>SDHC-Admin</name>
+    <oauthTokenEndpoint>https://sd-hc--ProdCopy.cs33.my.salesforce.com/services/oauth2/token?so=00D350000000lLW</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>0</requestSignatureMethod>
+    <salesforceLoginUrl>https://sd-hc--ProdCopy.cs33.my.salesforce.com?so=00D350000000lLW</salesforceLoginUrl>
+    <samlEntityId>https://saml.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDmDCCAoCgAwIBAgIGAVBInyLyMA0GCSqGSIb3DQEBBQUAMIGMMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEUMBIGA1UECwwLU1NPUHJvdmlkZXIxDTALBgNVBAMMBHNkaGMxHDAaBgkqhkiG9w0BCQEWDWluZm9Ab2t0YS5jb20wHhcNMTUxMDA4MTgwMjIwWhcNMjUxMDA4MTgwMzIwWjCBjDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDTALBgNVBAoMBE9rdGExFDASBgNVBAsMC1NTT1Byb3ZpZGVyMQ0wCwYDVQQDDARzZGhjMRwwGgYJKoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhLthdGOY/1b1EmpkjbbpFgaq4mrKGT3o0JmacK5x5bH7iDu4pVxeo6URB37OPuOr7cvDlTEBHph/3Dr/TrwVCut+AWe8Fm0Cstdt/OdYO6OD6b63V09n6KJohKgPGsmhMazqB4iDFAJ/WEBNaONJrcPFFF7Wsaf3xlB+VTWJZqCx77CvskC3rL6FzG6zhXi7WQ5G5FRS/oMO8WlLq5C9/xh05LKAo9dMxua2bFLKzwZWorgQssV0mTZjL3gW86sUYFWW6SWyN4rtWcW1rTrM04sM2P0pt3Zb/Rm7KPX+FcCObblW3+9xBSsFJ5TyGXsJroDdYs8Oen1UOLkdpril9wIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQBy6deDNZ2UdrgWpEwxHb7v+4Los1OO6KOGpNiiNwyzHlktzHU+jP5mRfNeOslin5N7Coxo73vMR11qyRi1oRUjmu2HBTTCsLguV+AlNj16uXW5Oyob9Dvc+CJetOpj4zbiqb+SwpQdrFf94F8E+SupVGiboNDHHtQPOW6qzTXPJsbmTDmPfN1523qKriJf0vSWC4ZtfnZ7gfBKsCE24tKjBx676g3I6EmLewAALLm9BlOXGDO2jT6aoYxnTw/CEa2/jppJkhWSz+h+cAtd4BeG7niANp/d/D27/ugDV2MhYrl+TYA+O1nRicvak/9IQtd3Vxmxs6t9myESi1Duc7n9</validationCert>
+</SamlSsoConfig>

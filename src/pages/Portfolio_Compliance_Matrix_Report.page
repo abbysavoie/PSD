@@ -1,0 +1,45 @@
+<apex:page standardController="Contact">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<apex:pageBlock >
+    <apex:pageBlockSection title="My Report" id="MyReport" columns="1">
+        <script language="JavaScript">
+            //$('[id$="MyReport"] > .pbSubsection > .detailList').load('/00Ot0000000Vpy7?isdtp=nv table.reportTable.matrixReportTable');
+                var credential = ' OAuth ' + '{!GETSESSIONID()}'; // native VF function
+                var apiUrl = "https://sd-hc--c.na21.visual.force.com";
+                $.ajax({
+                    type: "GET",
+                    // for community pages, use whole community url including path, e.g. 
+                    // https://logan.blitz01.t.force.com/customers/services/proxy.
+                    url: "https://sd-hc.my.salesforce.com/00Ot0000000Vpy7?isdtp=nv", 
+                    contentType: 'application/json',
+                    cache: false,
+                    success : function(response) {
+                                  alert("result" + response);
+                           },
+                    error : function(response) {
+                                  alert("Failed" + response);
+                           },                 
+                    dataType: "json",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('SalesforceProxy-Endpoint', apiUrl);
+                        xhr.setRequestHeader("Authorization", credential);
+                        xhr.setRequestHeader('X-User-Agent', 'MyClient');
+                        xhr.setRequestHeader('Access-Control-Allow-Origin: *');
+                        xhr.setRequestHeader('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+                        xhr.setRequestHeader('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
+                    }
+            
+            
+                });
+        </script>
+    
+    <!--<div id="MyReport" style="width:100%;height:600px;"></div>
+     <script type="text/javascript">
+        $(document).ready(function() {
+            //$('#MyReport').load('/00Ot0000000Vpy7?isdtp=mn div[class="reportOutput"]');
+        });
+        
+    </script>-->
+    </apex:pageBlockSection> 
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,100 @@
+<apex:page standardController="Applications__c"  showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+     renderAs="pdf" >
+      
+     <html>
+         <head>
+                        
+           <style type="text/css" media="print">
+            @page {
+             padding-top: 40px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {
+            
+            position: running(footer);
+            
+            }
+                 
+            </style>
+            </head> 
+            <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div>
+            </div>
+            <br/>                  
+            <center><h3>Rental Assistance Wait List Application {!Applications__c.Name} Status Report</h3></center>       
+
+        <br/>
+      
+    <body>  
+        <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Today()}"/></apex:outputText><br/><br/>    
+        <apex:outputlabel value="{!Applications__c.Applicant__r.Name}"/><br/>
+        <apex:outputPanel rendered="{!NOT(ISNULL(Applications__c.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Applications__c.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!Applications__c.Applicant__r.Mailingcity}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.MailingState}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Mailingpostalcode}"/>&nbsp;      
+            </apex:outputPanel><br/>   
+            <apex:outputPanel rendered="{!(ISNULL(Applications__c.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_Street__c}"/><br/>
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_City__c}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_State__c}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+            </apex:outputPanel>
+            <br/>
+           <p> Dear {!Applications__c.Applicant__r.FirstName}{!Applications__c.Applicant__r.LastName},</p>
+        <apex:outputlabel >The San Diego Housing Commission (SDHC) has received your reported change(s).</apex:outputlabel>
+        <br/>
+        <br/>
+        <apex:outputlabel >SDHC’s records show that you are on the wait list for the following program(s):</apex:outputlabel>
+        <br/><br/>
+        <table  cellspacing = "5" width="100%">
+            <tr align="center">
+                <td>PROGRAM</td>
+                <td>DATE and TIME</td> 
+                <td>STATUS</td>              
+            </tr>
+            <apex:repeat value="{!Applications__c.Enrolled_Wait_Lists__r}" var="c" >
+                 <tr align="center">
+                     <td >{!c.Wait_List_Type__r.Name}</td>
+                     <td>{!c.Original_Date_Time_with_seconds__c} </td>             
+                     <td>{!c.Portal_Status__c}</td>             
+                 </tr>
+            </apex:repeat>  
+        </table>
+        <br/>
+        <br/>
+     
+        <apex:outputlabel >It is important for you to keep the information on your application up-to-date. Visit the
+        SDHC Online Rental Assistance Wait List Portal on SDHC’s website, <apex:outputLink value="http://www.sdhc.org/"> www.sdhc.org</apex:outputLink>, to
+        report any changes to your existing application or to check your status on the wait list.</apex:outputlabel>
+        <br/>
+        <br/>
+        <br/>
+
+        <apex:outputlabel >If you have a disability and need a reasonable accommodation, please call the wait list call center at 619-578-7640.</apex:outputlabel>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <apex:outputlabel >Sincerely,</apex:outputlabel><br/><br/>
+        SDHC Rental Assistance Division    
+        <br/>
+        <div class="footer">
+            <center> <img alt="SDHC"  src="{!$Resource.RAD_Purge_footer}" width="180%" /></center>  
+            </div>
+        
+        
+    </body>
+</html>  
+            
+
+</apex:page>

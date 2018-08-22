@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bond</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bonds</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the Amount of the Bond Assistance at Conversion --></help>
+        <label><!-- Assistance Amount (At Conversion) --></label>
+        <name>Assistance_Amount_At_Conversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Councel --></label>
+        <name>Bond_Councel__c</name>
+        <relationshipLabel><!-- Bonds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bond Fee Payment Due --></label>
+        <name>Bond_Fee_Payment_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Fee Second Payment Due --></label>
+        <name>Bond_Fee_Second_Payment_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Series (Second) --></label>
+        <name>Bond_Series_Second__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Series --></label>
+        <name>Bond_Series__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Trustee Contact --></label>
+        <name>Bond_Trustee_Contact__c</name>
+        <relationshipLabel><!-- Bonds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bond Trustee --></label>
+        <name>Bond_Trustee__c</name>
+        <relationshipLabel><!-- Bonds (Bond Trustee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Advisor --></label>
+        <name>Financial_Advisor__c</name>
+        <relationshipLabel><!-- Bonds (Financial Advisor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Type --></label>
+        <name>Interest_Type__c</name>
+        <picklistValues>
+            <masterLabel>Adjustable</masterLabel>
+            <translation><!-- Adjustable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amortized</masterLabel>
+            <translation><!-- Amortized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compound</masterLabel>
+            <translation><!-- Compound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Simple</masterLabel>
+            <translation><!-- Simple --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Issuance Type --></label>
+        <name>Issuance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Portfolio Asset Project --></label>
+        <name>LPAM_Bond__c</name>
+        <relationshipLabel><!-- Bonds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lender --></label>
+        <name>Lender__c</name>
+        <relationshipLabel><!-- Bonds (Lender_1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Bond Amount (At Closing) --></label>
+        <name>Original_Bond_Amount_At_Closing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reserve Amount --></label>
+        <name>Reserve_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term (Years) --></label>
+        <name>Term_Years__c</name>
+    </fields>
+    <layouts>
+        <layout>Bond Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

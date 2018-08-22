@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Transaction__c$Name</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Tenant_Unit_Placement_Agreement_ID__c</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Tenant_Unit_Placement_Agreement_ID__c.Tenant__c.LastName</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Tenant_Unit_Placement_Agreement_ID__c.Tenant__c.FirstName</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Subsidy_Program_Type__c</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Resource__c</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Date__c</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Dollar_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Transaction__c$Unit_Owner__c</field>
+    </columns>
+    <description>Displays All Unit Transactions in the system with related information about Tenant and Owner.</description>
+    <format>Tabular</format>
+    <name>All Unit Transactions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_All_Unit_Transactions__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Transaction__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

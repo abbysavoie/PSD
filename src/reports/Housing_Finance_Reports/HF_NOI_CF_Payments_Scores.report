@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Actual_Financial__c$Project__c</field>
+    </columns>
+    <columns>
+        <field>Actual_Financial__c$NOI_SDHC_Calculated__c</field>
+    </columns>
+    <columns>
+        <field>Actual_Financial__c$SDHC_Calculated_Cash_Flow__c</field>
+    </columns>
+    <columns>
+        <field>Actual_Financial__c$SDHC_Loan_Payments__c</field>
+    </columns>
+    <columns>
+        <field>Actual_Financial__c$Asset_Score__c</field>
+    </columns>
+    <columns>
+        <field>Actual_Financial__c$Physical_Inspection_Score__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Actual_Financial__c$Year__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2016</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Actual_Financial__c$Project__c.Record_Type_RPT__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Both Bond and SDHC Multi-Family,SDHC Multi-Family Loan,SDHC Multi-Family Loan/Land Use</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Actual_Financial__c$Project__c.Project_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,Under Construction,Pipeline</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>HF NOI, CF, Payments, &amp; Scores</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HF_Actual_Financial_Header_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Actual_Financial__c$SDHC_Calculated_Cash_Flow__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Actual_Financial__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

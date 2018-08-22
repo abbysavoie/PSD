@@ -1,0 +1,18 @@
+<apex:component controller="RAD_EmailCompntCntrl" access="global" >
+    <apex:attribute name="waitlistIdname" type="Id" description="Id of the Waiting List"  assignTo="{!contactId}"/>
+    <table width="100%">
+        <tr align="center">
+            <td>PROGRAM</td>
+            <td>DATE/TIME</td>
+            <td>STATUS</td>
+        </tr>
+        <apex:repeat value="{!waitlistCollections}" var="wl">
+        <tr align="center">
+            <td>{!wl.Wait_List_Type__r.Name}</td>
+            <td>{!wl.Original_Date_Time_with_seconds__c}</td> 
+            <td>{!wl.Current_Status__c}</td>
+            
+        </tr>
+        </apex:repeat>        
+    </table>
+</apex:component>

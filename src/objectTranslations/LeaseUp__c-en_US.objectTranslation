@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lease Up Rate Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lease Up Rate Info</value>
+    </caseValues>
+    <fields>
+        <label><!-- ELI30 --></label>
+        <name>ELI30__c</name>
+    </fields>
+    <fields>
+        <label><!-- LI80 --></label>
+        <name>LI80__c</name>
+    </fields>
+    <fields>
+        <label><!-- VLI50 --></label>
+        <name>VLI50__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

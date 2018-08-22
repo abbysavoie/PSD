@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partner Structure</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partner Structures</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account/Business Entity --></label>
+        <name>Account_Business_Entity__c</name>
+        <relationshipLabel><!-- Partner Structures --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Asset Manager --></label>
+        <name>Asset_Manager__c</name>
+        <relationshipLabel><!-- Partner Structures --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Associated Project --></label>
+        <name>Associated_Project__c</name>
+        <relationshipLabel><!-- Partner Structures --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partner Sub-Type --></label>
+        <name>Partner_Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>Administrative</masterLabel>
+            <translation><!-- Administrative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-Partner</masterLabel>
+            <translation><!-- Co-Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor</masterLabel>
+            <translation><!-- Investor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managing</masterLabel>
+            <translation><!-- Managing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special</masterLabel>
+            <translation><!-- Special --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partner Type --></label>
+        <name>Partner_Type__c</name>
+        <picklistValues>
+            <masterLabel>Asset Management Company</masterLabel>
+            <translation><!-- Asset Management Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asset/Property Management Company</masterLabel>
+            <translation><!-- Asset/Property Management Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Borrower</masterLabel>
+            <translation><!-- Borrower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation><!-- Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Partner</masterLabel>
+            <translation><!-- General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Partner</masterLabel>
+            <translation><!-- Limited Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Management Company</masterLabel>
+            <translation><!-- Property Management Company --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Manager --></label>
+        <name>Property_Manager__c</name>
+        <relationshipLabel><!-- Partner Structures (Property Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Fees --></label>
+        <name>Total_Fees__c</name>
+    </fields>
+    <layouts>
+        <layout>Partner Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Structure Detail --></label>
+            <section>Partner Structure Detail</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_New_Business_Entity --></label>
+        <name>Create_New_Business_Entity</name>
+    </webLinks>
+</CustomObjectTranslation>

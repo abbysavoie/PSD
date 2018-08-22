@@ -1,0 +1,99 @@
+<apex:page standardController="Applications__c"  showHeader="false" sidebar="false"  standardStylesheets="false" applyBodyTag="false" 
+            renderAs="pdf" >
+
+            <head>
+                                          <style type="text/css" media="print">
+            @page {
+             padding-top: 40px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {
+            
+            position: running(footer);
+            
+            }
+           
+            
+            
+          
+            </style>
+            </head>
+            
+            
+            <br/>
+            
+            <body>
+            <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div>
+            </div>
+            
+            
+             
+            <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Today()}"/></apex:outputText><br/><br/>
+                  
+            {!Applications__c.Applicant__r.Name}<br/>          
+            <apex:outputPanel rendered="{!NOT(ISNULL(Applications__c.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Applications__c.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!Applications__c.Applicant__r.Mailingcity}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.MailingState}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Mailingpostalcode}"/>&nbsp;      
+            </apex:outputPanel><br/>   
+            <apex:outputPanel rendered="{!(ISNULL(Applications__c.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_Street__c}"/><br/>
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_City__c}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_State__c}"/>&nbsp;
+            <apex:outputField value="{!Applications__c.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+            </apex:outputPanel>
+            <br/>
+            <center><h4 style="font-size: 14px;">RE: WAIT LIST UPDATE REQUIRED BY <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Applications__c.RAD_Next_Purge_Date__c}"/></apex:outputText> </h4></center>
+            
+            <apex:outputlabel >Dear Rental Assistance Applicant:</apex:outputlabel><br/><br/>
+            <apex:outputlabel >The San Diego Housing Commission is required to update its Rental Assistance Wait List in order to obtain an accurate inventory of the number of individuals and families waiting for rental assistance.</apex:outputlabel> <br/><br/> 
+            <apex:outputlabel >If you wish to remain on any of our Rental Assistance Wait List(s), with your original application date and time, you MUST update your application on-line at<apex:outputLink value="http://www.sdhc.org/"> www.sdhc.org</apex:outputLink> </apex:outputlabel> <br/><br/>   
+            
+           <apex:outputlabel >Instructions to log in:
+            
+           <ol>
+               <li >Go to <apex:outputLink value="http://www.sdhc.org/"> www.sdhc.org</apex:outputLink>  to access the Wait List Portal.</li>
+               <li >Enter your username and password to access your file. If you have not created a username or password, please use the SSN  search function to find your application.</li>
+               <li >Once logged in, click on ‘Yes, I would like to remain on the wait list” button.</li>
+               <li >If you have other changes, click view/update to make changes.  If you do not have other changes, log out.</li>
+          </ol>  
+         
+           </apex:outputlabel>  
+           <apex:outputlabel >If you do not update your application on-line by <b>{!Applications__c.RAD_Next_Purge_Date__c}</b>, , your wait list application will be automatically removed from all wait lists.</apex:outputlabel><br/><br/>
+         <apex:outputlabel ><b>Reasonable Accommodation:</b><br/>
+         If you are unable to update your application online due to a disability, you may ask for an exception to this policy as a reasonable accommodation.</apex:outputlabel> <br/><br/>
+         <apex:outputlabel >If you are elderly (62+) or disabled and unable to respond online you may call (619) 578-XXXX for alternative methods to update your wait list application.</apex:outputlabel>  <br/>
+           <center> <h4 style="font-size: 14px;">We thank you for your cooperation</h4></center> 
+               <br/>    
+            <br/>  
+             <br/>  
+             <br/>  
+             <br/>   
+             <br/>    
+            <br/>  
+             <br/>  
+              
+              
+               
+              
+              
+               
+                    
+<div class="footer">
+            <center> <img alt="SDHC"  src="{!$Resource.RAD_Purge_footer}" width="180%" /></center>  
+            </div>
+                 
+            </body> 
+                  
+</apex:page>

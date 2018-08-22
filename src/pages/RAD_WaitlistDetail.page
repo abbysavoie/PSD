@@ -1,0 +1,188 @@
+<apex:page docType="html-5.0" standardStylesheets="true" standardController="Enrolled_Wait_List__c" extensions="RAD_WaitlistDetailCntrl">
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/jquery-3.3.1.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/bootstrap.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/moment.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/bootstrap-datetimepicker.min.js')}"></script>
+
+    <link href="{!URLFOR($Resource.bootStrapDatePicker,'css/bootstrap.min.css')}" rel="stylesheet"/>
+    <link href="{!URLFOR($Resource.bootStrapDatePicker,'css/bootstrap-datetimepicker.min.css')}" type="text/css" rel="stylesheet" />
+    
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $('.originalDate').datetimepicker({
+                                inline: false,
+                                sideBySide: false,
+                                format: 'MM/DD/YYYY hh:mm:ss A',
+                                showTodayButton: true,
+                                showClose: true,
+                                useStrict: true
+                            }).on('dp.hide',function(e){
+                                console.log(e);
+                                var date = moment(e.date).format('YYYY-MM-DD HH:mm:ss');
+                                console.log(date);
+                                 updateOriginal(date);});            
+
+            $('.currentsDate').datetimepicker({
+                                inline: false,
+                                sideBySide: false,
+                                format: 'MM/DD/YYYY hh:mm:ss A',
+                                showTodayButton: true,
+                                showClose: true,
+                                useStrict: true
+                            }).on('dp.hide',function(e){
+                                console.log(e);
+                                var date = moment(e.date).format('YYYY-MM-DD HH:mm:ss');
+                                console.log(date);
+                                 updateCurrents(date);});     
+        });
+
+    
+        function updateOriginal(valueChanged)
+        {
+            //alert(valueChanged);
+            var options = {  
+                weekday: "long", year: "numeric", month: "short",  
+                day: "numeric", hour: "2-digit", minute: "2-digit"  
+            };  
+            
+            if(valueChanged != null)
+            {
+                var pickedDate =  $('[id$="originalDate_sel"]').val();
+                
+                OriginalDateUpdate(valueChanged);
+            }
+            console.log('Date changes');
+            console.log(valueChanged);
+        }
+
+        function updateCurrents(valueChanged)
+        {
+            alert(valueChanged);
+            var options = {  
+                weekday: "long", year: "numeric", month: "short",  
+                day: "numeric", hour: "2-digit", minute: "2-digit"  
+            };  
+            
+            if(valueChanged != null)
+            {
+                var pickedDate =  $('[id$="currentsDate_sel"]').val();
+                
+                CurrentsDateUpdate(valueChanged);
+            }
+            console.log('Date changes');
+            console.log(valueChanged);
+        }        
+        function setWorkingDate(param){
+            $('[id$="oringalDate_dsp"]').val(param);
+            passStringToController();
+        }        
+    </script> 
+    
+    <apex:sectionHeader title="{!$ObjectType.Enrolled_Wait_List__c.label} Edit" subtitle="{!Enrolled_Wait_List__c.name}"/>
+    <apex:form >
+    <apex:pageBlock title="{!$ObjectType.Enrolled_Wait_List__c.label} Edit" mode="edit">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="Save"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection showHeader="true" title="Information" columns="2">
+            <apex:outputText value=""/>
+            <apex:outputText Id="currentsDate_dsp" label="Current Status Date/Time"  value="{0,date,MM/dd/yyyy K:mm:ss a}">
+                    <apex:param value="{!localCurrents_dt}"  />
+            </apex:outputText> 
+            <apex:inputField required="true" value="{!Enrolled_Wait_List__c.Applications__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Limit__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Wait_List_Type__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Prefernce_Point__c}"/>
+            <apex:inputField required="true" value="{!Enrolled_Wait_List__c.Current_Status__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.RAD_Preference_Group__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Portal_Status__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Reason__c}"/>
+            <apex:outputText Id="originalDate_dsp" label="Original Date/Time"  value="{0,date,MM/dd/yyyy K:mm:ss a}">
+                    <apex:param value="{!localOriginal_dt}"  />
+            </apex:outputText>   
+            <apex:inputField value="{!Enrolled_Wait_List__c.Bed_size__c}"/>
+            
+            <apex:inputField value="{!Enrolled_Wait_List__c.PASS_THROUGH__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Property__c}"/>
+            <apex:inputField value="{!Enrolled_Wait_List__c.Applicant_Confirmation_Received__c}"/>
+            <apex:outputText value="{!Enrolled_Wait_List__c.reason_out_of_order__c}"/>
+ 
+            <apex:inputField id="originalDate_org"  rendered="false" value="{!Enrolled_Wait_List__c.SFDC_Original_Datetime__c }" />        
+            <apex:outputText value="{!Enrolled_Wait_List__c.Lottery__c}"/>
+    
+            <apex:inputField id="currentsDate_org"  rendered="false" value="{!Enrolled_Wait_List__c.Current_Status_Date_Time__c}" />                        
+            <apex:pageBlockSectionItem />
+            <apex:pageBlockSectionItem />
+            <apex:pageBlockSectionItem />
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Current Status Date/Time & Original Date/Time Editing" columns="2">
+            <apex:pageBlockSectionItem />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="currentsDate_sel">Current Status Date/Time</label>
+                                <div class="input-group currentsDate" id="currentsDate">
+                                    <input type="text" text="Current Status Date/Time" width="200" id="currentsDate_sel" value="{!currents_str}" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>  
+                                </div>  
+                            </div>                              
+                        </div>
+                   </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="originalDate_sel">Original Date/Time</label>
+                                <div class="input-group originalDate" id="originalDate">
+                                    <input type="text" text="Original Date/Time" width="200" id="originalDate_sel" value="{!original_str}" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>  
+                                </div>
+                            </div>                              
+                        </div>
+                   </div>
+                </div>
+                <script type="text/javascript" >
+            
+                </script>                            
+        </apex:pageBlockSection>
+            <apex:pageBlockSection showHeader="true" title="System Information" columns="2">
+            <apex:inputField value="{!Enrolled_Wait_List__c.Send_To_Boomi__c}" rendered="false"/>
+        </apex:pageBlockSection>
+        <apex:actionFunction name="OriginalDateUpdate" action="{!updateOriginalDate}" reRender="originalDate_dsp" >
+            <apex:param name="newOriginalDate" value="" />
+        </apex:actionFunction>        
+        <apex:actionFunction name="CurrentsDateUpdate" action="{!updateCurrentsDate}" reRender="currentsDate_dsp" >
+            <apex:param name="newCurrentsDate" value="" />
+        </apex:actionFunction>
+    </apex:pageBlock>
+    </apex:form>
+        <style type="text/css">
+            .originalDate{
+                z-index: 9998;/*Changed this css property which was 100 prior*/
+                position: relative;
+                width: 250px;
+             }
+            .currentsDate{
+                z-index: 9998;/*Changed this css property which was 100 prior*/
+                position: relative;
+                width: 250px;
+             }
+         </style>
+         <style type="text/css">
+            .form-group label, .form-group input{
+                float: none;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;            
+                }
+        </style>    
+</apex:page>

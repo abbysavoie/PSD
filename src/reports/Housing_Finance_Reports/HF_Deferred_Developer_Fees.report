@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Deferred_Developer_Fee__c$Loan_Project__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c$Name</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c.Deferred_Developer_Fee_Payments_Balances__r$Actual_Financial_Item__c.Year__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c.Deferred_Developer_Fee_Payments_Balances__r$DDF_Total_Outstanding_Balance__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c$Interest_Rate__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c$Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c$Amount__c</field>
+    </columns>
+    <columns>
+        <field>Deferred_Developer_Fee__c$Notes__c</field>
+    </columns>
+    <description>Overview of all Deferred Developer Fees with their Interest Rate, Due Date, and Amount.</description>
+    <filter>
+        <criteriaItems>
+            <column>Deferred_Developer_Fee__c$Loan_Project__c.Record_Type_RPT__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Both Bond and SDHC Multi-Family,SDHC Multi-Family Loan,SDHC Multi-Family Loan/Land Use</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Deferred_Developer_Fee__c$Loan_Project__c.Project_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,Under Construction,Pipeline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Deferred_Developer_Fee__c.Deferred_Developer_Fee_Payments_Balances__r$Actual_Financial_Item__c.Year__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2016</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>HF Deferred Developer Fee Review</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HF_Deferred_Developer_Fees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Deferred_Developer_Fee__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

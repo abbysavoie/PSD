@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>LPAM - Actual Items</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accrued__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Accrued</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Financial_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Financial Item</label>
+        <referenceTo>Actual_Financial__c</referenceTo>
+        <relationshipLabel>Actual Financial Items</relationshipLabel>
+        <relationshipName>Underpayment_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Annual_Payment_Note__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Payment Note</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Audit__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Calculation</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Financial__c</fullName>
+        <description>This is the Budget Item from Borrower</description>
+        <externalId>false</externalId>
+        <label>Budget Financial</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rental Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Grant Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>(Less) Vacancy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>(Less) Concession/Lost Revenue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing &amp; Leasing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Personal Salary &amp; Benefits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Property Management fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Utilities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Property Taxes &amp; Insurance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SDHC Monitoring Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Resident Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Debt Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deferred Developer Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Operating Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Replacement Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General Partner Asset Management Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limited Partner Asset Management Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ground Rent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HCD .42%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bond Fee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Fees</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Principle Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Taxes/Insurance Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cal HFA Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transitional Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social Services Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Reserve</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Waterfall Expenses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Operating Expenses</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Earned_Funded__c</fullName>
+        <externalId>false</externalId>
+        <label>Earned/Funded</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Reserve_Balance__c</fullName>
+        <externalId>false</externalId>
+        <formula>Earned_Funded__c + Interest__c + Paid__c + Withdrawal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Reserve Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <description>Used for General Notes or to explain an &apos;Other&quot; option selection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Place any general notes or an explaination for selecting &quot;Other&quot;</inlineHelpText>
+        <label>Notes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Paid</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Financial_Item__r.Project__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Type_RPT__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Type RPT</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDHC_Allowance__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Allowance</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated_Per_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>SDHC_Calculated__c / Actual_Financial_Item__r.Project__r.Property__r.Total_Units__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDHC Calculated Per Unit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Calculated__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Calculated</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Category__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Conventions and Meetings</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Management Consultants</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrative Rent Free Unit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Office Supplies</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Computer Expenses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Office utilities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Licenses and Software</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bad Debts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Miscellaneous Admin Costs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manager Salaries</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Office Salaries</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare Benefits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Retirement Benefits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employment Taxes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Payroll Fees</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Employee Benefits</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Electricity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Water</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Gas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sewer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Garbage/Trash Removal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landscaping</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Elevator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Painting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Contract Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintenance Salaries</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General Interior Maintenance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General Exterior Maintenance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other Maintenance Expenses</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No Sub Category</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Limited Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special Limited Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrative Limited Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>General Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special General Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Co-General Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrative General Partner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Collection Loss</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Concession</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lost Revenue</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Limited Partner Asset Management Fee</controllingFieldValue>
+                <controllingFieldValue>(Less) Concession/Lost Revenue</controllingFieldValue>
+                <controllingFieldValue>General Partner Asset Management Fee</controllingFieldValue>
+                <valueName>No Sub Category</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Limited Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Special Limited Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limited Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Administrative Limited Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utilities</controllingFieldValue>
+                <valueName>Electricity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utilities</controllingFieldValue>
+                <valueName>Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utilities</controllingFieldValue>
+                <valueName>Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utilities</controllingFieldValue>
+                <valueName>Sewer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utilities</controllingFieldValue>
+                <valueName>Internet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Garbage/Trash Removal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Landscaping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Elevator</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Security</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Painting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contract Services</controllingFieldValue>
+                <valueName>Other Contract Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Maintenance</controllingFieldValue>
+                <valueName>Maintenance Salaries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Maintenance</controllingFieldValue>
+                <valueName>General Interior Maintenance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Maintenance</controllingFieldValue>
+                <valueName>General Exterior Maintenance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Maintenance</controllingFieldValue>
+                <valueName>Other Maintenance Expenses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>(Less) Concession/Lost Revenue</controllingFieldValue>
+                <valueName>Collection Loss</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>(Less) Concession/Lost Revenue</controllingFieldValue>
+                <valueName>Concession</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>(Less) Concession/Lost Revenue</controllingFieldValue>
+                <valueName>Lost Revenue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Conventions and Meetings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Management Consultants</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Legal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Administrative Rent Free Unit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Office Supplies</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Computer Expenses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Office utilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Licenses and Software</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Bad Debts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Administrative</controllingFieldValue>
+                <valueName>Miscellaneous Admin Costs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Manager Salaries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Office Salaries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Healthcare Benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Retirement Benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Employment Taxes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Payroll Fees</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Personal Salary &amp; Benefits</controllingFieldValue>
+                <valueName>Other Employee Benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General Partner Asset Management Fee</controllingFieldValue>
+                <valueName>General Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Special General Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Co-General Partner</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General Partner Asset Management Fee</controllingFieldValue>
+                <valueName>Administrative General Partner</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Withdrawal__c</fullName>
+        <externalId>false</externalId>
+        <label>Withdrawal</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Actual Financial Item</label>
+    <nameField>
+        <displayFormat>AFItem-{00000}</displayFormat>
+        <label>ActualFinancialItemID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Actual Financial Items</pluralLabel>
+    <recordTypes>
+        <fullName>Fees_Required_Payments</fullName>
+        <active>true</active>
+        <label>Fees/Required Payments</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Bond Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HCD %2E42%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDHC Monitoring Fee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category__c</picklist>
+            <values>
+                <fullName>No Sub Category</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Income</fullName>
+        <active>true</active>
+        <description>Income Types like Rent, Grant and Other Incomes</description>
+        <label>Income</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>%28Less%29 Concession%2FLost Revenue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%28Less%29 Vacancy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Income</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category__c</picklist>
+            <values>
+                <fullName>Collection Loss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost Revenue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Sub Category</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Operating_Expenses</fullName>
+        <active>true</active>
+        <description>Expense Types including Admin, Utilities, Fees</description>
+        <label>Operating Expenses</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Administrative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %26 Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Operating Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Salary %26 Benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property Management fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property Taxes %26 Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category__c</picklist>
+            <values>
+                <fullName>Administrative Rent Free Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bad Debts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computer Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conventions and Meetings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electricity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employment Taxes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garbage%2FTrash Removal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Interior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare Benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Landscaping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Licenses and Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance Salaries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management Consultants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manager Salaries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Admin Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Sub Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Salaries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Supplies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Contract Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Employee Benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Maintenance Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payroll Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retirement Benefits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sewer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Waterfall</fullName>
+        <active>true</active>
+        <description>Waterfall Fees including Debt Service, DDF and Operating Reserve Deposit</description>
+        <label>Waterfall</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Cal HFA Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debt Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred Developer Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Partner Asset Management Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ground Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Partner Asset Management Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operating Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Waterfall Expenses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principle Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replacement Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Services Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taxes%2FInsurance Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transitional Reserve</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category__c</picklist>
+            <values>
+                <fullName>Administrative General Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administrative Limited Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-General Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Sub Category</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special General Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Limited Partner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

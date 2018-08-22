@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Unit_Placement__c$Assigned_Unit__c.Name</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Assigned_Unit__c.Unit_Name__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Assigned_Unit__c.Street_Number__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Assigned_Unit__c.Street__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Tenant__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Lease_Up_Date__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Exit_Date__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Assigned_Unit__c.Active_Placements__c</field>
+    </columns>
+    <columns>
+        <field>Unit_Placement__c$Tenant__c.SDHC_Community_Relationship__c</field>
+    </columns>
+    <description>Displays the units in the system that have multiple Active unit placements</description>
+    <filter>
+        <criteriaItems>
+            <column>Unit_Placement__c$Assigned_Unit__c.Active_Placements__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Multiple Active Placements</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HFirst_Unit_Placements1__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Unit_Placement__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

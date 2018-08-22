@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dollar Amount --></label>
+        <name>Dollar_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payee --></label>
+        <name>Payee__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referral --></label>
+        <name>Referral__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resource --></label>
+        <name>Resource__c</name>
+        <picklistValues>
+            <masterLabel>Application Fee</masterLabel>
+            <translation><!-- Application Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment Readiness</masterLabel>
+            <translation><!-- Employment Readiness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Contingency Fund - Damages</masterLabel>
+            <translation><!-- Landlord Contingency Fund - Damages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Contingency Fund - Eviction</masterLabel>
+            <translation><!-- Landlord Contingency Fund - Eviction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Contingency Fund - Holding Fee</masterLabel>
+            <translation><!-- Landlord Contingency Fund - Holding Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Contingency Fund - Missed Rent</masterLabel>
+            <translation><!-- Landlord Contingency Fund - Missed Rent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Contingency Fund - Other</masterLabel>
+            <translation><!-- Landlord Contingency Fund - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landlord Incentive Payment</masterLabel>
+            <translation><!-- Landlord Incentive Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental Assistance</masterLabel>
+            <translation><!-- Rental Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security Deposit</masterLabel>
+            <translation><!-- Security Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Storage</masterLabel>
+            <translation><!-- Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utility Assistance</masterLabel>
+            <translation><!-- Utility Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle Expenses</masterLabel>
+            <translation><!-- Vehicle Expenses --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subsidy/Program Type --></label>
+        <name>Subsidy_Program_Type__c</name>
+        <picklistValues>
+            <masterLabel>1,000 Vets RRH</masterLabel>
+            <translation><!-- 1,000 Vets RRH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1,000 Vets SBS</masterLabel>
+            <translation><!-- 1,000 Vets SBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diversion</masterLabel>
+            <translation><!-- Diversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moving Home/RRH</masterLabel>
+            <translation><!-- Moving Home/RRH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prevention</masterLabel>
+            <translation><!-- Prevention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RRH/SSVF</masterLabel>
+            <translation><!-- RRH/SSVF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBS</masterLabel>
+            <translation><!-- SBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VASH</masterLabel>
+            <translation><!-- VASH --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tenant/Unit Placement Agreement ID --></label>
+        <name>Tenant_Unit_Placement_Agreement_ID__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Owner --></label>
+        <name>Unit_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Tenant --></label>
+        <name>Unit_Tenant__c</name>
+    </fields>
+    <layouts>
+        <layout>Unit Transaction Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Data Record Information --></label>
+            <section>Data Record Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Transaction Details --></label>
+            <section>Unit Transaction Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

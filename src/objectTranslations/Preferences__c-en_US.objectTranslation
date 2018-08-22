@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Preferences</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Preferences</value>
+    </caseValues>
+    <fields>
+        <label><!-- Application HMY --></label>
+        <name>Application_HMY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applications --></label>
+        <name>Application__c</name>
+        <relationshipLabel><!-- Preferences --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preference HMY --></label>
+        <name>Preference_HMY__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the box is checked, Boomi will pull the record on the next poll.  If the box is unchecked, Boomi will not pull the record. --></help>
+        <label><!-- Send To Boomi --></label>
+        <name>Send_To_Boomi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- YARDI Preference  Code --></label>
+        <name>YARDI_Preference_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Preferences Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

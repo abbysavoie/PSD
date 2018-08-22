@@ -2,10 +2,7 @@ public class RAD_ContactHelper{
 
     public static void processCntBeforeInsert(List<Contact> conts){
     
-        for(Contact ct : conts){
-           // if(!(UserInfo.getName() =='Dell Boomi'))
-            //    ct.Send_To_Boomi__c=true;
-        }
+        setSendToBoomiOnContacts(conts);
   
     }
 
@@ -59,8 +56,8 @@ public class RAD_ContactHelper{
             Applications__c tAppln = null;
             
             List<Contact> contact_list = [Select id, lastmodifiedby.name, name, SSN_TaxID__c, Date_of_Birth__c, Gender__c, Prospect_Number_YARDI__c, Tenant_Number_YARDI__c ,
-                                                Yardi_ID__C,
-                                (Select name,SSN__c,DOB__c, Gender__c, Prospect_Name__c, Tenant__c 
+                                                Yardi_ID__C,RAD_Homeless__c,
+                                (Select name,SSN__c,DOB__c, Gender__c, Prospect_Name__c, Tenant__c, Homeless__c  
                                     from Applications_WL_00000001__r 
                                     WHERE Application_status__c <> 'Closed'
                                     ORDER BY CREATEDDATE DESC )
@@ -73,7 +70,8 @@ public class RAD_ContactHelper{
                     ct.Date_of_Birth__c!= ((Contact)Trigger.oldMap.get(ct.id)).Date_of_Birth__c ||
                     ct.Gender__c != ((Contact)Trigger.oldMap.get(ct.id)).Gender__c ||
                     ct.Prospect_Number_YARDI__c != ((Contact)Trigger.oldMap.get(ct.id)).Prospect_Number_YARDI__c ||
-                    ct.Tenant_Number_YARDI__c != ((Contact)Trigger.oldMap.get(ct.id)).Tenant_Number_YARDI__c                                                 
+                    ct.Tenant_Number_YARDI__c != ((Contact)Trigger.oldMap.get(ct.id)).Tenant_Number_YARDI__c ||
+                    ct.RAD_Homeless__c!= ((Contact)Trigger.oldMap.get(ct.id)).RAD_Homeless__c                                                  
                      ){
                      
                      if(ct.Applications_WL_00000001__r.size() > 0){
@@ -84,6 +82,8 @@ public class RAD_ContactHelper{
                          tAppln.Prospect_Name__c = ct.Prospect_Number_YARDI__c;
                          tAppln.Tenant__c = ct.Tenant_Number_YARDI__c;
                          tAppln.Contact_Last_Modified_By__c = ct.LastModifiedBy.Name;
+                         system.debug(ct.RAD_Homeless__c);
+                         tAppln.Homeless__c = ct.RAD_Homeless__c;
                          applnLst.add(tAppln);
                          
                          if (!ctInList_set.contains(ct.Id)) {
@@ -102,6 +102,7 @@ public class RAD_ContactHelper{
                          app_newrec = ct.Applications_WL_00000001__r[0];
                          app_newrec.Contact_Last_Modified_By__c = ct.LastModifiedBy.Name;
                          app_newrec.HMY__c = ct.Yardi_ID__C;
+                        
                          applnLst.add(app_newrec);
                      }
                  } 
@@ -118,6 +119,7 @@ public class RAD_ContactHelper{
     /*
         Set 'Send to Boomi flag' on contacts if the Application corresponding to the contact is in Submitted Status
     */
+
     public static void setSendToBoomiOnContacts(List<Contact> lstContacts)
     {
         if(!(UserInfo.getName() == 'Dell Boomi'))

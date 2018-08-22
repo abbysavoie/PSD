@@ -1,0 +1,284 @@
+<apex:page docType="html-5.0" standardStylesheets="true" standardController="Applications__c" extensions="RAD_ApplicationDetailCntrl_V1" >
+    <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/flick/jquery-ui.css"/>
+    <script type="text/javascript"  src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript"  src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.DateTimePicker,'js/index.js')}"></script>
+    <link href="{!URLFOR($Resource.bootStrapDatePicker,'css/bootstrap.min.css')}" rel="stylesheet"/>
+    <style>
+        .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+        .ui-timepicker-div dl { text-align: left; }
+        .ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+        .ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+        .ui-timepicker-div td { font-size: 90%; }
+        .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+        .ui-timepicker-rtl{ direction: rtl; }
+        .ui-timepicker-rtl dl { text-align: right; }
+        .ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+        .ui-datepicker-trigger{margin-left: 102%;margin-top: -27%;}
+        .ui-datepicker-prev{background-color:white;margin-left: 11%;}
+        .ui-datepicker-next{background-color:white;margin-right: 12%;}
+    </style>
+    <script>
+        var applieddateId = "j_id0\\:j_id3\\:j_id4\\:j_id21\\:appliedDate_sel";
+        jQuery(document).ready(function () {
+            var inputDate = $("#"+applieddateId);
+            var changeYearButtons = function() {
+                setTimeout(function() {
+                    var widgetHeader = inputDate.datepicker("widget").find(".ui-datepicker-header");
+                    //you can opt to style up these simple buttons tho
+                    var prevYrBtn = $('<a  title="Previous Year" class="ui-datepicker-prev ui-corner-all" style="margin-left: 0%;"><span class="ui-icon ui-icon-seek-prev">Prev</span></a>');
+                    prevYrBtn.bind("click", function() {
+                        $.datepicker._adjustDate(inputDate, -1, 'Y');
+                    });
+                    var nextYrBtn = $('<a title="Next Year" class="ui-datepicker-next ui-corner-all" style="left: 87%;"><span class="ui-icon ui-icon-seek-next">Next</span></a>');
+                    nextYrBtn.bind("click", function() {
+                        $.datepicker._adjustDate(inputDate, +1, 'Y');
+
+                    });
+                    prevYrBtn.appendTo(widgetHeader);
+                    nextYrBtn.appendTo(widgetHeader);
+                }, 0);
+            };          
+            var dates = $("#"+applieddateId).datetimepicker({
+                onChangeMonthYear: changeYearButtons,
+                controlType: 'select',
+                timeFormat: 'hh:mm:ss z',
+                pick12HourFormat: false ,
+                amPmTimeZone: true,
+                showOn: 'button',
+                buttonText: 'Pick a date',
+                buttonImageOnly: true,
+                buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+                beforeShow: function (textbox, instance) {
+                instance.dpDiv.css({
+                    
+                 });
+                }               
+            });
+            var currentdate = $("#"+applieddateId).click(function () {
+                
+                $("#"+applieddateId).datepicker('setDate', new Date());
+                console.log('Console====Test1');
+                var pickedDate =  $('[id$=appliedDate_sel]').val();
+                console.log('Console====Test1'+pickedDate);
+                updateApplied(pickedDate);
+            });  
+           
+            var currentdate1 = $(".ui-datepicker-trigger").click(function () {
+                $("#ui-datepicker-div").show();
+                $("#"+applieddateId).datepicker('setDate', new Date());
+                setTimeout(function() {
+                    var widgetHeader = inputDate.datepicker("widget").find(".ui-datepicker-header");
+                    //you can opt to style up these simple buttons tho
+                    var prevYrBtn = $('<a  title="Previous Year" class="ui-datepicker-prev ui-corner-all" style="margin-left: 0%;"><span class="ui-icon ui-icon-seek-prev">Prev</span></a>');
+                    prevYrBtn.bind("click", function() {
+                        $.datepicker._adjustDate(inputDate, -1, 'Y');
+                    });
+                    var nextYrBtn = $('<a title="Next Year" class="ui-datepicker-next ui-corner-all" style="left: 87%;"><span class="ui-icon ui-icon-seek-next">Next</span></a>');
+                    nextYrBtn.bind("click", function() {
+                        $.datepicker._adjustDate(inputDate, +1, 'Y');
+
+                    });
+                    prevYrBtn.appendTo(widgetHeader);
+                    nextYrBtn.appendTo(widgetHeader);
+                }, 0);                  
+            }); 
+
+            jQuery.datepicker._hideDatepicker = function() {
+                var pickedDate =  $('[id$=appliedDate_sel]').val();
+                console.log('Console====Test1'+pickedDate);
+                updateApplied(pickedDate);
+                $("#ui-datepicker-div").hide();
+            };
+            
+        }); 
+
+        function restrictCurrencyValue() {
+             console.log('Console====Test111111111111111111');
+                var pickedDate =  $('[id$=appliedDate_sel]').val();
+                console.log('Console====Test1@@@@@'+pickedDate);
+                updateApplied(pickedDate);
+        }
+        
+        function formatDate(date) {
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var se;
+            alert(date);
+          var ampm = hours >= 12 ? 'pm' : 'am';
+          hours = hours % 12;
+          hours = hours ? hours : 12; // the hour '0' should be '12'
+          minutes = minutes < 10 ? '0'+minutes : minutes;
+          var strTime = hours + ':' + minutes + ':' + date.getSeconds() + ' ' + ampm;
+          return date.getMonth()+1 + "/" + date.getDate() + "/" + date.getFullYear() + "  " + strTime;
+        }
+
+        function updateApplied(valueChanged)
+        {
+            var options = {  
+                weekday: "long", year: "numeric", month: "short",  
+                day: "numeric", hour: "2-digit", minute: "2-digit"  
+            };  
+            if(valueChanged != null)
+            {
+                var pickedDate =  $('[id$=applieddateId]').val();
+                
+                AppliedDateUpdate(valueChanged);
+            }
+            console.log('Date changes');
+            console.log(valueChanged);
+        }
+        function setWorkingDate(param){
+            $('[id$="appliedDate_dsp"]').val(param);
+            passStringToController();
+        }  
+          
+    </script>   
+
+    
+    <apex:sectionHeader title="{!$ObjectType.Applications__c.label} Edit" subtitle="{!Applications__c.name}"/>
+    <apex:form >
+    <apex:pageBlock title="{!$ObjectType.Applications__c.label} Edit" mode="edit" >
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!Save}" value="Save"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection showHeader="true" title="Details" columns="2" id="AppDetails" >
+            <apex:inputField required="true" value="{!Applications__c.Applicant__c}"/>
+            <apex:inputField value="{!Applications__c.Section_8__c}"/>
+            <apex:inputField value="{!Applications__c.Application_Status__c}"/>
+            <apex:inputField value="{!Applications__c.Mod_Rehab__c}"/>
+            <apex:inputField value="{!Applications__c.Prospect_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Public_Housing__c}"/>
+            <apex:inputField value="{!Applications__c.Tenant__c}"/>
+            <apex:inputField value="{!Applications__c.PBVS_Project_Based_Single__c}"/>
+            <apex:outputField label="Created By" rendered="true" value="{!Applications__c.CreatedBy.Name}" />
+            <apex:inputField value="{!Applications__c.PBV_Project_Based__c}"/>
+            <apex:outputField label="Last Modified By" rendered="true" value="{!Applications__c.LastModifiedBy.Name}" />
+            <apex:inputField value="{!Applications__c.NED_Non_Elderly_Person_with_Disability__c}"/>
+            <apex:outputText Id="appliedDate_dsp" label="Applied Date/Time"  value="{0,date,MM/dd/yyyy hh:mm:ss a}">
+                    <apex:param value="{!local_dt}"  />
+            </apex:outputText>
+            <apex:inputField id="appliedDate_org"  rendered="false" value="{!Applications__c.Applied_Date_time__c}" />            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection collapsible="true"  showHeader="true" title="Applied Date Editing" columns="2"  >
+            <apex:pageBlockSectionItem />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <apex:outputLabel for="appliedDate_sel" style="color: #4a4a56;"><b>Applied Date/Time</b></apex:outputLabel>
+                                <div class="input-group appliedDate" style="margin-left:25px;" id="appliedDate">
+                                    <apex:input type="text" title="Applied Date/Time" id="appliedDate_sel" value="{!applied_str}" 
+                                                style="width:200px;" onblur="restrictCurrencyValue()" styleClass="form-control"></apex:input>
+                                </div>
+                            </div>                              
+                        </div>
+                   </div>
+                </div>
+    <script type="text/javascript" >
+    </script>                            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Update Processing" columns="2">
+             <apex:outputField value="{!Applications__c.RAD_Next_Purge_Request_Date__c}"/> 
+             <apex:outputField value="{!Applications__c.RAD_Last_Update_Date__c}"/>
+             <apex:outputField value="{!Applications__c.RAD_Next_Purge_Date__c}"/>
+         	 <apex:inputField value="{!Applications__c.Update_Confirmation__c}"/>  
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection showHeader="true" title="Personal Information" columns="2">
+            <apex:inputField value="{!Applications__c.DOB__c}"/>
+            <apex:inputField value="{!Applications__c.White__c}"/>
+            <apex:inputField value="{!Applications__c.Gender__c}"/>
+            <apex:inputField value="{!Applications__c.Black__c}"/>
+            <apex:inputField value="{!Applications__c.Citizenship__c}"/>
+            <apex:inputField value="{!Applications__c.Pacific_Islander__c}"/>
+            <apex:inputField required="true" value="{!Applications__c.Ethnicity__c}"/>
+            <apex:inputField value="{!Applications__c.American_Indian__c}"/>
+            <apex:outputText value=""/>
+            <apex:inputField value="{!Applications__c.Asian__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Spouse & Co Head" columns="2">
+            <apex:inputField value="{!Applications__c.Spouse_Co_Head_If_applicable__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_SSN__c}"/>
+            <apex:inputField value="{!Applications__c.First_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_Gender__c}"/>
+            <apex:inputField value="{!Applications__c.Middle_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_Date_of_Birth__c}"/>
+            <apex:inputField value="{!Applications__c.Last_Name__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Family Elements" columns="2">
+            <apex:inputField value="{!Applications__c.Total_People__c}"/>
+            <apex:inputField required="true" value="{!Applications__c.Family_Annual_Income__c}"/>
+            <apex:inputField value="{!Applications__c.of_people_in_the_H_H_Adults__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_veteran_or_a_family_of_a_ventera__c}"/>
+            <apex:inputField value="{!Applications__c.Dependents_Children_under_age_of_18__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_in_Active_duty_with_US_Army__c}"/>
+            <apex:inputField value="{!Applications__c.Employment_Zip_Code__c}"/>
+            <apex:inputField value="{!Applications__c.Occupation__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_or_your_spouse_co_head_disabled__c}"/>
+            <apex:inputField value="{!Applications__c.Education__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Special Needs" columns="2">
+            <apex:inputField value="{!Applications__c.Near_Elderly__c}"/>
+            <apex:inputField value="{!Applications__c.Displaced__c}"/>
+            <apex:inputField value="{!Applications__c.Disable__c}"/>
+            <apex:inputField value="{!Applications__c.Homeless__c}"/>
+            <apex:inputField value="{!Applications__c.Elderly__c}"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Access" columns="2">
+            <apex:inputField value="{!Applications__c.Hearing_Access__c}"/>
+            <apex:inputField value="{!Applications__c.Mobility_Access__c}"/>
+            <apex:inputField value="{!Applications__c.Sight_Access__c}"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Preferences" columns="2">
+            <apex:inputField value="{!Applications__c.Live_Work_in_City_of_San_Diego__c}"/>
+            <apex:inputField value="{!Applications__c.Disabled_Family__c}"/>
+            <apex:inputField value="{!Applications__c.Homeless_with_disability__c}"/>
+            <apex:inputField value="{!Applications__c.Elderly_Family__c}"/>
+            <apex:inputField value="{!Applications__c.Veteran_Family_of__c}"/>
+            <apex:inputField value="{!Applications__c.Family__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Agency" columns="2">
+            <apex:inputField value="{!Applications__c.Did_anyone_helped_you_to_submit_the_info__c}"/>
+            <apex:inputField value="{!Applications__c.Enter_Agency_name_if_selected_other__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_List__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Phone__c}"/>
+            <apex:inputField value="{!Applications__c.HMY__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Email__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Information" columns="2">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="System Information" columns="2">
+            <apex:inputField value="{!Applications__c.Send_To_Boomi__c}" rendered="false"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:actionFunction name="AppliedDateUpdate" action="{!updateAppliedDate}" reRender="appliedDate_dsp" >
+            <apex:param name="newAppliedDate" value="" />
+        </apex:actionFunction>
+    </apex:pageBlock>
+    </apex:form>
+        <style type="text/css">
+            .appliedDate{
+                z-index: 9998;/*Changed this css property which was 100 prior*/
+                position: relative;
+                width: 250px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+             }
+         </style>
+         <style type="text/css">
+            .form-group label, .form-group input{
+                float: none;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;            
+                }
+        </style>
+     
+</apex:page>

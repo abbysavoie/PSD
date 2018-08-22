@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);"><font face="Arial, sans-serif" size="4" style=""><font face="arial"><span style="font-size: 12pt;">Dear&nbsp;</span></font></font></span><span style="font-family: Arial, sans-serif; font-size: large; background-color: rgb(255, 255, 255);">{!Receiving_User.FirstName} {!Receiving_User.LastName}</span><span style="background-color: rgb(255, 255, 255);"><font face="Arial, sans-serif" size="4" style=""><font face="arial"><span style="font-size: 12pt;">,</span></font></font></span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Times New Roman, Times, serif" size="4">Thank you for signing up for the San Diego Housing Commission’s (SDHC) Online Rental Assistance Wait List Portal.</font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font style="font-size: 12pt;"><br></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font style="font-size: 12pt;">Your username is :&nbsp;</font><span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: large;">{!Receiving_User.Username}</span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Times New Roman&quot;, Times, serif; font-size: large;"><br></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Times New Roman, Times, serif" size="4">Please keep your User Name in a safe place. You will need them to access this portal. With SDHC’s Online Rental Assistance Wait List Portal, you will be able to check your wait list status and update your information from anywhere that you have internet access. If you have a disability and need a reasonable accommodation, please call the wait list<br>call center at 619-578-7640.</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<span style="font-family: Arial, sans-serif; font-size: large; background-color: rgb(255, 255, 255);">Sincerely,</span><br style="font-family: Arial, sans-serif; font-size: large; background-color: rgb(255, 255, 255);"><span style="font-family: Arial, sans-serif; font-size: large; background-color: rgb(255, 255, 255);">SDHC Rental Assistance Division</span>]]></td>
+</tr>
+</table>

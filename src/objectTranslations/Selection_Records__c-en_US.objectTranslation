@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Selection Record</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Selection Records</value>
+    </caseValues>
+    <fields>
+        <label><!-- App Date/Time --></label>
+        <name>App_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Bed Rooms --></label>
+        <name>Bed_Rooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- HH Ethnicity --></label>
+        <name>HH_Ethnicity__c</name>
+    </fields>
+    <fields>
+        <label><!-- HH Income --></label>
+        <name>HH_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total People --></label>
+        <name>HH_Occ__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income Target --></label>
+        <name>Income_Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lottery Rank --></label>
+        <name>Lottery_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pref Points --></label>
+        <name>Pref_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect --></label>
+        <name>Prospect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List --></label>
+        <name>RAD_Wait_List__c</name>
+        <relationshipLabel><!-- Selection Records --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Race --></label>
+        <name>Race__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resident --></label>
+        <name>Resident__c</name>
+    </fields>
+    <fields>
+        <label><!-- SSN --></label>
+        <name>SSN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wait List Selection --></label>
+        <name>Selection_ID__c</name>
+        <relationshipLabel><!-- Selection Records --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <layouts>
+        <layout>Selection Record Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

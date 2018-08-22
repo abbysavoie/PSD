@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ISSUE</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ISSUES</value>
+    </caseValues>
+    <fields>
+        <label><!-- Closing Comments --></label>
+        <name>Closing_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Type --></label>
+        <name>Issue_Type__c</name>
+        <picklistValues>
+            <masterLabel>Change Request</masterLabel>
+            <translation><!-- Change Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incident</masterLabel>
+            <translation><!-- Incident --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical - Critical Business Impact - No Work Around</masterLabel>
+            <translation><!-- Critical - Critical Business Impact - No Work Around --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High - High Number of user impact - Work Around exists</masterLabel>
+            <translation><!-- High - High Number of user impact - Work Around exists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low - Minimum impact</masterLabel>
+            <translation><!-- Low - Minimum impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium - Change is needed, does not impact major business process</masterLabel>
+            <translation><!-- Medium - Change is needed, does not impact major business process --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Clarification</masterLabel>
+            <translation><!-- Pending Clarification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>CASE Layout</layout>
+        <sections>
+            <label><!-- Closure Details --></label>
+            <section>Closure Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Technical Section (CGI Only) --></label>
+            <section>Technical Section (CGI Only)</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

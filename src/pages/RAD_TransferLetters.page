@@ -1,0 +1,94 @@
+<apex:page standardController="Memo__c"  extensions="RAD_TransferLetters" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+           renderAs="pdf" >
+    <html>
+        <head>
+            
+            <style type="text/css" media="print">
+                @page {
+                padding-top: 40px;
+                @top-center {
+                content: element(header);
+                }
+                @bottom-center {
+                content: element(footer);
+                }
+                }
+                div.header {
+                padding: 20px;
+                position: running(header);
+                }
+                div.footer {
+                
+                position: running(footer);
+                
+                }
+                
+            </style>
+        </head> 
+        <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div>
+        </div>
+        <br/> 
+        <br/> 
+        
+        <body>  
+            <apex:outputText value="{0, date, MMMM d','  yyyy}"><apex:param value="{!Today()}"/></apex:outputText><br/><br/>    
+            <apex:outputlabel value="{!Memo__c.Applications__r.Applicant__r.Name}"/> 
+            <apex:outputPanel rendered="{!NOT(ISNULL(Memo__c.Applications__r.Applicant__r.MailingStreet))}">
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.MailingStreet}"/><br/>
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Mailingcity}"/>&nbsp;
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.MailingState}"/>&nbsp;
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Mailingpostalcode}"/>&nbsp;      
+            </apex:outputPanel><br/>   
+            <apex:outputPanel rendered="{!(ISNULL(Memo__c.Applications__r.Applicant__r.MailingStreet))}">
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Residential_City__c}"/>&nbsp;
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Residential_State__c}"/>&nbsp;
+                <apex:outputField value="{!Memo__c.Applications__r.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+            </apex:outputPanel>
+            <br/>
+            <p> Dear {!Memo__c.Applications__r.Applicant__r.FirstName}{!Memo__c.Applications__r.Applicant__r.LastName},</p>
+            <apex:outputlabel >This is to confirm that a copy of your Waiting List application data has been forwarded to the 
+                County Housing Authority. Please, allow 4 weeks from the date of this letter before contacting your new Housing Authority.</apex:outputlabel>
+            <br/>
+            <br/>
+            <apex:outputlabel >For information and/or inquiries regarding your status on the Housing Authority’s Waiting List, 
+                you may write to the following address:</apex:outputlabel>
+                
+            <br/> 
+            <center><h5>{!TransLettAddress.Name__c}
+                <br/>
+                {!TransLettAddress.Address__c} 
+                <br/>
+                {!TransLettAddress.City__c}  {!TransLettAddress.State__c}, {!TransLettAddress.Zip_Code__c} 
+                <br/>
+                {!TransLettAddress.Phone_Number__c} 
+                </h5></center>
+            <br/>
+            
+            <apex:outputLabel >
+                <b><u>Important:</u></b> Your name remains on the San Diego Housing Commission’s Waiting List.
+                Therefore, you are responsible for notifying the Housing Commission’s Waiting List Department within 
+                two weeks of any changes in address, family size, or income; to respond to any updates, correspondence 
+                and appointments. Failure to do so will result in your name being removed from the Housing Commission’s 
+                Waiting List and <apex:outputLink value="http://www.sdhc.org/"> you will have to reapply. </apex:outputLink>
+            </apex:outputLabel>
+            <br/><br/>
+            <apex:outputlabel > Remember to include your social security number or the Housing Commission 
+                Identification number in all correspondence and send your letter to the address listed below:</apex:outputlabel>
+            
+            <center><h5>San Diego Housing Commission Waiting List
+                <br/>
+                1122 Broadway Suite #300
+                <br/>
+                San Diego CA 92101
+                </h5></center>
+            <br/>
+            <div class="footer">
+                <center> <img alt="SDHC"  src="{!$Resource.RAD_TransferLetter_Footer}" width="260%" /></center>  
+            </div>     
+        </body>     
+        
+        
+    </html>  
+</apex:page>

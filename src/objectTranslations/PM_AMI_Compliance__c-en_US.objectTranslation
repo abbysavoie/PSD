@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PM AMI Compliance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PM AMI Compliances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Associated Property --></label>
+        <name>Associated_Property__c</name>
+        <relationshipLabel><!-- PM AMI Compliances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other AMI% --></label>
+        <name>Other_AMI__c</name>
+    </fields>
+    <fields>
+        <label><!-- 35% AMI --></label>
+        <name>X35_AMI__c</name>
+    </fields>
+    <fields>
+        <label><!-- 50% AMI --></label>
+        <name>X50_AMI__c</name>
+    </fields>
+    <fields>
+        <label><!-- 65% AMI --></label>
+        <name>X65_AMI__c</name>
+    </fields>
+    <fields>
+        <label><!-- 80% AMI --></label>
+        <name>X80_AMI__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

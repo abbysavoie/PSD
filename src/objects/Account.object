@@ -1,0 +1,1999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableCustomerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewCustomerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>WebsiteHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>AccountNumber</fullName>
+        <inlineHelpText>This is the Unique Identifier in Yardi, Most likely the &quot;V&quot; Number</inlineHelpText>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AccountSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Relationships__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Relationships</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SDHC_Community_Relationships</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account_Roles__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Roles</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Account_Roles</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Aggregate_Bonding__c</fullName>
+        <externalId>false</externalId>
+        <label>Aggregate Bonding</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BillingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Billing_Suite_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Suite Number</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_License_Expiration__c</fullName>
+        <externalId>false</externalId>
+        <label>Business License Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_License_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Business License Name</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_License_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Business License Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CSLB_or_Professional_License_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>CSLB or Professional License Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Certification_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Certification Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Certification_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Date(Year(Certification_Date__c )+ 3,Month(Certification_Date__c), Day(Certification_Date__c)) - 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Certification Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Certification_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Certification Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Employees__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Employees</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contractor_License_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor License Code</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A - General Engineering Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B - General Building Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C2 - Insulation and Acoustical Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C4 - Boiler, Hot Water Heating and Steam Fitting Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C5 - Framing and Rough Carpentry Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C6 - Cabinet, Millwork and Finish Carpentry Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C7 - Low Voltage Systems Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C8 - Concrete Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C9 - Drywall Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C10 - Electrical Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C11 - Elevator Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C12 - Earthwork and Paving Contractors</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C13 - Fencing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C15 - Flooring and Floor Covering Contractors</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C16 - Fire Protection Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C17 - Glazing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C20 - Warm-Air Heating, Ventilating and Air-Conditioning Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C21 - Building Moving/Demolition Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C22 - Asbestos Abatement Contractors License</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C23 - Ornamental Metal Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C27 - Landscaping Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C28 - Lock and Security Equipment Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C29 - Masonry Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C31 - Construction Zone Traffic Control Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C32 - Parking and Highway Improvement Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C33 - Painting and Decorating Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C34 - Pipeline Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C35 - Lathing and Plastering Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C36 - Plumbing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C38 - Refrigeration Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C39 - Roofing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C42 - Sanitation System Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C43 - Sheet Metal Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C45 - Electrical Sign Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C46 - Solar Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C47 - General Manufactured Housing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C50 - Reinforcing Steel Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C51 - Structural Steel Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C53 - Swimming Pool Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C54 - Ceramic and Mosaic Tile Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C55 - Water Conditioning Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C57 - Water Well Drilling Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C60 - Welding Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C61 - Limited Specialty</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D12 - Synthetic Products Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D34 - Prefabricated Equipment Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D42 - Non-Electrical Sign Installation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D49 - Tree Service Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D52 - Window Coverings Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D62 - Air and Water Balancing Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D63 - Construction Clean-up Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D65 - Weatherization and Energy Conservation Contractor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ASB - Asbestos Certification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HAZ - Hazardous Substance Removal Certification</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DBA__c</fullName>
+        <externalId>false</externalId>
+        <label>DBA</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DIR_Expiration__c</fullName>
+        <externalId>false</externalId>
+        <label>DIR Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DIR_Registered__c</fullName>
+        <externalId>false</externalId>
+        <label>DIR Registered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DUNS_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>DUNS Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Of Birth</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Diverse_Business_Certification__c</fullName>
+        <externalId>false</externalId>
+        <label>Diverse Business Certification</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ELBE/SLBE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DBE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DVBE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MBE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EPA_Certified__c</fullName>
+        <externalId>false</externalId>
+        <label>EPA Certified</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Classification__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Classification</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Management/Professional</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Technician</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Construction/Labor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Workers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Office/Clerical</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>40</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Full_Time_Employees__c</fullName>
+        <externalId>false</externalId>
+        <label>Full Time Employees</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_Worked_for_SDHC__c</fullName>
+        <externalId>false</externalId>
+        <label>Has Worked for SDHC?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Housing_First_Team_Member_Assigned__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Housing First Team Member Assigned</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsCustomerPortal</fullName>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MBE__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MBE</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>New_Existing__c</fullName>
+        <externalId>false</externalId>
+        <label>New/Existing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Existing</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Notice_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Notice Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Number_of_Offices_Outside_County__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Offices Outside County</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_NAICS_Code_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other NAICS Code 1</label>
+        <referenceTo>NAICS_Code__c</referenceTo>
+        <relationshipLabel>Accounts (Other NAICS Code 1)</relationshipLabel>
+        <relationshipName>Accounts2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_NAICS_Code_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other NAICS Code 2</label>
+        <referenceTo>NAICS_Code__c</referenceTo>
+        <relationshipLabel>Accounts (Other NAICS Code 2)</relationshipLabel>
+        <relationshipName>Accounts3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_NAICS_Code_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other NAICS Code 3</label>
+        <referenceTo>NAICS_Code__c</referenceTo>
+        <relationshipLabel>Accounts (Other NAICS Code 3)</relationshipLabel>
+        <relationshipName>Accounts4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <inlineHelpText>This is the SDHC Internal Person who &quot;Owns&quot; this Record. Generally that means they are the only one who can delete it.</inlineHelpText>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ownership</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Part_Time_Employees__c</fullName>
+        <externalId>false</externalId>
+        <label>Part Time Employees</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Primary_NAICS_Code__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary NAICS Code</label>
+        <referenceTo>NAICS_Code__c</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prism_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>Prism Vendor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Public_Works_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Public Works Expiration Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Public_Works_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Public Works Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qualifying_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Qualifying Criteria</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Workforce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ownership</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recent_Ending_Gross__c</fullName>
+        <externalId>false</externalId>
+        <label>Recent Ending Gross</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Release_Of_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Release Of Information</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Secondary_NAICS_Code__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Secondary NAICS Code</label>
+        <referenceTo>NAICS_Code__c</referenceTo>
+        <relationshipLabel>Accounts (Secondary NAICS Code)</relationshipLabel>
+        <relationshipName>Accounts1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Professional</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pest Control</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Supplier</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ShippingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Sic</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SicDesc</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Single_Bonding__c</fullName>
+        <externalId>false</externalId>
+        <label>Single Bonding</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Site</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TaxID_SSN__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>TaxID/SSN</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TickerSymbol</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Total_Employees__c</fullName>
+        <externalId>false</externalId>
+        <formula>Full_Time_Employees__c + Contract_Employees__c + Part_Time_Employees__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Employees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Types_of_Jobs_Preferred__c</fullName>
+        <externalId>false</externalId>
+        <label>Types of Jobs Preferred</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Union_Member__c</fullName>
+        <externalId>false</externalId>
+        <label>Union Member</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Union_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Union Name</label>
+        <length>250</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>X60_Day_Notice__c</fullName>
+        <externalId>false</externalId>
+        <formula>Certification_Expiration_Date__c  - 60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>60 Day Notice</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Unique Identifier in Yardi, Most likely the &quot;V&quot; Number</inlineHelpText>
+        <label>Yardi ID</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllAccounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.SITE</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Accounts</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_Finance_Database_Accounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Relationships__c</field>
+            <operation>equals</operation>
+            <value>Housing Finance Database</value>
+        </filters>
+        <label>Housing Finance Database Accounts</label>
+    </listViews>
+    <listViews>
+        <fullName>Housing_First_Accounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Relationships__c</field>
+            <operation>equals</operation>
+            <value>Housing First</value>
+        </filters>
+        <label>Housing First Accounts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyAccounts</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Accounts</label>
+    </listViews>
+    <listViews>
+        <fullName>Rehab_Accounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Relationships__c</field>
+            <operation>equals</operation>
+            <value>Rehab</value>
+        </filters>
+        <label>Rehab Accounts</label>
+    </listViews>
+    <listViews>
+        <fullName>Section_3_Businesses</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Relationships__c</field>
+            <operation>equals</operation>
+            <value>Section 3</value>
+        </filters>
+        <label>Section 3 Businesses</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>RAD_Community_Account</fullName>
+        <active>true</active>
+        <label>RAD Community Account</label>
+        <picklistValues>
+            <picklist>AccountSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Account_Roles</picklist>
+            <values>
+                <fullName>Asset Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conventional Lender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Checkbox_Results</picklist>
+            <values>
+                <fullName>%3CUnknown%3E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contractor_License_Code__c</picklist>
+            <values>
+                <fullName>A - General Engineering Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASB - Asbestos Certification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B - General Building Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C10 - Electrical Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C11 - Elevator Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C12 - Earthwork and Paving Contractors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C13 - Fencing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C15 - Flooring and Floor Covering Contractors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C16 - Fire Protection Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C17 - Glazing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C2 - Insulation and Acoustical Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C20 - Warm-Air Heating%2C Ventilating and Air-Conditioning Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C21 - Building Moving%2FDemolition Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C22 - Asbestos Abatement Contractors License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C23 - Ornamental Metal Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C27 - Landscaping Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C28 - Lock and Security Equipment Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C29 - Masonry Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C31 - Construction Zone Traffic Control Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C32 - Parking and Highway Improvement Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C33 - Painting and Decorating Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C34 - Pipeline Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C35 - Lathing and Plastering Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C36 - Plumbing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C38 - Refrigeration Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C39 - Roofing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C4 - Boiler%2C Hot Water Heating and Steam Fitting Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C42 - Sanitation System Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C43 - Sheet Metal Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C45 - Electrical Sign Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C46 - Solar Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C47 - General Manufactured Housing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C5 - Framing and Rough Carpentry Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C50 - Reinforcing Steel Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C51 - Structural Steel Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C53 - Swimming Pool Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C54 - Ceramic and Mosaic Tile Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C55 - Water Conditioning Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C57 - Water Well Drilling Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C6 - Cabinet%2C Millwork and Finish Carpentry Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C60 - Welding Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C61 - Limited Specialty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C7 - Low Voltage Systems Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C8 - Concrete Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C9 - Drywall Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D12 - Synthetic Products Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D34%C2%A0- Prefabricated Equipment Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D42 - Non-Electrical Sign Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D49 - Tree Service Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D52 - Window Coverings Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D62%C2%A0- Air and Water Balancing Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D63 - Construction Clean-up Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D65 - Weatherization and Energy Conservation Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HAZ - Hazardous Substance Removal Certification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Diverse_Business_Certification__c</picklist>
+            <values>
+                <fullName>DBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DVBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ELBE%2FSLBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MBE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WBE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employee_Classification__c</picklist>
+            <values>
+                <fullName>Construction%2FLabor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Management%2FProfessional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office%2FClerical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Workers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technician</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Existing__c</picklist>
+            <values>
+                <fullName>Existing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ownership</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying_Criteria__c</picklist>
+            <values>
+                <fullName>Ownership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workforce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDHC_Community_Relationships</picklist>
+            <values>
+                <fullName>Housing Finance Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Diversion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Moving Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Prevention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing First - Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portfolio Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDHC Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Section 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Category__c</picklist>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pest Control</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limited Liability Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>S%2E Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDHC For Internal Use Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Proprietorship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.PHONE1</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.ACCOUNT_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_STREET</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.PHONE1</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.TYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.INDUSTRY</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Service_Category__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>ACCOUNT.NAME</searchFilterFields>
+        <searchFilterFields>ACCOUNT.ADDRESS1_STREET</searchFilterFields>
+        <searchFilterFields>ACCOUNT.TYPE</searchFilterFields>
+        <searchFilterFields>ACCOUNT.INDUSTRY</searchFilterFields>
+        <searchFilterFields>Service_Category__c</searchFilterFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Prog_Affiliation_Required</fullName>
+        <active>true</active>
+        <description>Forces the user to select Housing First if they are a user assigned to the Housing First SDHC Profile</description>
+        <errorConditionFormula>AND(INCLUDES($User.SDHC_Program_Affiliation__c,&quot;Housing First&quot;), NOT(INCLUDES( Account_Relationships__c , &quot;Housing First&quot;)) )</errorConditionFormula>
+        <errorDisplayField>Account_Relationships__c</errorDisplayField>
+        <errorMessage>You must supply the value of Housing First</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Account_BillingStreet}+{!Account_BillingCity}+{!Account_BillingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Account_Name}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Show_Transactions</fullName>
+        <availability>online</availability>
+        <description>Displays a list of transactions for this owner.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Show Transactions</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>https://sd-hc.my.salesforce.com/00Ot0000000mMkb?pv0={!Account.Name}</url>
+    </webLinks>
+</CustomObject>

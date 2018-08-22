@@ -20,6 +20,17 @@ global class RAD_LoginRegisterCtrl{
     public RAD_LoginRegisterCtrl() {
         
         StaticResource objStc = [Select Id, LastModifiedDate From StaticResource where Name='RAD_Web'];
+        //Clear the previous cookies
+        System.Cookie cookieNameObj= ApexPages.currentPage().getCookies().get('Name');
+        System.debug('DLS--getCookies is '+ ApexPages.currentPage().getCookies());
+        System.debug('DLS--cookieNameObj is '+ cookieNameObj);
+        if (cookieNameObj <>null){
+            String cookieName=cookieNameObj.getName();
+            // create a new cookie with name , an initial value of Name at the page,   
+            // path 'null', maxAge '-1', and isSecure 'false'. 
+            System.Cookie newCookie=new System.Cookie(cookieName,'',null,-1,true);
+            ApexPages.currentPage().setCookies(new Cookie[]{newCookie});
+        }
         
         iCnt = objStc.LastModifiedDate.getTime();
         
@@ -317,7 +328,8 @@ global class RAD_LoginRegisterCtrl{
             UserContact.Contact_Type__c        = 'Community Global User';
             UserContact.FirstName              = FirstNameRegister;
             UserContact.Phone                  = PhoneRegister; 
-            UserContact.SSN_TaxID__c           = SSNRegister.remove('-');
+            //UserContact.SSN_TaxID__c           = SSNRegister.remove('-');
+            UserContact.SSN_TaxID__c           = SSNRegister;
             UserContact.SNN_DUP__c             = SSNRegister;
             UserContact.Gender__c              = GenderRegister;
             //UserContact.Age__c                 = AgeRegister; //RHATHI WE ARE NOT USING THIS BUT FORMULA AND TYPE IS NUMBER IN PROD

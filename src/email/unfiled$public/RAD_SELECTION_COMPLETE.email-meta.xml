@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SDHC_LOGO</letterhead>
+    <name>RAD_SELECTION_COMPLETE</name>
+    <style>freeForm</style>
+    <subject>New Selection Run : {!Wait_List_Selection__c.Name} , Wait List : {!Wait_List_Selection__c.Wait_List_Type__c}</subject>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,82 @@
+<messaging:emailTemplate recipientType="Contact"  relatedToType="Applications__c"
+
+subject="Rental Assistance Wait List Application {!relatedTo.Name} Status Report">
+
+    <messaging:htmlEmailBody >
+<html>
+    <style>p{margin-top:0px; margin-bottom:0px;}</style>        
+         
+        <body class="setupTab"  onload="init()"  style=" background-color:#CCCCCC; bEditID:b1st1; bLabel:body;">
+        <center>
+        <table cellpadding="0" width="500" cellspacing="0" id="topTable" height="300" >
+            <tr valign="top" >
+                <td  style=" background-color:#FFFFFF; bEditID:r1st1; bLabel:header; vertical-align:top; height:70; text-align:left;">
+<!--<img alt="SDHC" height="150" src= "https://sd-hc--uat.cs32.my.salesforce.com/servlet/servlet.ImageServer?id=015t0000000DT0H&oid=00Dr00000000udw&lastMod=1503679665000" width="250" /> <br/>-->
+<img alt="SDHC" height="150" src= "https://sd-hc.my.salesforce.com/servlet/servlet.ImageServer?id=015t0000000DT0H&oid=00Dt00000008aPG&lastMod=1500882746000" width="250" />   
+               <!-- <c:SDHCLOGO /> -->
+             
+              <!-- <img alt="SDHC" height="100" src="{!$Resource.SDHCLogo}" width="150" />  -->
+ </td>
+            </tr><tr><br/></tr>
+            <tr valign="top" >
+                <td  style=" background-color:#FFFFFF; bEditID:r2st1; bLabel:accent1; height:4;"></td>
+            </tr>
+            <tr valign="top" >
+                <td styleInsert="1" height="300"  style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:Times New Roman;">
+                    <table border="0" cellpadding="5" width="600" cellspacing="5" height="300" >
+                        <tr valign="top" height="30" >
+                            <td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:Times New Roman;" aEditID="c1r1" locked="0" >
+                                <font face="Arial">                           
+                                    <span style='font-family: "Times New Roman","Times New Roman"; font-size: 12pt;'>
+                                      <br/><p>Dear {!recipient.Name}, </p>
+                                   </span>                           
+                                </font>
+                             </td>
+                          </tr>
+                          <tr valign="top" height="300" >
+                             <td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:Times New Roman;" aEditID="c1r2" locked="0" >
+                                <span style="color: rgb(0, 0, 0); font-family: Times New Roman, Times New Roman; font-size: 12pt;">
+                                   <p>The San Diego Housing Commission (SDHC) has received your reported change(s).</p><br/>
+                                   <p>SDHC’s records show that you are on the wait list for the following program(s):</p><br/>
+                                   <c:RADWL_EmailComponent waitlistIdname="{!recipient.Id}" />
+
+
+         <br/><p>Based on the information provided, you do not live in the San Diego limits (Zip codes)
+You may request your application date / time to be transferred to other Housing agencies
+based on your zip codes 
+         </p><br/>
+
+                                  <p> It is important for you to keep the information on your application up-to-date. Visit the
+SDHC Online Rental Assistance Wait List Portal on SDHC’s website,<a href="https:// www.sdhc.org/"> www.sdhc.org</a>, to
+report any changes to your existing application or to check your status on the wait list.</p><br/>                                          
+                                    
+
+                                    <p>If you have a disability and need a reasonable accommodation, please call the wait list
+call center at 619-578-7640 </p>
+                                    
+
+                                     </span>                               
+                             </td>
+                          </tr>
+                   </table>
+                        </td> </tr>
+                        <tr valign="top" >
+                                <td  style=" background-color:#FFFFFF; bEditID:r4st1; bLabel:accent2; height:3;"></td>
+                          </tr>
+                          <tr valign="top" >
+                                <td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:Times New Roman;" aEditID="c1r2" locked="0" >
+                        <span style="color: rgb(0, 0, 0); font-family: Times New Roman, Times New Roman; font-size: 12pt;">
+                                 <p>&nbsp;&nbsp; Sincerely, </p><br/>                  
+                              <p>&nbsp;&nbsp; SDHC Rental Assistance Division </p>
+                              </span>
+                              </td>
+                          </tr>
+                          <tr valign="top" >
+                                <td  style=" background-color:#FFFFFF; bEditID:r6st1; bLabel:accent3; height:3;"></td>
+                          </tr>                    
+                </table>
+            </center>  
+      </body>    
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

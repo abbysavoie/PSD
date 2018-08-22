@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>LPAM - Loan Portfolio Asset Management Project</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acquisition_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Acquisition Costs</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Building_Permit_PTS_Numbers__c</fullName>
+        <externalId>false</externalId>
+        <label>Building Permit PTS Numbers</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Closing__c</fullName>
+        <description>Closing/Origination Date or Date Funded</description>
+        <externalId>false</externalId>
+        <label>Closing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Completion_Date__c</fullName>
+        <description>Completion Date (Certificate of Occupancy)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Certificate of Occupancy Date</inlineHelpText>
+        <label>Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Conventional_Debt_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Conventional Debt Amount</label>
+        <summarizedField>Conventional_Debt__c.Original_Loan_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Conventional_Debt__c.Funding_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Conventional</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Conventional_Debt__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Conventional_Debt_Outstanding_Balance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is fed from the Conventional Debt Object -&gt; Outstanding Balance field.</inlineHelpText>
+        <label>Conventional Debt Outstanding Balance</label>
+        <summarizedField>Conventional_Debt__c.Outstanding_Balance__c</summarizedField>
+        <summaryFilterItems>
+            <field>Conventional_Debt__c.Funding_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Conventional</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Conventional_Debt__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Conventional_Debt_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Conventional Debt Payments</label>
+        <summarizedField>Conventional_Debt__c.Total_Payments__c</summarizedField>
+        <summaryForeignKey>Conventional_Debt__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Date_Building_Permit_Pulled__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Building Permit Pulled</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deferred_Developer_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Deferred Developer Fees</label>
+        <summarizedField>Deferred_Developer_Fee__c.Amount__c</summarizedField>
+        <summaryForeignKey>Deferred_Developer_Fee__c.Loan_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Density_Bonus__c</fullName>
+        <externalId>false</externalId>
+        <label>Density Bonus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Developer_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Developer Fee</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Development_Costs_Sources__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Amount_of_Bonds__c + Conventional_Debt_Amount__c + Tax_Credit_Equity__c + Grant_Rollup__c + SDHC_Loan_Amount__c + Deferred_Developer_Fees__c+ Subordinate_Debt_Amount__c+ Other_Financing_Sources__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Development Costs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Development_Costs_Uses__c</fullName>
+        <externalId>false</externalId>
+        <formula>Acquisition_Costs__c + Financing_Costs__c + Other_Uses__c + Hard_Cost_Contingency__c + Hard_Costs__c + Soft_Costs__c + Financing_Costs__c +  Developer_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Development Costs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Completion_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Completion_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Completion Percentage</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Financing_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Financing Costs</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>First_Payment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>First Payment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Grant_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Grant Rollup</label>
+        <summarizedField>Grant__c.Amount__c</summarizedField>
+        <summaryForeignKey>Grant__c.Loan_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Hard_Cost_Contingency__c</fullName>
+        <externalId>false</externalId>
+        <label>Hard Cost Contingency</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Hard_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Hard Costs</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Authority_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Housing Authority Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Commission_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Housing Commission Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Inclusionary__c</fullName>
+        <externalId>false</externalId>
+        <label>Inclusionary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Jump_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>Jump Percent</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LIHTC__c</fullName>
+        <externalId>false</externalId>
+        <label>LIHTC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>4%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9%</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legacy_Project_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Project ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_to_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Conventional_Debt_Outstanding_Balance__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Loan to Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Payment</label>
+        <summarizedField>SDHC_Loan__c.Minimum_Payment__c</summarizedField>
+        <summaryFilterItems>
+            <field>SDHC_Loan__c.Minimum_Payment__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SDHC_Loan__c.Loan_Portfolio_Asset_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Option_To_Purchase__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Option To Purchase</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_Financing_Sources__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Financing Sources</label>
+        <summarizedField>Other_Financing_Source__c.Amount__c</summarizedField>
+        <summaryForeignKey>Other_Financing_Source__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Other_Specify__c</fullName>
+        <externalId>false</externalId>
+        <label>Other (Specify)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Other_Uses__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Uses</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Jump_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Jump Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Placed_In_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Placed In Service</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Program_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Portfolio Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Housing Finance-Loan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Housing Finance-Bond</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compliance – Civic</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compliance – Civic San Diego</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Land Use-Density Bonus</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Land Use-Inclusionary</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Land Use-SRO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Land Use-Coastal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HDP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Former RDA</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Housing_Use__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Housing Use</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rental</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Condo Conversion</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>For Sale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Transitional Housing</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Manager</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Contact_Type__c</field>
+                <operation>equals</operation>
+                <value>Housing Finance Manager</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Under Construction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pipeline</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Potential</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Property</label>
+        <referenceTo>Building__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Type_RPT__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Type RPT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reserves__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserves</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Residual_Receipt_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Residual Receipt Percentage</label>
+        <summarizedField>SDHC_Loan__c.Payment_Terms__c</summarizedField>
+        <summaryForeignKey>SDHC_Loan__c.Loan_Portfolio_Asset_Project__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Restricted_Term_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Restricted Term End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Restricted_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Restricted Term</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDHC_Ground_Lease__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SDHC Ground Lease</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SDHC_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>SDHC Loan Amount</label>
+        <summarizedField>SDHC_Loan__c.Original_Approved_Loan_Amount__c</summarizedField>
+        <summaryForeignKey>SDHC_Loan__c.Loan_Portfolio_Asset_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Soft Costs</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Source_of_Data_for_Sources_and_Uses__c</fullName>
+        <externalId>false</externalId>
+        <label>Source of Data for Sources and Uses</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HA Report Proforma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closing Proforma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Final Cost Certification</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subordinate_Debt_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Subordinate Debt Amount</label>
+        <summarizedField>Conventional_Debt__c.Original_Loan_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Conventional_Debt__c.Funding_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Subordinate, HCD, CalHFA, HUD, Other</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Conventional_Debt__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Subordinate_Debt_Outstanding_Balance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is fed from the Conventional Debt Object -&gt; Outstanding Balance Field.</inlineHelpText>
+        <label>Subordinate Debt Outstanding Balance</label>
+        <summarizedField>Conventional_Debt__c.Outstanding_Balance__c</summarizedField>
+        <summaryFilterItems>
+            <field>Conventional_Debt__c.Funding_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Subordinate, HCD, CalHFA, HUD, Other</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Conventional_Debt__c.Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TDC_Notes__c</fullName>
+        <description>Total Development Cost Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Development Cost Notes</inlineHelpText>
+        <label>Notes</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Credit_Equity__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Credit Equity</label>
+        <summarizedField>Tax_Credit_Equity__c.Amount__c</summarizedField>
+        <summaryForeignKey>Tax_Credit_Equity__c.Loan_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Amount_of_Bonds__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Amount of Bonds</label>
+        <summarizedField>Bond__c.Assistance_Amount_At_Conversion__c</summarizedField>
+        <summaryForeignKey>Bond__c.LPAM_Bond__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Construction__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Construction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Construction</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Acquisition</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rehabilitation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Preservation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Adaptive Re-Use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Condo Conversion</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Demolition</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <label>Project</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Bond_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>012t0000000Gslx</value>
+        </filters>
+        <label>Bond Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Multi_Family_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Loan_Project__c.Default_Project_Record_Type,012t0000000GsnA</value>
+        </filters>
+        <label>Multi-Family Projects</label>
+    </listViews>
+    <nameField>
+        <label>Project Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Default_Project_Record_Type</fullName>
+        <active>true</active>
+        <description>This is the default record type for all projects</description>
+        <label>Default Project Record Type</label>
+        <picklistValues>
+            <picklist>Checkbox_Results</picklist>
+            <values>
+                <fullName>%3CUnknown%3E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LIHTC__c</picklist>
+            <values>
+                <fullName>4%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Program_Type__c</picklist>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance %E2%80%93 Civic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance %E2%80%93 Civic San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Former RDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Finance-Bond</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Finance-Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Use-Coastal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Use-Density Bonus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Use-Inclusionary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Use-SRO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portfolio Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Housing_Use__c</picklist>
+            <values>
+                <fullName>Rental</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Construction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_of_Data_for_Sources_and_Uses__c</picklist>
+            <values>
+                <fullName>Closing Proforma</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Cost Certification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HA Report Proforma</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_Of_Construction__c</picklist>
+            <values>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adaptive Re-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Conversion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demolition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preservation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rehabilitation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Property__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type_Of_Construction__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Property__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type_Of_Construction__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Property__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Project_Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type_Of_Construction__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Property__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type_Of_Construction__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

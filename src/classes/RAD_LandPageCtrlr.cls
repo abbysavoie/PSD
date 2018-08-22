@@ -31,6 +31,17 @@ global class RAD_LandPageCtrlr {
             //return new PageReference('https://waitlist-sdhcportal.cs32.force.com/RADWL/RADNewLand');
         }
         else{
+            //Clear the previous cookies
+            System.Cookie cookieNameObj= ApexPages.currentPage().getCookies().get('Name');
+            System.debug('DLS--getCookies is '+ ApexPages.currentPage().getCookies());
+            System.debug('DLS--cookieNameObj is '+ cookieNameObj);
+            if (cookieNameObj <>null){
+                String cookieName=cookieNameObj.getName();
+                // create a new cookie with name , an initial value of Name at the page,   
+                // path 'null', maxAge '-1', and isSecure 'false'. 
+                System.Cookie newCookie=new System.Cookie(cookieName,'',null,-1,true);
+                ApexPages.currentPage().setCookies(new Cookie[]{newCookie});
+                }
             userLoggedIn = true;
             //PageReference pr = new PageReference('RADNewLand');
             loggedInUserName = UserInfo.getName();
@@ -175,7 +186,7 @@ global class RAD_LandPageCtrlr {
             if(cont != null){
                 UserCont = (Contact)Json.deserialize(cont,Contact.class);
                 system.Debug(UserCont);
-                update UserCont;
+                //update UserCont;
                 
                 List<User> lstLoggedInUser = [SELECT Id, LastName FROM User WHERE ContactId = :UserCont.Id AND LastName <> :UserCont.LastName LIMIT 1];
                 if(lstLoggedInUser != null && lstLoggedInUser.size() == 1)
@@ -233,8 +244,18 @@ global class RAD_LandPageCtrlr {
                 app.RAD_Next_Purge_Date__c =  Null;
             }
             else if(action.equals('submit')){
+                // Save Application first
+                               
                 app.Application_Status__c = 'Submitted';
-                app.Applied_Date_time__c = Datetime.now();
+                for (Applications__c App_list : [Select Id, Applied_Date_time__c from applications__c where id =:app.id])
+                {
+                    app.Applied_Date_time__c = App_list.Applied_Date_time__c;
+                }
+                if (app.Applied_Date_time__c == Null)
+                {
+                    app.Applied_Date_time__c = Datetime.now();
+                }
+                
                 RAD_Configuration__c cnfg = [select Update_Duration_Months__c, RAD_Purge_Extension_Months__c from  RAD_Configuration__c where name = 'Main Configurations' limit 1];
                 Integer totalMonths = Integer.valueOf(cnfg.Update_Duration_Months__c) + Integer.valueOf(cnfg.RAD_Purge_Extension_Months__c);
                 app.Application_status__c = 'Submitted';

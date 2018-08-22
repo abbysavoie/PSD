@@ -1,0 +1,193 @@
+<apex:page docType="html-5.0" standardStylesheets="true" standardController="Applications__c" extensions="RAD_ApplicationDetailCntrl" >
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/jquery-3.3.1.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/bootstrap.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/moment.min.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.bootStrapDatePicker,'js/bootstrap-datetimepicker.min.js')}"></script>
+
+    <link href="{!URLFOR($Resource.bootStrapDatePicker,'css/bootstrap.min.css')}" rel="stylesheet"/>
+    <link href="{!URLFOR($Resource.bootStrapDatePicker,'css/bootstrap-datetimepicker.min.css')}" type="text/css" rel="stylesheet" />
+    
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $('.appliedDate').datetimepicker({
+                                inline: false,
+                                sideBySide: false,
+                                format: 'MM/DD/YYYY hh:mm:ss A',
+                                showTodayButton: true,
+                                showClose: true,
+                                useStrict: true
+                            }).on('dp.hide',function(e){
+                                console.log(e);
+                                var date = moment(e.date).format('YYYY-MM-DD HH:mm:ss');
+                                console.log(date);
+                                 updateApplied(date);});            
+        });
+
+    
+        function updateApplied(valueChanged)
+        {
+            //alert(valueChanged);
+            var options = {  
+                weekday: "long", year: "numeric", month: "short",  
+                day: "numeric", hour: "2-digit", minute: "2-digit"  
+            };  
+            
+            //$('[id$="appliedDate_org"]').val(valueChanged);
+            if(valueChanged != null)
+            {
+                var pickedDate =  $('[id$="appliedDate_sel"]').val();
+                
+                AppliedDateUpdate(valueChanged);
+            }
+            console.log('Date changes');
+            console.log(valueChanged);
+        }
+        function setWorkingDate(param){
+            $('[id$="appliedDate_dsp"]').val(param);
+            passStringToController();
+        }        
+    </script>    
+    
+    <apex:sectionHeader title="{!$ObjectType.Applications__c.label} Edit" subtitle="{!Applications__c.name}"/>
+    <apex:form >
+    <apex:pageBlock title="{!$ObjectType.Applications__c.label} Edit" mode="edit" >
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!Save}" value="Save"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection showHeader="true" title="Details" columns="2" id="AppDetails" >
+            <apex:inputField required="true" value="{!Applications__c.Applicant__c}"/>
+            <apex:inputField value="{!Applications__c.Section_8__c}"/>
+            <apex:inputField value="{!Applications__c.Application_Status__c}"/>
+            <apex:inputField value="{!Applications__c.Mod_Rehab__c}"/>
+            <apex:inputField value="{!Applications__c.Prospect_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Public_Housing__c}"/>
+            <apex:inputField value="{!Applications__c.Tenant__c}"/>
+            <apex:inputField value="{!Applications__c.PBVS_Project_Based_Single__c}"/>
+            <apex:outputField label="Created By" rendered="true" value="{!Applications__c.CreatedBy.Name}" />
+            <apex:inputField value="{!Applications__c.PBV_Project_Based__c}"/>
+            <apex:outputField label="Last Modified By" rendered="true" value="{!Applications__c.LastModifiedBy.Name}" />
+            <apex:inputField value="{!Applications__c.NED_Non_Elderly_Person_with_Disability__c}"/>
+            <apex:outputText Id="appliedDate_dsp" label="Applied Date/Time"  value="{0,date,MM/dd/yyyy K:mm:ss a}">
+                    <apex:param value="{!local_dt}"  />
+            </apex:outputText>
+            <apex:inputField id="appliedDate_org"  rendered="false" value="{!Applications__c.Applied_Date_time__c}" />            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection collapsible="true"  showHeader="true" title="Applied Date Editing" columns="2"  >
+            <apex:pageBlockSectionItem />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                    <label for="appliedDate_sel">Applied Date/Time</label>
+                                <div class="input-group appliedDate" id="appliedDate">
+                                    <input type="text" text="Applied Date/Time" width="200" id="appliedDate_sel" value="{!applied_str}" class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>  
+                                </div>
+                            </div>                              
+                        </div>
+                   </div>
+                </div>
+    <script type="text/javascript" >
+
+    </script>                            
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection showHeader="true" title="Personal Information" columns="2">
+            <apex:inputField value="{!Applications__c.DOB__c}"/>
+            <apex:inputField value="{!Applications__c.White__c}"/>
+            <apex:inputField value="{!Applications__c.Gender__c}"/>
+            <apex:inputField value="{!Applications__c.Black__c}"/>
+            <apex:inputField value="{!Applications__c.Citizenship__c}"/>
+            <apex:inputField value="{!Applications__c.Pacific_Islander__c}"/>
+            <apex:inputField required="true" value="{!Applications__c.Ethnicity__c}"/>
+            <apex:inputField value="{!Applications__c.American_Indian__c}"/>
+            <apex:outputText value=""/>
+            <apex:inputField value="{!Applications__c.Asian__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Spouse & Co Head" columns="2">
+            <apex:inputField value="{!Applications__c.Spouse_Co_Head_If_applicable__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_SSN__c}"/>
+            <apex:inputField value="{!Applications__c.First_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_Gender__c}"/>
+            <apex:inputField value="{!Applications__c.Middle_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Spouse_Date_of_Birth__c}"/>
+            <apex:inputField value="{!Applications__c.Last_Name__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Family Elements" columns="2">
+            <apex:inputField value="{!Applications__c.Total_People__c}"/>
+            <apex:inputField required="true" value="{!Applications__c.Family_Annual_Income__c}"/>
+            <apex:inputField value="{!Applications__c.of_people_in_the_H_H_Adults__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_veteran_or_a_family_of_a_ventera__c}"/>
+            <apex:inputField value="{!Applications__c.Dependents_Children_under_age_of_18__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_in_Active_duty_with_US_Army__c}"/>
+            <apex:inputField value="{!Applications__c.Employment_Zip_Code__c}"/>
+            <apex:inputField value="{!Applications__c.Occupation__c}"/>
+            <apex:inputField value="{!Applications__c.Are_you_or_your_spouse_co_head_disabled__c}"/>
+            <apex:inputField value="{!Applications__c.Education__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Special Needs" columns="2">
+            <apex:inputField value="{!Applications__c.Near_Elderly__c}"/>
+            <apex:inputField value="{!Applications__c.Displaced__c}"/>
+            <apex:inputField value="{!Applications__c.Disable__c}"/>
+            <apex:inputField value="{!Applications__c.Homeless__c}"/>
+            <apex:inputField value="{!Applications__c.Elderly__c}"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Access" columns="2">
+            <apex:inputField value="{!Applications__c.Hearing_Access__c}"/>
+            <apex:inputField value="{!Applications__c.Mobility_Access__c}"/>
+            <apex:inputField value="{!Applications__c.Sight_Access__c}"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Preferences" columns="2">
+            <apex:inputField value="{!Applications__c.Live_Work_in_City_of_San_Diego__c}"/>
+            <apex:inputField value="{!Applications__c.Disabled_Family__c}"/>
+            <apex:inputField value="{!Applications__c.Homeless_with_disability__c}"/>
+            <apex:inputField value="{!Applications__c.Elderly_Family__c}"/>
+            <apex:inputField value="{!Applications__c.Veteran_Family_of__c}"/>
+            <apex:inputField value="{!Applications__c.Family__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Agency" columns="2">
+            <apex:inputField value="{!Applications__c.Did_anyone_helped_you_to_submit_the_info__c}"/>
+            <apex:inputField value="{!Applications__c.Enter_Agency_name_if_selected_other__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Name__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_List__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Phone__c}"/>
+            <apex:inputField value="{!Applications__c.HMY__c}"/>
+            <apex:inputField value="{!Applications__c.Agency_Contact_Email__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Information" columns="2">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="System Information" columns="2">
+            <apex:inputField value="{!Applications__c.Send_To_Boomi__c}" rendered="false"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:actionFunction name="AppliedDateUpdate" action="{!updateAppliedDate}" reRender="appliedDate_dsp" >
+            <apex:param name="newAppliedDate" value="" />
+        </apex:actionFunction>
+    </apex:pageBlock>
+    </apex:form>
+        <style type="text/css">
+            .appliedDate{
+                z-index: 9998;/*Changed this css property which was 100 prior*/
+                position: relative;
+                width: 250px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+             }
+         </style>
+         <style type="text/css">
+            .form-group label, .form-group input{
+                float: none;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;            
+                }
+        </style>
+     
+</apex:page>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acquisition Costs --></label>
+        <name>Acquisition_Costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Permit PTS Numbers --></label>
+        <name>Building_Permit_PTS_Numbers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closing --></label>
+        <name>Closing__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the Certificate of Occupancy Date --></help>
+        <label><!-- Completion Date --></label>
+        <name>Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conventional Debt Amount --></label>
+        <name>Conventional_Debt_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is fed from the Conventional Debt Object -&gt; Outstanding Balance field. --></help>
+        <label><!-- Conventional Debt Outstanding Balance --></label>
+        <name>Conventional_Debt_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conventional Debt Payments --></label>
+        <name>Conventional_Debt_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Building Permit Pulled --></label>
+        <name>Date_Building_Permit_Pulled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deferred Developer Fees --></label>
+        <name>Deferred_Developer_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Density Bonus --></label>
+        <name>Density_Bonus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer Fee --></label>
+        <name>Developer_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Development Costs --></label>
+        <name>Development_Costs_Sources__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Development Costs --></label>
+        <name>Development_Costs_Uses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Completion Date --></label>
+        <name>Estimated_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Completion Percentage --></label>
+        <name>Estimated_Completion_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financing Costs --></label>
+        <name>Financing_Costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Payment Date --></label>
+        <name>First_Payment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Rollup --></label>
+        <name>Grant_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hard Cost Contingency --></label>
+        <name>Hard_Cost_Contingency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hard Costs --></label>
+        <name>Hard_Costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Housing Authority Date --></label>
+        <name>Housing_Authority_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Housing Commission Date --></label>
+        <name>Housing_Commission_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inclusionary --></label>
+        <name>Inclusionary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jump Percent --></label>
+        <name>Jump_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- LIHTC --></label>
+        <name>LIHTC__c</name>
+        <picklistValues>
+            <masterLabel>4%</masterLabel>
+            <translation><!-- 4% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9%</masterLabel>
+            <translation><!-- 9% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legacy Project ID --></label>
+        <name>Legacy_Project_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan to Value --></label>
+        <name>Loan_to_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Payment --></label>
+        <name>Minimum_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Option To Purchase --></label>
+        <name>Option_To_Purchase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Financing Sources --></label>
+        <name>Other_Financing_Sources__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other (Specify) --></label>
+        <name>Other_Specify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Uses --></label>
+        <name>Other_Uses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Jump Year --></label>
+        <name>Payment_Jump_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Placed In Service --></label>
+        <name>Placed_In_Service__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>Program_Type__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance – Civic</masterLabel>
+            <translation><!-- Compliance – Civic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance – Civic San Diego</masterLabel>
+            <translation><!-- Compliance – Civic San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former RDA</masterLabel>
+            <translation><!-- Former RDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDP</masterLabel>
+            <translation><!-- HDP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing Finance-Bond</masterLabel>
+            <translation><!-- Housing Finance-Bond --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing Finance-Loan</masterLabel>
+            <translation><!-- Housing Finance-Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land Use-Coastal</masterLabel>
+            <translation><!-- Land Use-Coastal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land Use-Density Bonus</masterLabel>
+            <translation><!-- Land Use-Density Bonus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land Use-Inclusionary</masterLabel>
+            <translation><!-- Land Use-Inclusionary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land Use-SRO</masterLabel>
+            <translation><!-- Land Use-SRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portfolio Management</masterLabel>
+            <translation><!-- Portfolio Management --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Housing Use --></label>
+        <name>Project_Housing_Use__c</name>
+        <picklistValues>
+            <masterLabel>Condo Conversion</masterLabel>
+            <translation><!-- Condo Conversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>For Sale</masterLabel>
+            <translation><!-- For Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental</masterLabel>
+            <translation><!-- Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transitional Housing</masterLabel>
+            <translation><!-- Transitional Housing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Manager --></label>
+        <name>Project_Manager__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Status --></label>
+        <name>Project_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipeline</masterLabel>
+            <translation><!-- Pipeline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Potential</masterLabel>
+            <translation><!-- Potential --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Construction</masterLabel>
+            <translation><!-- Under Construction --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property --></label>
+        <name>Property__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Purchase Year --></label>
+        <name>Purchase_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type RPT --></label>
+        <name>Record_Type_RPT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reserves --></label>
+        <name>Reserves__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residual Receipt Percentage --></label>
+        <name>Residual_Receipt_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restricted Term End Date --></label>
+        <name>Restricted_Term_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restricted Term --></label>
+        <name>Restricted_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Ground Lease --></label>
+        <name>SDHC_Ground_Lease__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Loan Amount --></label>
+        <name>SDHC_Loan_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Soft Costs --></label>
+        <name>Soft_Costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source of Data for Sources and Uses --></label>
+        <name>Source_of_Data_for_Sources_and_Uses__c</name>
+        <picklistValues>
+            <masterLabel>Closing Proforma</masterLabel>
+            <translation><!-- Closing Proforma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Cost Certification</masterLabel>
+            <translation><!-- Final Cost Certification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HA Report Proforma</masterLabel>
+            <translation><!-- HA Report Proforma --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subordinate Debt Amount --></label>
+        <name>Subordinate_Debt_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is fed from the Conventional Debt Object -&gt; Outstanding Balance Field. --></help>
+        <label><!-- Subordinate Debt Outstanding Balance --></label>
+        <name>Subordinate_Debt_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Development Cost Notes --></help>
+        <label><!-- Notes --></label>
+        <name>TDC_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Credit Equity --></label>
+        <name>Tax_Credit_Equity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Amount of Bonds --></label>
+        <name>Total_Amount_of_Bonds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type Of Construction --></label>
+        <name>Type_Of_Construction__c</name>
+        <picklistValues>
+            <masterLabel>Acquisition</masterLabel>
+            <translation><!-- Acquisition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adaptive Re-Use</masterLabel>
+            <translation><!-- Adaptive Re-Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Condo Conversion</masterLabel>
+            <translation><!-- Condo Conversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demolition</masterLabel>
+            <translation><!-- Demolition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Construction</masterLabel>
+            <translation><!-- New Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preservation</masterLabel>
+            <translation><!-- Preservation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rehabilitation</masterLabel>
+            <translation><!-- Rehabilitation --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Bond Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Database Record Information --></label>
+            <section>Database Record Information</section>
+        </sections>
+        <sections>
+            <label><!-- Permanent Financing Sources --></label>
+            <section>Permanent Financing Sources</section>
+        </sections>
+        <sections>
+            <label><!-- Permanent Financing Uses --></label>
+            <section>Permanent Financing Uses</section>
+        </sections>
+        <sections>
+            <label><!-- Project Detail --></label>
+            <section>Project Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Source of Data for Sources and Uses --></label>
+            <section>Source of Data for Sources and Uses</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>LPAM Project Layout</layout>
+        <sections>
+            <label><!-- Asset Management Summary --></label>
+            <section>Asset Management Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Database Record Information --></label>
+            <section>Database Record Information</section>
+        </sections>
+        <sections>
+            <label><!-- Permanent Financing Sources --></label>
+            <section>Permanent Financing Sources</section>
+        </sections>
+        <sections>
+            <label><!-- Permanent Financing Uses --></label>
+            <section>Permanent Financing Uses</section>
+        </sections>
+        <sections>
+            <label><!-- Project Detail --></label>
+            <section>Project Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Source of Data for Sources and Uses --></label>
+            <section>Source of Data for Sources and Uses</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Default Project Record Type --></label>
+        <name>Default_Project_Record_Type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

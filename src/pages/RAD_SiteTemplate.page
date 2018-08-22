@@ -1,0 +1,186 @@
+<apex:page id="RADTemppgid" doctype="HTML-5.0" sidebar="false" showHeader="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" >
+    <html class="no-js gt-ie8" lang="en-US">
+        <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+            <title>Log In</title>
+            <meta name="description" content=""/>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+            <link rel="icon" type="image/png" href="{!URLFOR($Resource.RAD_Web,'/img/SDHC_Horiz_logo.png')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.Waitlist_Bst,'/css/bootstrap.min.css')}"/>
+           <!-- <apex:stylesheet value="{!URLFOR($Resource.RAD_Web,'/css/main.min.css')}"/>-->
+            <apex:stylesheet value="{!URLFOR($Resource.RADCSS)}"/>
+            <script src="/soap/ajax/33.0/connection.js"></script>
+            <script src="/soap/ajax/33.0/apex.js"></script>
+            
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.js"></script>
+            <apex:includeScript value="{!URLFOR($Resource.jQuery)}"/>
+            <apex:includeScript value="{!URLFOR($Resource.Waitlist_Bst,'/js/bootstrap.min.js')}"/>
+             <apex:insert name="css_scripts">
+                </apex:insert>
+             
+    
+              
+            <style>
+                html{
+                    background:transparent !important;
+                }
+                .form-inline .form-group{
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .boldheading{
+                    font-size:250%;
+                    font-weight:bolder;
+                }
+                .quicklinks .google-translate .goog-te-gadget-simple .goog-te-menu-value{
+                    font-size:1.5rem !Important;
+                }
+                .help-block{
+                    font-style:Italic;
+                    font-weight:bold;
+                    
+                }
+                .help-block1{
+                    color:red;
+                    text-align:right;
+                }
+                .checkbox {
+                  padding-left: 20px; 
+                  }
+                .checkbox label {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 5px;
+                    font-size:1.5rem;
+                }
+               <!-- .checkbox label::before {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  width: 17px;
+                  height: 17px;
+                  left: 0;
+                  margin-left: -20px;
+                  border: 1px solid #cccccc;
+                  border-radius: 3px;
+                  background-color: #fff;
+                  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+                  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+                  transition: border 0.15s ease-in-out, color 0.15s ease-in-out; 
+                  }
+                .checkbox label::after {
+                  display: inline-block;
+                  position: absolute;
+                  width: 16px;
+                  height: 16px;
+                  left: 0;
+                  top: 0;
+                  margin-left: -20px;
+                  padding-left: 3px;
+                  padding-top: 1px;
+                  font-size: 15px;
+                  color: #555555; 
+                  font-weight:bolder;
+                  }
+                .checkbox input[type="checkbox"] {
+                    opacity: 0; 
+                }
+                .checkbox input[type="checkbox"]:focus + label::before {
+                  outline: thin dotted;
+                  outline: 5px auto -webkit-focus-ring-color;
+                  outline-offset: -2px; 
+                  }
+                .checkbox input[type="checkbox"]:checked + label::after {
+                  font-family: 'FontAwesome';
+                  content: "\2713"; 
+                }-->
+
+                
+                @media screen and (min-width: 60em) {
+                    
+                }
+            </style>
+           
+            
+            <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <script type="text/javascript">__sfdcSessionId = '{!$Api.Session_Id}';</script>
+        </head>
+            
+    <body class="portal" style="min-height:100%;top:0px;">
+        <apex:form id="frmIdd">
+            <div id="outerwrap">
+                <div id="innerwrap">
+                     
+                    <!-- =============== HEADER START ===============-->
+                    <!--<c:tswheadercomp id="HeadComId"/>-->
+                    <!-- =============== HEADER END =================-->
+                    
+                    <header>
+                        <div class="top-nav-strip">
+                            <div class="l-constrained">
+                                <div class="row">
+                                    <div class="col-xs-6" align="left">
+                                        <p style="font-size:1.5rem">Visit <a href="http://www.sdhc.org/" target="_blank">sdhc.org</a></p>
+                                    </div>
+                                    <div class="col-xs-6 hide-on-mobile">
+                                        <div class="quicklinks" align="right">
+                                            <ul class="l-margin-bs l-margin-tn">
+                                                <li class="google-translate"><div id="google_translate_element"></div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-constrained row l-padding-td l-padding-bd">
+                            <div class="col-xs-3">
+                                <a href="http://www.sdhc.org/">
+                                <img alt="SDHC" height="100" src="{!URLFOR($Resource.RAD_Web,'/img/SDHC_Horiz_logo.png')}" width="150" />
+                                </a>
+                            </div>
+                           
+                            <div class="col-xs-9">
+                                <div align="right" style="padding-top:2%;">
+                                    <apex:insert name="logincomponent">
+                                        
+                                    </apex:insert>
+                                </div>           
+                            </div>
+                            
+                        </div>
+                       
+                    </header>
+                    
+                    <!-- For the background image--> 
+                    
+                    <div class="hero__wrap">
+                        <div class="hero__bg hero__bg--secondary col-md-12" style="background-image:url('{!URLFOR($Resource.RAD_Web,'/img/Waitlist-Portal-Main-Image.jpg')}');"></div>
+                        <div class="l-constrained--site row">
+                            <div class="col-md-12">
+                                <div class="main__message main__message--transparent">
+                                    <!-- <h1 style="color:#b3d9ff; height:100px;" align = "right"></h1>-->
+                                    <h1 style="color:#00457C; height:200px;" align = "right"></h1>
+                                </div>                    
+                            </div>
+                        </div>          
+                    </div>
+                    
+                    <!--  Login Model Start---->
+                    <div class="white-popup" style="max-width:80%;bottom:100px;">
+                        
+                        <apex:insert name="body">
+                            
+                        </apex:insert>
+                   
+                      
+                    </div>
+                </div>
+                     <!-- closing div's for outer-wrap and inner-wrap-->
+            </div>
+            <!------------------------------>
+            </apex:form>
+    </body>
+</html>
+</apex:page>

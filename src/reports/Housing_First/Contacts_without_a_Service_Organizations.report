@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$SDHC_Community_Relationship__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Service_Provider_Organization__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Active__c</field>
+    </columns>
+    <description>A Service Provider Organization is required for any Contacts with a SDHC Program Affiliation of Referral or Moving Home. this list shows the Contacts that done have one.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$SDHC_Community_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Housing First - Referral,Housing First - Moving Home</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Service_Provider_Organization__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Contacts without a Service Organizations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>All_Contact_Information__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

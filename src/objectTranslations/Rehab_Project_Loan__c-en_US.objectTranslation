@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Loan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Loans</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area Program --></label>
+        <name>Area_Program__c</name>
+        <relationshipLabel><!-- Loans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Document Number --></label>
+        <name>Document_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Authority --></label>
+        <name>Funding_Authority__c</name>
+        <picklistValues>
+            <masterLabel>CA Hsg Trust Fd</masterLabel>
+            <translation><!-- CA Hsg Trust Fd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDBG</masterLabel>
+            <translation><!-- CDBG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHFA</masterLabel>
+            <translation><!-- CHFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRP-O</masterLabel>
+            <translation><!-- CHRP-O --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CalHOME</masterLabel>
+            <translation><!-- CalHOME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CalHome EAGR</masterLabel>
+            <translation><!-- CalHome EAGR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Imperial Red</masterLabel>
+            <translation><!-- Central Imperial Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>City Hts Redev</masterLabel>
+            <translation><!-- City Hts Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coastal</masterLabel>
+            <translation><!-- Coastal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Grove Redev</masterLabel>
+            <translation><!-- College Grove Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction Defects</masterLabel>
+            <translation><!-- Construction Defects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crossroads Redev</masterLabel>
+            <translation><!-- Crossroads Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discretionary Funds</masterLabel>
+            <translation><!-- Discretionary Funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprize Community</masterLabel>
+            <translation><!-- Enterprize Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grantville Redev</masterLabel>
+            <translation><!-- Grantville Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOME</masterLabel>
+            <translation><!-- HOME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOPWA</masterLabel>
+            <translation><!-- HOPWA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HTF/CDBG</masterLabel>
+            <translation><!-- HTF/CDBG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HTF/Linkage</masterLabel>
+            <translation><!-- HTF/Linkage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD Healthy Homes</masterLabel>
+            <translation><!-- HUD Healthy Homes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD Lead Control Grt</masterLabel>
+            <translation><!-- HUD Lead Control Grt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD Lead Demo Grant</masterLabel>
+            <translation><!-- HUD Lead Demo Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD Lead Pt Grant</masterLabel>
+            <translation><!-- HUD Lead Pt Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hsg Trust Fund</masterLabel>
+            <translation><!-- Hsg Trust Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inclusionary</masterLabel>
+            <translation><!-- Inclusionary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease Revenue</masterLabel>
+            <translation><!-- Lease Revenue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linda Vista Redev</masterLabel>
+            <translation><!-- Linda Vista Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market St Redev</masterLabel>
+            <translation><!-- Market St Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mt Hope Redev</masterLabel>
+            <translation><!-- Mt Hope Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSP</masterLabel>
+            <translation><!-- NSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSP Program Income</masterLabel>
+            <translation><!-- NSP Program Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Park Redev</masterLabel>
+            <translation><!-- No Park Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proj 1st Class</masterLabel>
+            <translation><!-- Proj 1st Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REO Funds</masterLabel>
+            <translation><!-- REO Funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent Rehab Inc</masterLabel>
+            <translation><!-- Rent Rehab Inc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental Rehab (HUD)</masterLabel>
+            <translation><!-- Rental Rehab (HUD) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB966/AB333</masterLabel>
+            <translation><!-- SB966/AB333 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC Local Funds</masterLabel>
+            <translation><!-- SDHC Local Funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE San Diego Redev</masterLabel>
+            <translation><!-- SE San Diego Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEDC LSSD</masterLabel>
+            <translation><!-- SEDC LSSD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Ysidro Redev</masterLabel>
+            <translation><!-- San Ysidro Redev --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Section 312</masterLabel>
+            <translation><!-- Section 312 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>So Crest Redev</masterLabel>
+            <translation><!-- So Crest Redev --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- LSSI --></label>
+        <name>LSSI__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegacyRHNumber --></label>
+        <name>LegacyRHNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lender --></label>
+        <name>Lender__c</name>
+        <picklistValues>
+            <masterLabel>Crocker Bank</masterLabel>
+            <translation><!-- Crocker Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUD</masterLabel>
+            <translation><!-- HUD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDHC</masterLabel>
+            <translation><!-- SDHC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State</masterLabel>
+            <translation><!-- State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wells Fargo</masterLabel>
+            <translation><!-- Wells Fargo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Type --></label>
+        <name>Loan_Type__c</name>
+        <picklistValues>
+            <masterLabel>Buy Down</masterLabel>
+            <translation><!-- Buy Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Deferred</masterLabel>
+            <translation><!-- Direct Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Forgiven</masterLabel>
+            <translation><!-- Direct Forgiven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Installment</masterLabel>
+            <translation><!-- Direct Installment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Interest Only</masterLabel>
+            <translation><!-- Direct Interest Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grant</masterLabel>
+            <translation><!-- Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOA</masterLabel>
+            <translation><!-- LOA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Paint Grant</masterLabel>
+            <translation><!-- Lead Paint Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leveraged Installment</masterLabel>
+            <translation><!-- Leveraged Installment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate</masterLabel>
+            <translation><!-- Moderate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partially Deferred</masterLabel>
+            <translation><!-- Partially Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation><!-- Personal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Section 312</masterLabel>
+            <translation><!-- Section 312 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participating Units --></label>
+        <name>Participating_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recorded --></label>
+        <name>Recorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rehab Project --></label>
+        <name>Rehab_Project__c</name>
+        <relationshipLabel><!-- Loans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Units --></label>
+        <name>Units__c</name>
+    </fields>
+    <layouts>
+        <layout>Loan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Loan Specifics --></label>
+            <section>Loan Specifics</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Following Format Required: #-##-#### --></errorMessage>
+        <name>LSSI_Format_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

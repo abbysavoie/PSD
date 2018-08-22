@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compliance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Compliances</value>
+    </caseValues>
+    <fields>
+        <label><!-- AMI Units --></label>
+        <name>AMI_Units__c</name>
+        <picklistValues>
+            <masterLabel>20%</masterLabel>
+            <translation><!-- 20% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25%</masterLabel>
+            <translation><!-- 25% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30%</masterLabel>
+            <translation><!-- 30% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35%</masterLabel>
+            <translation><!-- 35% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40%</masterLabel>
+            <translation><!-- 40% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45%</masterLabel>
+            <translation><!-- 45% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50%</masterLabel>
+            <translation><!-- 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>55%</masterLabel>
+            <translation><!-- 55% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60%</masterLabel>
+            <translation><!-- 60% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>65%</masterLabel>
+            <translation><!-- 65% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70%</masterLabel>
+            <translation><!-- 70% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75%</masterLabel>
+            <translation><!-- 75% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80%</masterLabel>
+            <translation><!-- 80% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manager</masterLabel>
+            <translation><!-- Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market</masterLabel>
+            <translation><!-- Market --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restricted</masterLabel>
+            <translation><!-- Restricted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total</masterLabel>
+            <translation><!-- Total --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Portfolio Asset Project --></label>
+        <name>Compliance_Information__c</name>
+        <relationshipLabel><!-- Compliances --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the Number of Beds --></help>
+        <label><!-- Number Meeting Criteria --></label>
+        <name>Number_Meeting_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Units --></label>
+        <name>Number_Of_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Type --></label>
+        <name>Unit_Type__c</name>
+        <picklistValues>
+            <masterLabel>1 Bedroom</masterLabel>
+            <translation><!-- 1 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bedroom</masterLabel>
+            <translation><!-- 2 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Bedroom</masterLabel>
+            <translation><!-- 3 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Bedroom</masterLabel>
+            <translation><!-- 4 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Bedroom</masterLabel>
+            <translation><!-- 5 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beds</masterLabel>
+            <translation><!-- Beds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SRO</masterLabel>
+            <translation><!-- SRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio</masterLabel>
+            <translation><!-- Studio --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>LPAM Compliance Layout</layout>
+        <sections>
+            <label><!-- Compliance Detail --></label>
+            <section>Compliance Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Compliance Information Project --></label>
+            <section>Compliance Information Project</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

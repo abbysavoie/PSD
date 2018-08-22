@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Compliance__c$Number_Of_Units__c</field>
+    </columns>
+    <columns>
+        <field>Compliance__c$Name</field>
+    </columns>
+    <description>Compliance Matrix that showcases the AMI %, Unit Count, and Unit Type.</description>
+    <filter>
+        <criteriaItems>
+            <column>Compliance__c$AMI_Units__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>20%,25%,30%,35%,40%,45%,50%,55%,60%,65%,70%,75%,80%</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Compliance__c$Compliance_Information__c.Project_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,Under Construction,Pipeline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Compliance__c$Compliance_Information__c.Record_Type_RPT__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Both Bond and SDHC Multi-Family,SDHC Multi-Family Loan,SDHC Multi-Family Loan/Land Use</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Compliance__c$Category__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Restricted</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Compliance__c$AMI_Units__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Compliance__c$Compliance_Information__c.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Compliance__c$Unit_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>HF Compliance Matrix by Project</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>HF_Compliances__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Compliance__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

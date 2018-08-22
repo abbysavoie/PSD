@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RAD Configuration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RAD Configurations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Announcement End Date --></label>
+        <name>Announcement_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Announcement Start Date --></label>
+        <name>Announcement_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Announcement Subject --></label>
+        <name>Announcement_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Announcement --></label>
+        <name>Announcement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purge Limit --></label>
+        <name>Purge_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Contact Address --></label>
+        <name>RAD_Portal_Contact_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Forgot Password Note --></label>
+        <name>RAD_Portal_Forgot_Password_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Forgot UserName Note --></label>
+        <name>RAD_Portal_Forgot_UserName_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purge Extension(Months) --></label>
+        <name>RAD_Purge_Extension_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Duration (Months) --></label>
+        <name>Update_Duration_Months__c</name>
+    </fields>
+    <layouts>
+        <layout>RAD Configuration Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Purge Process Duration --></label>
+            <section>Purge Process Duration</section>
+        </sections>
+        <sections>
+            <label><!-- Wait List Portal Announcement --></label>
+            <section>Wait List Portal Announcement</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RAD_MGR</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Forgot Password Message --></label>
+            <section>Forgot Password Message</section>
+        </sections>
+        <sections>
+            <label><!-- Forgot User Name Message --></label>
+            <section>Forgot User Name Message</section>
+        </sections>
+        <sections>
+            <label><!-- Purge Process Duration --></label>
+            <section>Purge Process Duration</section>
+        </sections>
+        <sections>
+            <label><!-- SDHC Contact Details for website --></label>
+            <section>SDHC Contact Details for website</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

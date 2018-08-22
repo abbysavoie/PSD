@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SDHC Loan Payment/Balance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SDHC Loan Payments/Balances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Financial --></label>
+        <name>Actual_Financial__c</name>
+        <relationshipLabel><!-- SDHC Loan Payments/Balances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Check Number --></label>
+        <name>Check_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest --></label>
+        <name>Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Payment Type --></label>
+        <name>Loan_Payment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amortized</masterLabel>
+            <translation><!-- Amortized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residual Receipt</masterLabel>
+            <translation><!-- Residual Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surplus Cash</masterLabel>
+            <translation><!-- Surplus Cash --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Any other fees that apply to this loan --></help>
+        <label><!-- Other --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Date --></label>
+        <name>Payment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Year --></label>
+        <name>Payment_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Penalty Fees --></label>
+        <name>Penalty_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal --></label>
+        <name>Principal__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Accrued Interest --></label>
+        <name>SDHC_Accrued_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Loan --></label>
+        <name>SDHC_Loan__c</name>
+        <relationshipLabel><!-- SDHC Loan Payments/Balances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SDHC Outstanding Principle --></label>
+        <name>SDHC_Outstanding_Principle__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Total Outstanding Balance --></label>
+        <name>SDHC_Total_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Payment --></label>
+        <name>Total_Payment__c</name>
+    </fields>
+    <layouts>
+        <layout>Loan Payment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Information --></label>
+            <section>Detail Information</section>
+        </sections>
+        <sections>
+            <label><!-- Parent Information --></label>
+            <section>Parent Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

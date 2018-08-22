@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Actual Financial</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Actual Financials</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accounts Receivable --></label>
+        <name>Accounts_Receivable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset Score --></label>
+        <name>Asset_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit Financial Cash Flow --></label>
+        <name>Audit_Financial_Cash_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit Financial Fees/Required Payments --></label>
+        <name>Audit_Financial_Fees_Required_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit Financial Operating Expenses --></label>
+        <name>Audit_Financial_Operating_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit Financial Waterfall Obligations --></label>
+        <name>Audit_Financial_Waterfall_Obligations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit Residual Receipt --></label>
+        <name>Audit_Residual_Receipt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond Payments Rollup --></label>
+        <name>Bond_Payments_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculated Cash Flow --></label>
+        <name>Borrower_Calculated_Cash_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculated Fees/Required Paymen --></label>
+        <name>Borrower_Calculated_Fees_Required_Paymen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculated Operating Expenses --></label>
+        <name>Borrower_Calculated_Operating_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculated Residual Receipt --></label>
+        <name>Borrower_Calculated_Residual_Receipt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrower Calculated Waterfall Obligation --></label>
+        <name>Borrower_Calculated_Waterfall_Obligation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial Cash Flow --></label>
+        <name>Budget_Financial_Cash_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial Fees/Required Payments --></label>
+        <name>Budget_Financial_Fees_Required_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial Operating Expenses --></label>
+        <name>Budget_Financial_Operating_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial Residual Receipt --></label>
+        <name>Budget_Financial_Residual_Receipt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Financial Waterfall Obligations --></label>
+        <name>Budget_Financial_Waterfall_Obligations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cal HFA Reserve Beg Balance --></label>
+        <name>Cal_HFA_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cal HFA Reserve End Balance --></label>
+        <name>Cal_HFA_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cal HFA Reserve Rollup --></label>
+        <name>Cal_HFA_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Balance --></label>
+        <name>Cash_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collection Loss Rate --></label>
+        <name>Collection_Loss_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Concession Loss Revenue Rollup --></label>
+        <name>Concession_Loss_Revenue_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conventional Debt Payments --></label>
+        <name>Conventional_Debt_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conventional Outstanding Balance --></label>
+        <name>Conventional_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debt Service Coverage Ratio --></label>
+        <name>Debt_Service_Coverage_Ratio__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGI Audit Financial --></label>
+        <name>EGI_Audit_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGI Borrower Calculated --></label>
+        <name>EGI_Borrower_Calculated__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGI Budget Financial --></label>
+        <name>EGI_Budget_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- EGI SDHC Calculated --></label>
+        <name>EGI_SDHC_Calculated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Economic Vacancy Rate --></label>
+        <name>Economic_Vacancy_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Less Vacancy Rollup --></label>
+        <name>Less_Vacancy_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan to Value --></label>
+        <name>Loan_to_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOI Audit --></label>
+        <name>NOI_Audit__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOI Borrower Calculated --></label>
+        <name>NOI_Borrower_Calculated__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOI Budget Financial --></label>
+        <name>NOI_Budget_Financial__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOI SDHC Calculated --></label>
+        <name>NOI_SDHC_Calculated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operating Reserve Beg Balance --></label>
+        <name>Operating_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operating Reserve End Balance --></label>
+        <name>Operating_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operating Reserve Rollup --></label>
+        <name>Operating_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Name --></label>
+        <name>Other_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Reserve Beg Balance --></label>
+        <name>Other_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Reserve End Balance --></label>
+        <name>Other_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Reserve Rollup --></label>
+        <name>Other_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Cash Flow --></label>
+        <name>Per_Unit_Cash_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit EGI --></label>
+        <name>Per_Unit_EGI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Fees/Required Payments --></label>
+        <name>Per_Unit_Fees_Required_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Loan Payments --></label>
+        <name>Per_Unit_Loan_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit NOI --></label>
+        <name>Per_Unit_NOI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Operating Expenses --></label>
+        <name>Per_Unit_Operating_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Replacement Reserves --></label>
+        <name>Per_Unit_Replacement_Reserves__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Residual Receipt --></label>
+        <name>Per_Unit_Residual_Receipt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Waterfall --></label>
+        <name>Per_Unit_Waterfall__c</name>
+    </fields>
+    <fields>
+        <label><!-- Physical Inspection Score --></label>
+        <name>Physical_Inspection_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principle Reserve Beg Balance --></label>
+        <name>Principle_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principle Reserve End Balance --></label>
+        <name>Principle_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principle Reserve Rollup --></label>
+        <name>Principle_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Actual Financials --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Receivables --></label>
+        <name>Receivables__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Income Rollup --></label>
+        <name>Rental_Income_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Reserve Beginning Balance --></label>
+        <name>Replacement_Reserve_Beginning_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Reserve Ending Balance --></label>
+        <name>Replacement_Reserve_Ending_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Reserve Interest Rollup --></label>
+        <name>Replacement_Reserve_Interest_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Reserve Rollup --></label>
+        <name>Replacement_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residual Receipt Due --></label>
+        <name>Residual_Receipt_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Cash Flow --></label>
+        <name>SDHC_Calculated_Cash_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Fees/Required Payments --></label>
+        <name>SDHC_Calculated_Fees_Required_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Operating Expense --></label>
+        <name>SDHC_Calculated_Operating_Expense__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Residual Receipt --></label>
+        <name>SDHC_Calculated_Residual_Receipt__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Surplus Cash --></label>
+        <name>SDHC_Calculated_Surplus_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Calculated Waterfall Obligations --></label>
+        <name>SDHC_Calculated_Waterfall_Obligations__c</name>
+    </fields>
+    <fields>
+        <label><!-- SDHC Loan Payments --></label>
+        <name>SDHC_Loan_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Service Reserve End Balance --></label>
+        <name>Social_Service_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Services Reserve Beg Balance --></label>
+        <name>Social_Services_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Services Reserve Rollup --></label>
+        <name>Social_Services_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subordinate Outstanding Balance --></label>
+        <name>Subordinate_Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taxes/Insurance Reserve Beg Balance --></label>
+        <name>Taxes_Insurance_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taxes/Insurance Reserve End Balance --></label>
+        <name>Taxes_Insurance_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taxes/Insurance Reserve Rollup --></label>
+        <name>Taxes_Insurance_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transitional Reserve Beg Balance --></label>
+        <name>Transitional_Reserve_Beg_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transitional Reserve End Balance --></label>
+        <name>Transitional_Reserve_End_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transitional Reserve Rollup --></label>
+        <name>Transitional_Reserve_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <layouts>
+        <layout>Underpayment Layout</layout>
+        <sections>
+            <label><!-- Audit Financials --></label>
+            <section>Audit Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Borrower Calculations --></label>
+            <section>Borrower Calculations</section>
+        </sections>
+        <sections>
+            <label><!-- Budget Financials --></label>
+            <section>Budget Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Financials --></label>
+            <section>Detail Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Reserve Tracking --></label>
+            <section>Reserve Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- SDHC Calculated Financials --></label>
+            <section>SDHC Calculated Financials</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

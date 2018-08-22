@@ -1,0 +1,84 @@
+<apex:page standardController="Enrolled_Wait_List__c" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+        renderAs="pdf" >
+          <head>                   
+          <style type="text/css" media="print">
+            @page {
+             padding-top: 40px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-center {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 20px;
+            position: running(header);
+            }
+            div.footer {
+            
+            position: running(footer);
+            
+            }
+            li{
+              margin: 10px 0;
+            }
+            h4 {
+              margin: 5px 0;
+            }
+         
+            </style>
+            </head>          
+        <!--<div style="page-break-after:always;"/>  -->             
+           
+        <div class="header">
+            <div><img alt="SDHC"  src="{!$Resource.SDHC_PDF_HDR}" width="100%" /></div> 
+            </div>           
+           
+             <br/>   
+               
+            <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Today()}"/></apex:outputText>      
+
+            <br/>
+         
+        <body> 
+            <br/><br/> 
+             
+            <apex:outputlabel >{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Name}</apex:outputlabel><br/> 
+            <apex:outputPanel rendered="{!NOT(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet}"/><br/>
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingcity}"/>&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingState}"/>&nbsp;
+            <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Mailingpostalcode}"/>&nbsp;      
+            </apex:outputPanel>
+          
+       
+        <apex:outputPanel rendered="{!(ISNULL(Enrolled_Wait_List__c.Applications__r.Applicant__r.MailingStreet))}">
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Street__c}"/><br/>
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_City__c}"/>&nbsp;
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_State__c}"/>&nbsp;
+        <apex:outputField value="{!Enrolled_Wait_List__c.Applications__r.Applicant__r.Residential_Zipcode__c}"/>&nbsp;     
+        </apex:outputPanel> 
+        
+        <br/>
+        <br/>
+        <apex:outputlabel >Re: VASH/Section 8 Housing Choice Voucher Eligibility Appointment Scheduled for your Household </apex:outputlabel><br/><br/>      
+          <p> You are scheduled to attend an eligibity appointment on: <apex:outputText value="{0, date, MMMM d','  yyyy}" ><apex:param value="{!Today()}"/></apex:outputText> @ 8AM/ at the San Diego Housing Commision's main office located at 1122 Broadway, Suite#300, San Diego, CA92101.
+           Please bring valid picture identification with you. </p>    
+            <center><p><b>(Your social worker at the VA has also been advised of this date and time.)</b></p></center>
+        
+                <p> At your eligibity appointment, you will need to bring photo ID for yourself, birth certificates for your children, and Social Security cards for all of you. You will also need to bring current verification of all income that you or your children receive. All persons in the household that are 18 years or over and will be living in your household must attend this appointment.</p>
+                 <p> It is very important that you be on time so as not to miss this appointment. If you are not ableto attend the above stated time, please inform the Housing Commission prior to noon the day before your scheduled appointment. Only one postponement is allowable. If you must re-schedule, please call (619)578.7640 Monday thru Friday, from 8am to 4pm. </p>
+                 <p>Arrangements <u>must</u> be made for the care of your children as there are no facilities for them during your appointment. You will be rescheduled for another date if you bring your children to the session or if you arrive late. You should allow approximately 2 hours for this important meeting. 
+                 <b>If you park your car in our facility - (underground parking access is on 11th Avenue- your parking ticket  will be validated for the length of your appointment only. (No appointment= no validation.))</b></p>
+               <apex:outputlabel > Sincerely, </apex:outputlabel>       
+       <br/><br/>
+       <p>Eligibility Department</p>     
+       
+       <div class="footer">
+        <center> <img alt="SDHC"  src="{!$Resource.SDHC_PDF_FTR}" width="200%" /></center>
+        </div>
+        </body>
+       
+                  
+ </apex:page>

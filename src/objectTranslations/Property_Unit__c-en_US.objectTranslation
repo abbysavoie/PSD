@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Property Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Property Units</value>
+    </caseValues>
+    <fields>
+        <label><!-- AMI --></label>
+        <name>AMI__c</name>
+        <picklistValues>
+            <masterLabel>30%</masterLabel>
+            <translation><!-- 30% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35%</masterLabel>
+            <translation><!-- 35% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40%</masterLabel>
+            <translation><!-- 40% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45%</masterLabel>
+            <translation><!-- 45% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50%</masterLabel>
+            <translation><!-- 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>55%</masterLabel>
+            <translation><!-- 55% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60%</masterLabel>
+            <translation><!-- 60% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>65%</masterLabel>
+            <translation><!-- 65% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80%</masterLabel>
+            <translation><!-- 80% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Accesibility --></label>
+        <name>Accesibility__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Placements --></label>
+        <name>Active_Placements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Affordable Units --></label>
+        <name>Affordable_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bath Score --></label>
+        <name>Bath_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bath --></label>
+        <name>Bath__c</name>
+    </fields>
+    <fields>
+        <label><!-- BedroomCount --></label>
+        <name>BedroomCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bedroom Type --></label>
+        <name>Bedroom_Type__c</name>
+        <picklistValues>
+            <masterLabel>1 Bedroom</masterLabel>
+            <translation><!-- 1 Bedroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bedrooms</masterLabel>
+            <translation><!-- 2 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Bedrooms</masterLabel>
+            <translation><!-- 3 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Bedrooms</masterLabel>
+            <translation><!-- 4 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Bedrooms</masterLabel>
+            <translation><!-- 5 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 Bedrooms</masterLabel>
+            <translation><!-- 6 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 Bedrooms</masterLabel>
+            <translation><!-- 7 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8 Bedrooms</masterLabel>
+            <translation><!-- 8 Bedrooms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SRO</masterLabel>
+            <translation><!-- SRO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shared Housing</masterLabel>
+            <translation><!-- Shared Housing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio</masterLabel>
+            <translation><!-- Studio --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Bedrooms --></label>
+        <name>Beds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Between 6 and 17 --></label>
+        <name>Between_6_and_17__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building --></label>
+        <name>Building__c</name>
+        <relationshipLabel><!-- Bulding Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Child Eligibility --></label>
+        <name>Child_Eligibility__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of HQS --></label>
+        <name>Date_of_HQS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doors Score --></label>
+        <name>Doors_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doors --></label>
+        <name>Doors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Electrical Score --></label>
+        <name>Electrical_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Electrical --></label>
+        <name>Electrical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ethnicity --></label>
+        <name>Ethnicity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Size --></label>
+        <name>Family_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flooring Score --></label>
+        <name>Flooring_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flooring --></label>
+        <name>Flooring__c</name>
+    </fields>
+    <fields>
+        <label><!-- HQS Type --></label>
+        <name>HQS_Type__c</name>
+        <picklistValues>
+            <masterLabel>Pre-Inspection</masterLabel>
+            <translation><!-- Pre-Inspection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Time</masterLabel>
+            <translation><!-- Real Time --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HVAC Score --></label>
+        <name>HVAC_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- HVAC --></label>
+        <name>HVAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handicaped --></label>
+        <name>Handicaped__c</name>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Safety Score --></label>
+        <name>Health_Safety_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Health &amp; Safety --></label>
+        <name>Health_Safety__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hearing --></label>
+        <name>Hearing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income 1 --></label>
+        <name>Income_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income 2 --></label>
+        <name>Income_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income 3 --></label>
+        <name>Income_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Income --></label>
+        <name>Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kitchen Score --></label>
+        <name>Kitchen_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kitchen --></label>
+        <name>Kitchen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Contacted Landlord --></label>
+        <name>Last_Contacted_Landlord__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Physical Needs Assessment --></label>
+        <name>Last_Physical_Needs_Assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegacyRHNumber --></label>
+        <name>LegacyRHNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meets ADA Requirements --></label>
+        <name>Meets_ADA_Requirements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Bathrooms --></label>
+        <name>Number_of_Bathrooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Over 60 --></label>
+        <name>Over_60__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participating --></label>
+        <name>Participating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plumbing Score --></label>
+        <name>Plumbing_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plumbing --></label>
+        <name>Plumbing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Manager Unit --></label>
+        <name>Property_Manager_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Owner --></label>
+        <name>Property_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Race --></label>
+        <name>Race__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason Not Available --></label>
+        <name>Reason_Not_Available__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Released</masterLabel>
+            <translation><!-- Released --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rented Through Housing First SD</masterLabel>
+            <translation><!-- Rented Through Housing First SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rented to Non-SDHC Tenant</masterLabel>
+            <translation><!-- Rented to Non-SDHC Tenant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rehab Project --></label>
+        <name>Rehab_Project__c</name>
+        <relationshipLabel><!-- Property Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This is the date that the Unit was released and SDHC no longer can use it for placement. --></help>
+        <label><!-- Released Date --></label>
+        <name>Released_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rent Amount --></label>
+        <name>Rent_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please select any and all SDHC programs this unit is affiliated with. NOTE: If you don&apos;t select your program, you probably won&apos;t see this unit represented on reports or included in counts. 
+
+This will be replacing Record Type! --></help>
+        <label><!-- SDHC Program Affiliation --></label>
+        <name>SDHC_Program_Affiliation__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD/CO Score --></label>
+        <name>SD_CO_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- SD/CO --></label>
+        <name>SD_CO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Deposit --></label>
+        <name>Security_Deposit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sex --></label>
+        <name>Sex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Square Footage --></label>
+        <name>Square_Footage__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Number --></label>
+        <name>Street_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street_Old --></label>
+        <name>Street_Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Under 6 Medical --></label>
+        <name>Under_6_Medical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Under 6 --></label>
+        <name>Under_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the date the Unit would be available to SDHC for placement. --></help>
+        <label><!-- Unit Available Date --></label>
+        <name>Unit_Available_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Name --></label>
+        <name>Unit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Number --></label>
+        <name>Unit_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Type --></label>
+        <name>Unit_Type__c</name>
+        <picklistValues>
+            <masterLabel>0 Bedroom 0 Bath</masterLabel>
+            <translation><!-- 0 Bedroom 0 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 BR 1 BA DOWN FAMILY</masterLabel>
+            <translation><!-- 1 BR 1 BA DOWN FAMILY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 BR 1 BA UP FAMILY</masterLabel>
+            <translation><!-- 1 BR 1 BA UP FAMILY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Bedroom 1 Bath</masterLabel>
+            <translation><!-- 1 Bedroom 1 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Bedroom 1 Bath Disability</masterLabel>
+            <translation><!-- 1 Bedroom 1 Bath Disability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Bedroom 1 Bath Downstairs</masterLabel>
+            <translation><!-- 1 Bedroom 1 Bath Downstairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Bedroom 1 Bath Upstairs</masterLabel>
+            <translation><!-- 1 Bedroom 1 Bath Upstairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bd 1 ba elderly down</masterLabel>
+            <translation><!-- 1 bd 1 ba elderly down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bd 1 ba elderly up</masterLabel>
+            <translation><!-- 1 bd 1 ba elderly up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bdrm  1 bath</masterLabel>
+            <translation><!-- 1 bdrm  1 bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bed 1 bath Elderly - Down unit</masterLabel>
+            <translation><!-- 1 bed 1 bath Elderly - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bed 1 bath Elderly - Up unit</masterLabel>
+            <translation><!-- 1 bed 1 bath Elderly - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bed 1 bath Family - Down unit</masterLabel>
+            <translation><!-- 1 bed 1 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 bed 1 bath Family - Up unit</masterLabel>
+            <translation><!-- 1 bed 1 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 BR 2 BA DOWN FAMILY</masterLabel>
+            <translation><!-- 2 BR 2 BA DOWN FAMILY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 BR 2 BA UP FAMILY</masterLabel>
+            <translation><!-- 2 BR 2 BA UP FAMILY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bedroom 1 Bath</masterLabel>
+            <translation><!-- 2 Bedroom 1 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bedroom 2 Bath</masterLabel>
+            <translation><!-- 2 Bedroom 2 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Bedroom 2 Bath Disability</masterLabel>
+            <translation><!-- 2 Bedroom 2 Bath Disability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath  Family - Up unit</masterLabel>
+            <translation><!-- 2 bed 1 bath  Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Disabled - Down unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Disabled - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Disabled - Up unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Disabled - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Elderly - Down unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Elderly - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Elderly - Up unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Elderly - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Family - Down unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Family - Manager Apartment</masterLabel>
+            <translation><!-- 2 bed 1 bath Family - Manager Apartment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Family - Up unit</masterLabel>
+            <translation><!-- 2 bed 1 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Single Family</masterLabel>
+            <translation><!-- 2 bed 1 bath Single Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 1 bath Townhome</masterLabel>
+            <translation><!-- 2 bed 1 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 2 bath  Family - Up unit</masterLabel>
+            <translation><!-- 2 bed 2 bath  Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 2 bath Family - Down unit</masterLabel>
+            <translation><!-- 2 bed 2 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 bed 2 bath Family - Up unit</masterLabel>
+            <translation><!-- 2 bed 2 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2bd+2ba downstr</masterLabel>
+            <translation><!-- 2bd+2ba downstr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2bd+2ba upstr</masterLabel>
+            <translation><!-- 2bd+2ba upstr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2bed 1 bath Disabled - Up Unit</masterLabel>
+            <translation><!-- 2bed 1 bath Disabled - Up Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 BR 2 BA TOWNHOUSE</masterLabel>
+            <translation><!-- 3 BR 2 BA TOWNHOUSE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 BR 2 BA UP FAMILY</masterLabel>
+            <translation><!-- 3 BR 2 BA UP FAMILY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Bedroom 2 Bath</masterLabel>
+            <translation><!-- 3 Bedroom 2 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1 bath Family - Up unit</masterLabel>
+            <translation><!-- 3 bed 1 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1 bath Single Family</masterLabel>
+            <translation><!-- 3 bed 1 bath Single Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1 bath Townhome</masterLabel>
+            <translation><!-- 3 bed 1 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Disabled - Down unit</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Disabled - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Disabled- Down unit</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Disabled- Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Disabled-Down unit</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Disabled-Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Family - Down unit</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Family - Up unit</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Single Family</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Single Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Townhome</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 1.5 bath Townhome Disabled</masterLabel>
+            <translation><!-- 3 bed 1.5 bath Townhome Disabled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Disabled - Down unit</masterLabel>
+            <translation><!-- 3 bed 2 bath Disabled - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Disabled - Up unit</masterLabel>
+            <translation><!-- 3 bed 2 bath Disabled - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Family  Down Unit</masterLabel>
+            <translation><!-- 3 bed 2 bath Family  Down Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Family - Down unit</masterLabel>
+            <translation><!-- 3 bed 2 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Family - Up unit</masterLabel>
+            <translation><!-- 3 bed 2 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2 bath Townhome</masterLabel>
+            <translation><!-- 3 bed 2 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 bed 2.5 bath Townhome</masterLabel>
+            <translation><!-- 3 bed 2.5 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3bd+2ba downstr</masterLabel>
+            <translation><!-- 3bd+2ba downstr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3bd+2ba upstr</masterLabel>
+            <translation><!-- 3bd+2ba upstr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Bedroom 2 Bath</masterLabel>
+            <translation><!-- 4 Bedroom 2 Bath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 bed 2 bath Family - Down unit</masterLabel>
+            <translation><!-- 4 bed 2 bath Family - Down unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 bed 2 bath Family - Up unit</masterLabel>
+            <translation><!-- 4 bed 2 bath Family - Up unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 bed 2 bath Single Family</masterLabel>
+            <translation><!-- 4 bed 2 bath Single Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 bed 2 bath Townhome</masterLabel>
+            <translation><!-- 4 bed 2 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 bed 1.5 bath Townhome</masterLabel>
+            <translation><!-- 5 bed 1.5 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 bed 2.5 bath Single Family</masterLabel>
+            <translation><!-- 5 bed 2.5 bath Single Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 bed 2.5 bath Townhome</masterLabel>
+            <translation><!-- 5 bed 2.5 bath Townhome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Suite</masterLabel>
+            <translation><!-- Commercial Suite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>studio  1 bath</masterLabel>
+            <translation><!-- studio  1 bath --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vision --></label>
+        <name>Vision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visitors Older Than 6 With Medical --></label>
+        <name>Visitors_Older_Than_6_With_Medical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visitors Older Than 6 --></label>
+        <name>Visitors_Older_Than_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Walls Score --></label>
+        <name>Walls_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Walls --></label>
+        <name>Walls__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 10 --></label>
+        <name>Year_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 11 --></label>
+        <name>Year_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 12 --></label>
+        <name>Year_12__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 13 --></label>
+        <name>Year_13__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 14 --></label>
+        <name>Year_14__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 15 --></label>
+        <name>Year_15__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 16 --></label>
+        <name>Year_16__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 17 --></label>
+        <name>Year_17__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 18 --></label>
+        <name>Year_18__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 19 --></label>
+        <name>Year_19__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 1 --></label>
+        <name>Year_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 20 --></label>
+        <name>Year_20__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 2 --></label>
+        <name>Year_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 3 --></label>
+        <name>Year_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 4 --></label>
+        <name>Year_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 5 --></label>
+        <name>Year_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 6 --></label>
+        <name>Year_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 7 --></label>
+        <name>Year_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 8 --></label>
+        <name>Year_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year 9 --></label>
+        <name>Year_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code_Old --></label>
+        <name>Zip_Code_Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Master Unit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Housing Finance Information --></label>
+            <section>Housing Finance Information</section>
+        </sections>
+        <sections>
+            <label><!-- Housing First Fields --></label>
+            <section>Housing First Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Occupant Information --></label>
+            <section>Occupant Information</section>
+        </sections>
+        <sections>
+            <label><!-- Portfolio Management Into --></label>
+            <section>Portfolio Management Into</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Information --></label>
+            <section>Unit Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Master Unit Record Type --></label>
+        <name>Master_Unit_Record_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Minimal Information --></label>
+        <name>Minimal_Information</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If the Unit is Not Currently Vacant, you must supply a &quot;Reason Not 
+Available&quot;. --></errorMessage>
+        <name>Unit_Currently_Vacant_Reason_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

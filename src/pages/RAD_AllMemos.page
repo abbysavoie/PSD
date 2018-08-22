@@ -1,0 +1,17 @@
+<apex:page controller="RAD_AllMemosCntrl" sidebar="false" standardStylesheets="false"> 
+<apex:form >    
+   <apex:pageBlock title="All Memos">
+            <apex:pageBlockTable value="{!memoRecords}" var="mR"  > 
+            
+                <apex:column headerValue="Memo Subject" value="{!mR.name}"/>
+                <apex:column headerValue="Applications" value="{!mR.Applications__r.Name}"/>
+                <apex:column headerValue="Date and Time" value="{!mR.Date_and_Time__c}"/>
+                <apex:column headerValue="Notes / Desc" value="{!mR.Notes__c}"/>
+                
+                                
+          </apex:pageBlockTable>
+        </apex:pageBlock>
+   
+    </apex:form>
+
+</apex:page>

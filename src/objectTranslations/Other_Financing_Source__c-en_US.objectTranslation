@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Other Financing Source</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Other Financing Sources</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accrued Interest --></label>
+        <name>Accrued_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Source Name --></label>
+        <name>Funding_Source_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outstanding Balance --></label>
+        <name>Outstanding_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Other Financing Sources --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Term (Years) --></label>
+        <name>Term_Years__c</name>
+    </fields>
+    <layouts>
+        <layout>Other Financing Source Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Funding Details --></label>
+            <section>Funding Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

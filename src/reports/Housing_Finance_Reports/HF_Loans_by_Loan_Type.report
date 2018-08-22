@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SDHC_Loan__c$Loan_Portfolio_Asset_Project__c</field>
+    </columns>
+    <columns>
+        <field>SDHC_Loan__c$Name</field>
+    </columns>
+    <columns>
+        <field>SDHC_Loan__c$Original_Approved_Loan_Amount__c</field>
+    </columns>
+    <description>All SDHC Loans sorted by Loan Type with Original Approved Loan Amounts.</description>
+    <filter>
+        <criteriaItems>
+            <column>SDHC_Loan__c$Loan_Portfolio_Asset_Project__c.Project_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,Under Construction,Pipeline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SDHC_Loan__c$Loan_Portfolio_Asset_Project__c.Record_Type_RPT__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Both Bond and SDHC Multi-Family,SDHC Multi-Family Loan,SDHC Multi-Family Loan/Land Use</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SDHC_Loan__c$Loan_Payment_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>HF Loan Type List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HF_SDHC_Loan_Header_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SDHC_Loan__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

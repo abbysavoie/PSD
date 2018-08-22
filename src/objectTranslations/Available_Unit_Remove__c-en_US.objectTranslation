@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Available Unit_Remove</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Available Units</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assisted Living Facility --></label>
+        <name>Assisted_Living_Facility__c</name>
+    </fields>
+    <fields>
+        <label><!-- Associated Property --></label>
+        <name>Associated_Property__c</name>
+        <relationshipLabel><!-- Available Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Available Unit Count --></label>
+        <name>Available_Unit_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Type --></label>
+        <name>Building_Type__c</name>
+        <picklistValues>
+            <masterLabel>Apartments</masterLabel>
+            <translation><!-- Apartments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Room Occupancy</masterLabel>
+            <translation><!-- Single Room Occupancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Studio/Efficiency</masterLabel>
+            <translation><!-- Studio/Efficiency --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company Application Fee --></label>
+        <name>Company_Application_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Available --></label>
+        <name>Date_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Pictures --></label>
+        <name>Has_Pictures__c</name>
+    </fields>
+    <fields>
+        <label><!-- High Rent --></label>
+        <name>High_Rent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Listing Status --></label>
+        <name>Listing_Status__c</name>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Future</masterLabel>
+            <translation><!-- Future --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Responsive</masterLabel>
+            <translation><!-- Non-Responsive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market To Section-8 Tenants --></label>
+        <name>Market_To_Section_8_Tenants__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 20% --></label>
+        <name>Median_Income_Rent_20__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 30% --></label>
+        <name>Median_Income_Rent_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 40% --></label>
+        <name>Median_Income_Rent_40__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 50% --></label>
+        <name>Median_Income_Rent_50__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 60% --></label>
+        <name>Median_Income_Rent_60__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 70% --></label>
+        <name>Median_Income_Rent_70__c</name>
+    </fields>
+    <fields>
+        <label><!-- Median Income Rent 80% --></label>
+        <name>Median_Income_Rent_80__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Fair Market Rent --></label>
+        <name>No_Fair_Market_Rent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Bathrooms --></label>
+        <name>Number_of_Bathrooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Bedrooms --></label>
+        <name>Number_of_Bedrooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Waiting List --></label>
+        <name>On_Waiting_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Realtor Asserts Lead-paint-free --></label>
+        <name>Realtor_Asserts_Lead_paint_free__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rent Below Listing Limit --></label>
+        <name>Rent_Below_Listing_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Minimum Lease Months --></label>
+        <name>Rental_Minimum_Lease_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Security Deposit Slide Scale Low --></label>
+        <name>Rental_Security_Deposit_Slide_Scale_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Security Deposit --></label>
+        <name>Rental_Security_Deposit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Deposit by How Many Months Rent --></label>
+        <name>Security_Deposit_by_How_Many_Months_Rent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shared Living Facility --></label>
+        <name>Shared_Living_Facility__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sliding Scale Rent Based On Income --></label>
+        <name>Sliding_Scale_Rent_Based_On_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sliding Scale Rent Low --></label>
+        <name>Sliding_Scale_Rent_Low__c</name>
+    </fields>
+    <fields>
+        <label><!-- Smoking Allowed --></label>
+        <name>Smoking_Allowed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>RRH</masterLabel>
+            <translation><!-- RRH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shared Housing</masterLabel>
+            <translation><!-- Shared Housing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Serve</masterLabel>
+            <translation><!-- Social Serve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VASH</masterLabel>
+            <translation><!-- VASH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VASH/RRH</masterLabel>
+            <translation><!-- VASH/RRH --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subsidized Rent / Sponsored Tenants --></label>
+        <name>Subsidized_Rent_Sponsored_Tenants__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Credit Property --></label>
+        <name>Tax_Credit_Property__c</name>
+    </fields>
+    <layouts>
+        <layout>Social Serve Available Unit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Physical Attributes --></label>
+            <section>Physical Attributes</section>
+        </sections>
+        <sections>
+            <label><!-- Social Serve Details --></label>
+            <section>Social Serve Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

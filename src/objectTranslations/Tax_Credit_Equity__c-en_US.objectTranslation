@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tax Credit Equity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tax Credit Equities</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Equity Type --></label>
+        <name>Equity_Type__c</name>
+        <picklistValues>
+            <masterLabel>General Partner</masterLabel>
+            <translation><!-- General Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIHTC 4%</masterLabel>
+            <translation><!-- LIHTC 4% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIHTC 9%</masterLabel>
+            <translation><!-- LIHTC 9% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Project --></label>
+        <name>Loan_Project__c</name>
+        <relationshipLabel><!-- Tax Credit Equities --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Equity Investment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

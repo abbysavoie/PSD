@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bond Payment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bond Payments</value>
+    </caseValues>
+    <fields>
+        <help><!-- Select the Actual Financial Year to apply this payment to. --></help>
+        <label><!-- Actual Financial --></label>
+        <name>Actual_Financial__c</name>
+        <relationshipLabel><!-- Bond Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bond --></label>
+        <name>Bond__c</name>
+        <relationshipLabel><!-- Bond Payments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Date --></label>
+        <name>Payment_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Bond Payment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

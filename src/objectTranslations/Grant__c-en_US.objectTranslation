@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Grant</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Grants</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Discounted</masterLabel>
+            <translation><!-- Discounted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forgivable</masterLabel>
+            <translation><!-- Forgivable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grant Name --></label>
+        <name>Grant_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Project --></label>
+        <name>Loan_Project__c</name>
+        <relationshipLabel><!-- Grants --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revocable --></label>
+        <name>Revocable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Terms --></label>
+        <name>Terms__c</name>
+    </fields>
+    <layouts>
+        <layout>Grant Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Grant Information --></label>
+            <section>Grant Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

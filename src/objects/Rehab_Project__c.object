@@ -1,0 +1,2014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Rehab - the Main object</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>APN__c</fullName>
+        <externalId>false</externalId>
+        <label>APN</label>
+        <length>13</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anniversary_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Anniversary Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Application_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Received</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Application_Submitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Submitted</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appraised_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraised Value</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assigned__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Audit__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Bathrooms__c</fullName>
+        <externalId>false</externalId>
+        <label>Bathrooms</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bedrooms__c</fullName>
+        <externalId>false</externalId>
+        <label>Bedrooms</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Bid Due Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancel_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancel Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Over Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Interested</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LBP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cancel__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Census_Track__c</fullName>
+        <externalId>false</externalId>
+        <label>Census Track</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>San_Diego_Cities</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Clearance_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Amount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Check_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Check Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Clear_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Clear Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Contractor_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Clearance Contractor_Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects</relationshipLabel>
+        <relationshipName>Rehab_Projects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Contractor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Clearance Contractor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects</relationshipLabel>
+        <relationshipName>Rehab_Projects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Invoice Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clearance_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Order_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Order Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Clearance_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Result</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Clearance_Test_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Clearance Test Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Close_Out__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Out</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contract_1_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract 1 Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_2_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract 2 Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_3_Lead_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract 3 (Lead) Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_1_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 1 Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 1</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 1 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_2_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 2 Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 2)</relationshipLabel>
+        <relationshipName>Rehab_Projects4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 2</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 2 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_3_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 3 Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 3)</relationshipLabel>
+        <relationshipName>Rehab_Projects5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contractor 3</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects (Contractor 3 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_Paid_Relocation_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Paid Relocation Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Council_District__c</fullName>
+        <externalId>false</externalId>
+        <label>Council District</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ELB_Investment__c</fullName>
+        <externalId>false</externalId>
+        <label>ELB Investment</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ELB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ELB</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Eligability_Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligability Approval</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Evaluation_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Evaluation Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Flood_Zone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Flood Zone</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 Years</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 Years</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Fund_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Fund Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>General_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>General Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HC_Grant_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>HC Grant Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>HC_Loan_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>HC Loan Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Construction_Specialist__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Housing Construction Specialist</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Rehab Projects</relationshipLabel>
+        <relationshipName>Rehab_Projects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Legacy_HCS__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy HCS</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Abran Quevedo</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Adams/Geis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Al Shaw</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Al Slomski</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AQG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ayala/Dean</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ayala/Helton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cady/Vincent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Carlos C DeBaca</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cecil Davis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DA/JI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dan Cady</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dave Scrimger</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DEW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Don Evers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EWE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FB/LT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FB/RV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FB/SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FDW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG/RV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG/SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FVR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Geis/Gelbman</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Helton/Solomon</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hugh Major</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jack Pena</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jack Sanders</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jensen/Moss</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jessie Helton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JG/LS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JG/RV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>John Ayala</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>John Jensen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>John Robinson</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ken Moss</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LBW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Louis Wilfinger</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LS/KF/JG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LS/KS/JG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LS/VM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Luis Monge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Madrid/Geis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Madrid/Townsend</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mike Mele</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pre-Assigned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Roger Nulton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Skip Batchelder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TAC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TEAM A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TEAM B</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ted Adams</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tom Ford</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vicki Madrid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VM</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Limited_Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Limited Test</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Approval</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Mailing_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Address</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Apt_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Apt Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing State</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Street</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Zip</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Map__c</fullName>
+        <externalId>false</externalId>
+        <label>Map</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_Area_Program__c</fullName>
+        <externalId>false</externalId>
+        <formula>Master_Target_Area__r.Program__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Master Area Program</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_Target_Area__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Master Target Area</label>
+        <referenceTo>Area_Program__c</referenceTo>
+        <relationshipLabel>Rehab Projects</relationshipLabel>
+        <relationshipName>Rehab_Projects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Non_Displace_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Non Displace Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OGM_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>OGM Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupancy</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Owner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rental</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Occupied_Rental_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupied Rental Units</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Amount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Check_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Check Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Clear_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Clear Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Contractor_TaxID_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other Contractor TaxID Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Other Contractor TaxID)</relationshipLabel>
+        <relationshipName>Rehab_Projects2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Contractor_TaxID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other Contractor TaxID</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects (Other Contractor TaxID 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Invoice Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Loans_Grants_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Loans/Grants Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Order_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Order Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Result</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Other_Test_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Test Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Out_To_Bid__c</fullName>
+        <externalId>false</externalId>
+        <label>Out To Bid</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Age</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Alternate_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Alternate Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Owner 1 Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Ethnicity_F__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text( Owner_1__r.Ethnicity__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner 1 Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Ethnicity__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Ethnicity</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_1_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 First Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Home_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Home Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Language</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Language</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Middle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Middle Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Race__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Race</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Race</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_1_SSN__c</fullName>
+        <description>Owner 1 SSN</description>
+        <externalId>false</externalId>
+        <label>Owner 1 SSN</label>
+        <length>11</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>ssn</maskType>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Sex__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Sex</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Gender</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_1_Work_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 1 Work Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Mouse Over the Person&apos;s Name to See Full Details!</inlineHelpText>
+        <label>Owner 1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Rehab Projects (Owner 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Age</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Alt_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Alt Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Owner 2 Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Ethnicity__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Ethnicity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Ethnicity</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_2_First_name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 First name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Home_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Home Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Language</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Language</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Last Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Middle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Middle Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Race__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Race</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Race</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_2_SSN__c</fullName>
+        <description>Owner 2 SSN</description>
+        <externalId>false</externalId>
+        <label>Owner 2 SSN</label>
+        <length>11</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>ssn</maskType>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Sex__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Sex</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Gender</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_2_Work_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner 2 Work Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Mouse Over the Person&apos;s Name to See Full Details!</inlineHelpText>
+        <label>Owner 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Rehab Projects (Owner 2)</relationshipLabel>
+        <relationshipName>Rehab_Projects2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Builder_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner/Builder Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Builder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Owner/Builder</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Funds__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Funds</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Occupied_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Occupied Units</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participating_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Units</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent_AMI__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent AMI</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Project_Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Completed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Property</label>
+        <referenceTo>Building__c</referenceTo>
+        <relationshipLabel>Rehab Projects</relationshipLabel>
+        <relationshipName>Rehab_Projects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RA_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Amount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RA_Check_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Check Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RA_Contractor_TaxID_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>RA Contractor TaxID Old</label>
+        <referenceTo>Rehab_Contractor__c</referenceTo>
+        <relationshipLabel>Rehab Projects (RA Contractor TaxID)</relationshipLabel>
+        <relationshipName>Rehab_Projects1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RA_Contractor_TaxID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>RA Contractor TaxID</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehab Projects (RA Contractor TaxID 1)</relationshipLabel>
+        <relationshipName>Rehab_Projects5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RA_Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Invoice Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RA_Order_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Order Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RA_Referral_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Referral Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RA_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Result</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RA_Test_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Test Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RA_Test_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>RA Test Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Rehab_Test_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Re_Evaluation_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Re-Evaluation Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Relocation_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Relocation Dollars</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Relocation_Number_of_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Relocation Number of Units</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Relocation_notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Relocation notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Request_For_Funds__c</fullName>
+        <externalId>false</externalId>
+        <label>Request For Funds</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Work__c</fullName>
+        <externalId>false</externalId>
+        <label>Requested Work</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>S__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Structures</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Soft_Other_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Soft/Other Costs</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>US_States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Number</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Area_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Mouse Over the Number to see information on the selected Target Area</inlineHelpText>
+        <label>Target Area 2</label>
+        <referenceTo>Area_Program__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Target Area 2)</relationshipLabel>
+        <relationshipName>Rehab_Projects1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target_Area_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Mouse Over the Number to see information on the selected Target Area</inlineHelpText>
+        <label>Target Area 3</label>
+        <referenceTo>Area_Program__c</referenceTo>
+        <relationshipLabel>Rehab Projects (Target Area 3)</relationshipLabel>
+        <relationshipName>Rehab_Projects2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_1_Dollars__c + Contract_2_Dollars__c + Contract_3_Lead_Dollars__c + Owner_Builder_Dollars__c + Relocation_Dollars__c + Contractor_Paid_Relocation_Dollars__c + Soft_Other_Costs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Resources__c</fullName>
+        <externalId>false</externalId>
+        <formula>HC_Loan_Dollars__c + HC_Grant_Dollars__c + Owner_Funds__c + Other_Loans_Grants_Dollars__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Resources</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Units</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacant_Rental_Units__c</fullName>
+        <externalId>false</externalId>
+        <label>Vacant Rental Units</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Veteran__c</fullName>
+        <description>Is the Owner of this property a Veteran?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Owner of this property a Veteran?</inlineHelpText>
+        <label>Veteran</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Checkbox_Results</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Walk_Through__c</fullName>
+        <externalId>false</externalId>
+        <label>Walk Through</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Year_Built__c</fullName>
+        <externalId>false</externalId>
+        <label>Year Built</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip +4</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Rehab Project</label>
+    <listViews>
+        <fullName>Active_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Owner_1_Last_Name__c</columns>
+        <columns>Owner_1_First_Name__c</columns>
+        <columns>Street_Name__c</columns>
+        <columns>City__c</columns>
+        <columns>Project_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Active Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Owner_1__c</columns>
+        <columns>Owner_1_Last_Name__c</columns>
+        <columns>Owner_1_First_Name__c</columns>
+        <columns>APN__c</columns>
+        <columns>Project_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>Case Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Rehab Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Owner_1__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Owner_1_Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Owner_1_First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Street_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Street_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Owner_1_Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Owner_1_First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Street_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Street_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Master_Target_Area__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Owner_1_Last_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Owner_1_First_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Street_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Street_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Master_Target_Area__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Owner_1_Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Owner_1_First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Street_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Street_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Master_Target_Area__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>APN_Format</fullName>
+        <active>true</active>
+        <description>Formats the APN number</description>
+        <errorConditionFormula>NOT( 
+OR( 
+ISBLANK(APN__c), 
+REGEX( APN__c , &quot;[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}&quot;) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>APN__c</errorDisplayField>
+        <errorMessage>The APN number must be in the form of ###-###-##-##</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Owner_1_SSN_Formatting</fullName>
+        <active>true</active>
+        <description>Requires the dashes in a SSN</description>
+        <errorConditionFormula>if(!ISBLANK(Owner_1_SSN__c) &amp;&amp; !ISNULL(Owner_1_SSN__c),NOT( REGEX( Owner_1_SSN__c , &quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; )),false)</errorConditionFormula>
+        <errorDisplayField>Owner_1_SSN__c</errorDisplayField>
+        <errorMessage>SSN must be ###-##-####</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Owner_2_SSN_Formatting</fullName>
+        <active>true</active>
+        <description>Requires the dashes in a SSN</description>
+        <errorConditionFormula>if(!ISBLANK(Owner_2_SSN__c) &amp;&amp; !ISNULL(Owner_2_SSN__c),NOT( REGEX( Owner_2_SSN__c , &quot;[0-9]{3}-[0-9]{2}-[0-9]{4}&quot; )),false)</errorConditionFormula>
+        <errorDisplayField>Owner_2_SSN__c</errorDisplayField>
+        <errorMessage>SSN must be ###-##-####</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Unique_Case_Name</fullName>
+        <active>true</active>
+        <description>Makes sure that 2 cases with the same number do not exist</description>
+        <errorConditionFormula>Name == VLOOKUP(
+    $ObjectType.Rehab_Project__c.Fields.Name,
+    $ObjectType.Rehab_Project__c.Fields.Name,
+    Name
+)
+&amp;&amp;
+Id &lt;&gt; VLOOKUP(
+    $ObjectType.Rehab_Project__c.Fields.Id,
+    $ObjectType.Rehab_Project__c.Fields.Name,
+    Name
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>There is already a project using that case number.</errorMessage>
+    </validationRules>
+</CustomObject>
